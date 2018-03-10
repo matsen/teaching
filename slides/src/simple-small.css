@@ -1,0 +1,41 @@
+<style type="text/css">
+    .reveal { font-size: 32px; }
+    .reveal h1 { font-size: 1.6em; }
+    .reveal h2 { font-size: 1.35em; }
+    .reveal h3 { font-size: 1.35em; }
+
+    .reveal section img {
+        border: none;
+        box-shadow: none;
+        vertical-align: middle;
+    }
+
+    .reveal h1,
+    .reveal h2,
+    .reveal h3,
+    .reveal h4,
+    .reveal h5,
+    .reveal h6 {
+      font-family: "News Cycle", Lato, sans-serif;
+      text-shadow: none; }
+
+    div.bigpurple {
+      font-size: 3em;
+      line-height: 1em;
+      color: purple;
+    }
+
+    div.caption {
+      font-size: 24px;
+      line-height: 1em;
+    }
+
+    div.citation {
+        position: absolute;
+        bottom:0px;
+        right:0px;
+        z-index:100;
+        font-size: 0.45em !important;
+    }
+
+</style>

@@ -1,0 +1,22 @@
+% Why phylogenetics?
+% Erick Matsen
+% Thank you to: Trevor Bedford (Fred Hutch)
+
+# Popular image of phylogenetics
+
+^imgh figures/motivation/sponges-sister-tree.png
+^div caption "Simion *et al*, *Current Biology*, 2017"
+
+
+# What can we *do* with phylogenetics?
+
+#
+
+^img figures/comparative-method/traits.png
+
+
+^imgh figures/comparative-method/false-correlation-one-symbol.png
+
+^imgh figures/comparative-method/false-correlation-two-symbols.png
+
+^imgh figures/comparative-method/worst-case-tree.png
