@@ -1,0 +1,21 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               'Erick Matsen'
+tagline:             'Teaching'
+description:         'Courses on phylogenetics and adaptive immunology'
+url:                 http://matsen.github.io/teaching
+baseurl:             ''
+
+# About/contact
+author:
+  name: Erick Matsen
+  url: http://matsen.group/
+  email: matsen@fredhutch.org
+
+
+# Collections
+collections_dir: courses
+collections:
+    - GS541
