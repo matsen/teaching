@@ -5,8 +5,8 @@ permalink:           pretty
 title:               'Erick Matsen'
 tagline:             'Teaching'
 description:         'Courses on phylogenetics and adaptive immunology'
-url:                 http://matsen.github.io/teaching
-baseurl:             ''
+url:                 https://matsen.github.io/teaching/
+baseurl:             https://matsen.github.io/teaching/
 
 # About/contact
 author:
