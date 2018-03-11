@@ -10,13 +10,14 @@
 
 # What can we *do* with phylogenetics?
 
-#
-
+# Say we measure two traits
 ^img figures/comparative-method/traits.png
 
-
+# Plot traits $X$ and $Y$
 ^imgh figures/comparative-method/false-correlation-one-symbol.png
 
+#
 ^imgh figures/comparative-method/false-correlation-two-symbols.png
 
+#
 ^imgh figures/comparative-method/worst-case-tree.png
