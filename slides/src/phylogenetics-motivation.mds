@@ -1,6 +1,5 @@
 % Why phylogenetics?
 % Erick Matsen
-% Thank you to: Trevor Bedford (Fred Hutch)
 
 # Popular image of phylogenetics
 
@@ -10,14 +9,64 @@
 
 # What can we *do* with phylogenetics?
 
+Examples today:
+
+1. Felsenstein independent contrasts
+2. Understanding flu transmission
+
+#
+^div bigpurple "Independent contrasts"
+
 # Say we measure two traits
 ^img figures/comparative-method/traits.png
 
-# Plot traits $X$ and $Y$
+# Do traits $X$ and $Y$ look correlated?
 ^imgh figures/comparative-method/false-correlation-one-symbol.png
 
-#
+# Do traits $X$ and $Y$ look correlated?
 ^imgh figures/comparative-method/false-correlation-two-symbols.png
 
+# Stars from left branch, squares from the right
+^imgfl figures/comparative-method/worst-case-tree.png 510
+^imgfr figures/comparative-method/false-correlation-two-symbols.png 510
+
+<br>
+
+^div fragment "Need to correct for evolutionary history to test evolution hypothesis."
+
+# Felsenstein 1985
+
+Felsenstein, J. (1985). Phylogenies and the Comparative Method. The American Naturalist, 125(1), 1–15. [[PDF]](https://paperpile.com/shared/Vp8yHJ)
+
 #
-^imgh figures/comparative-method/worst-case-tree.png
+
+Trait measurement is old-school. I am young and hip!
+
+^imgh figures/comparative-method/hipster-rna-seq-1.svg
+
+#
+
+Trait measurement is old-school. I am young and hip!
+
+^imgh figures/comparative-method/hipster-rna-seq.svg
+
+#
+
+Schraiber, J. G., Mostovoy, Y., Hsu, T. Y., & Brem, R. B. (2013). Inferring evolutionary histories of pathway regulation from transcriptional profiling data. PLoS Computational Biology, 9(10), e1003255. https://doi.org/10.1371/journal.pcbi.1003255
+
+#
+^div bigpurple "Flu transmission patterns"
+
+# Where does the flu come from?
+^imgw figures/phylogeography/bedford-2010-migration-map.png
+
+<div class="fragment">
+Bedford, T., Cobey, S., Beerli, P., & Pascual, M. (2010). Global Migration Dynamics Underlie Evolution and Persistence of Human Influenza A (H3N2). PLoS Pathogens, 6(5), e1000918. [[DOI]](https://doi.org/10.1371/journal.ppat.1000918)
+</div>
+
+# Infer trunk location
+^imgw figures/phylogeography/bedford-2010-migration-tree.png
+
+# Infer trunk location
+^imgw figures/phylogeography/bedford-2010-migration-trunk.png
+
