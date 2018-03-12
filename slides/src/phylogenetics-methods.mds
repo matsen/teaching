@@ -27,9 +27,6 @@
 ^imgw figures/phylo/what_is_phylo_dist.svg
 
 # Parsimony phylogenetics
-^imgh figures/phylo/tree_parsimony.svg
-
-# Parsimony phylogenetics
 
 <br>
 
@@ -161,6 +158,8 @@ Fiddle with the dials until it looks good.
 
 
 # Questions
+
+^imgh figures/likelihood/ripe-likelihood.svg 250
 
 <ol>
 <li class=fragment>
