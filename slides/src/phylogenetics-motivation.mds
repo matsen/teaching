@@ -114,3 +114,25 @@ Bedford, T., Cobey, S., Beerli, P., & Pascual, M. (2010). Global Migration Dynam
 # Infer trunk location
 ^imgw figures/phylogeography/bedford-2010-migration-trunk.png
 
+# Where is flu going?
+<br>
+
+I.e. which virus is going to take over the population?
+
+# Local branching index
+^imgw figures/motivation/lbi-definition.png
+
+# Local branching index in nextflu.org
+^imgw figures/motivation/lbi-nextflu.svg
+
+# Try it out
+
+<http://nextflu.org/>
+
+Neher, R. A., & Bedford, T. (2015). nextflu: Real-time tracking of seasonal influenza virus evolution in humans. Bioinformatics . [[DOI]](https://doi.org/10.1093/bioinformatics/btv381)
+
+Neher, R. A., Russell, C. A., & Shraiman, B. I. (2014). Predicting evolution from the shape of genealogical trees. eLife, 3. [[DOI]](https://doi.org/10.7554/eLife.03568)
+
+<http://nextstrain.org/>
+
+Hadfield, Megill, Bell, Huddleston, Potter, Callender, … Bedford, Neher, (2017). Nextstrain: real-time tracking of pathogen evolution. bioRxiv. [[DOI]](https://doi.org/10.1101/224048)
