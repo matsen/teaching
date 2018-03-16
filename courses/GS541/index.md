@@ -9,7 +9,7 @@ Welcome to the phylogenetics module of Genome Sciences 541.
 
 #### Conceptual prerequisites
 
-* Basic probability, including conditional probability
+* Basic probability, including conditional probability. [A refresher](https://www.khanacademy.org/math/statistics-probability/probability-library#conditional-probability-independence).
 
 #### Software prerequisites
 
@@ -21,7 +21,7 @@ http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/wh2017/Likelihood_Lewi
 -->
 
 
-## Day 1
+## Day 1: Phylogenetics motivation and intro
 
 * [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
 * [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }})
@@ -32,7 +32,7 @@ http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/wh2017/Likelihood_Lewi
 * Review conditional probability
 
 
-## Day 2
+## Day 2: Phylogenetics methods
 
 * Quiz on video material
 * Practical: inferring trees
@@ -45,7 +45,7 @@ http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/wh2017/Likelihood_Lewi
 * Get programs working if they aren't already
 
 
-## Day 3
+## Day 3: Theory and codon models
 
 * Quiz on video material
 * Conditional probability exercises
@@ -60,7 +60,7 @@ http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/wh2017/Likelihood_Lewi
 * Start quantifying evolution project
 
 
-## Day 4
+## Day 4: Further topics
 
 * Quiz on video material
 * Independent contrasts?
