@@ -3,5 +3,4 @@ _site
 Gruntfile.js
 node_modules
 package.json
-*_nofonts.svg
 .ipynb_checkpoints

@@ -18,6 +18,7 @@ Welcome to the phylogenetics module of Genome Sciences 541.
 <!--
 https://molevol.mbl.edu/index.php/Paul_Lewis
 http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/wh2017/Likelihood_Lewis_22July2017.pdf
+https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-independent-contrasts/
 -->
 
 
