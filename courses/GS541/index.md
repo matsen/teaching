@@ -5,6 +5,14 @@ title: 'GS541 home'
 
 Welcome to the phylogenetics module of Genome Sciences 541.
 
+After this course, I hope you will be able to
+
+* recognize situations when evolutionary thinking is important
+* understand basic features of evolutionary trees
+* be familiar with the various types of tree inference, and when they are useful
+* be able to apply codon-based tests for natural selection
+
+
 ## Prerequisites
 
 #### Conceptual prerequisites
@@ -13,19 +21,27 @@ Welcome to the phylogenetics module of Genome Sciences 541.
 
 #### Software prerequisites
 
-* A sequence alignment viewer, such as [seaview](http://doua.prabi.fr/software/seaview)
+Please download and make sure you can run [seaview](http://doua.prabi.fr/software/seaview) as soon as possible.
 
 <!--
 https://molevol.mbl.edu/index.php/Paul_Lewis
 http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/wh2017/Likelihood_Lewis_22July2017.pdf
 https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-independent-contrasts/
+
+This has some great homeworks:
+https://phylogeny.uconn.edu/courses/
 -->
 
 
 ## Day 1: Phylogenetics motivation and intro
 
-* [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
+* Lecture: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
 * [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }})
+
+<!--
+Have some in-class exercise about the independent contrasts method? How about a parameter count of how much signal there is in the data?
+Have some sort of strange distance-based phylogenetics thing?
+-->
 
 #### Homework
 
@@ -37,7 +53,7 @@ https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-indep
 
 * Quiz on video material
 * Practical: inferring trees
-* Lecture: sequence alignment
+* Lecture: phylogenetic sequence alignment
 * Practical: doing sequence alignment
 
 #### Homework
@@ -65,6 +81,7 @@ https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-indep
 
 * Quiz on video material
 * Independent contrasts?
+* Lecture: Phylogenetic sequence alignment
 * Lecture: Bayesian methods
 * Lecture: [coalescent and population size](http://bedford.io/projects/mitii/coalescent-and-selection/coalescent.html#/)
 
