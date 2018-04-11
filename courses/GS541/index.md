@@ -30,13 +30,22 @@ https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-indep
 
 This has some great homeworks:
 https://phylogeny.uconn.edu/courses/
--->
 
+
+l = [''.join([random.choice('AGCT') for i in xrange(200)]) for j in xrange(6)]
+
+with open('data.fasta', 'w') as f:
+    for s in l:
+        f.write('>x\n')
+        f.write(s+'\n')
+-->
 
 ## Day 1: Phylogenetics motivation and intro
 
 * Lecture: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
 * [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }})
+* Perform sequence alignment and tree building on [sample data]({{ "/data/sample.fasta" | relative_url }})
+
 
 <!--
 Have some in-class exercise about the independent contrasts method? How about a parameter count of how much signal there is in the data?
