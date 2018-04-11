@@ -16,6 +16,8 @@ theme="simple"
     --smart \
     -o "$2"
 
+# The third line unwraps images from their paragraphs, which has the lovely effect of allowing reveal's stretch feature to work.
 sed -e "s_reveal.js/css/reveal.min.css_reveal.js/css/reveal.css_" \
     -e "s_reveal.js/js/reveal.min.js_reveal.js/js/reveal.js_" \
+    -e "s#<p>\(<img ..*\)</p>#\1#" \
     -i "$2"
