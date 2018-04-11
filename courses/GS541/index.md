@@ -3,14 +3,14 @@ layout: default
 title: 'GS541 home'
 ---
 
-Welcome to the phylogenetics module of Genome Sciences 541.
+_Welcome to the phylogenetics module of Genome Sciences 541._
 
 After this course, I hope you will be able to
 
 * recognize situations when evolutionary thinking is important
 * understand basic features of evolutionary trees
 * be familiar with the various types of tree inference, and when they are useful
-* be able to apply codon-based tests for natural selection
+* be able to apply codon-based tests for natural selection.
 
 
 ## Prerequisites
@@ -19,7 +19,7 @@ After this course, I hope you will be able to
 
 * Basic probability, including conditional probability. [A refresher](https://www.khanacademy.org/math/statistics-probability/probability-library#conditional-probability-independence).
 
-### Software prerequisites
+### Software prerequisite
 
 Please download and make sure you can run [seaview](http://doua.prabi.fr/software/seaview) as soon as possible.
 
