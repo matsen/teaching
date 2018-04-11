@@ -1,0 +1,17 @@
+% Codon-based natural selection inference
+
+# Natural selection inference
+^imgh figures/phylo/synonymous-vs-nonsyn.svg
+
+# Yang-Nielsen 2000 model
+^imgw figures/phylo/yn00-model.png
+^div citation "[Yang & Nielsen 2000](http://mbe.oxfordjournals.org/content/17/1/32.short)"
+
+# Natural selection inference is a HUGE topic
+
+&nbsp;
+
+We can't really cover it today.
+
+However, you can do great by reading the tutorial information on [datamonkey.org](http://datamonkey.org/help/index.php) and using their tools.
+

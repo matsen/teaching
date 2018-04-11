@@ -11,9 +11,22 @@
 #
 ^imgw figures/phylo/what_is_phylo_unrooted.svg
 
+
 # "data": sequence alignment
 
 ^img figures/phylo/bigProtAln.png
+
+
+# A sequence alignment is not a fact
+
+^img figures/phylo/bigProtAln.png
+
+... it is a complex inference.
+
+# In phylogenetics, *homology* means..
+
+^imgh figures/phylo/bigProtAln-column.svg
+
 
 # Types of phylogenetic inference methods
 * Distance-based
@@ -265,53 +278,13 @@ $$
 * But on the other hand our models are over-simple!
 </div>
 
+
 # Crazy but typical model assumptions
 
 * differences between sequences only appear by point mutation
 * evolution happens on each column independently
 * sequences are evolving according to *reversible* models (this excludes selection and directional evolution of base composition)
 * the evolutionary process is identical on all branches of the tree
-
-# Sequence alignment is hard!
-^imgh figures/phylo/alignment-and-phylogeny-protpal-truth-only.png
-
-# Sometimes it's more or less impossible
-^imgh figures/phylo/alignment-and-phylogeny-protpal-hard-case.png
-
-# Phylogenetic approach is best
-^imgw figures/phylo/alignment-and-phylogeny-protpal-tractable-case.png
-^div citation "[Westesson et al. 2012](http://dx.doi.org/10.1371/journal.pone.0034572)"
-
-# Muscle vs PRANK
-^imgw figures/phylo/alignment-and-phylogeny-prank.png
-<div class="citation">
-[Löytynoja and Goldman 2008](http://dx.doi.org/10.1126/science.1158395)
-</div>
-
-# [BAli-Phy](http://www.bali-phy.org/)
-Co-estimate tree & alignment using Bayesian methods
-^imgw figures/phylo/bali-phy.png
-
-# Multiple sequence alignment: summary
-* Use PRANK, perhaps through [Wasabi](http://wasabiapp.org/)
-* If you need a faster algorithm and are happy with a less good result, try [Muscle](http://drive5.com/muscle/)
-* If you really care about alignments (and trees) use BAli-Phy.
-
-
-# Natural selection inference
-^imgh figures/phylo/synonymous-vs-nonsyn.svg
-
-# Yang-Nielsen 2000 model
-^imgw figures/phylo/yn00-model.png
-^div citation "[Yang & Nielsen 2000](http://mbe.oxfordjournals.org/content/17/1/32.short)"
-
-# Natural selection inference is a HUGE topic
-
-&nbsp;
-
-We can't really cover it today.
-
-However, you can do great by reading the tutorial information on [datamonkey.org](http://datamonkey.org/help/index.php) and using their tools.
 
 
 # To read

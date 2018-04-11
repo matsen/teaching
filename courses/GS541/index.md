@@ -15,11 +15,11 @@ After this course, I hope you will be able to
 
 ## Prerequisites
 
-#### Conceptual prerequisites
+### Conceptual prerequisites
 
 * Basic probability, including conditional probability. [A refresher](https://www.khanacademy.org/math/statistics-probability/probability-library#conditional-probability-independence).
 
-#### Software prerequisites
+### Software prerequisites
 
 Please download and make sure you can run [seaview](http://doua.prabi.fr/software/seaview) as soon as possible.
 
@@ -43,8 +43,8 @@ with open('data.fasta', 'w') as f:
 ## Day 1: Phylogenetics motivation and intro
 
 * Lecture: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
+* Perform sequence alignment on [sample data]({{ "/data/sample.fasta" | relative_url }}) using seaview
 * [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }})
-* Perform sequence alignment and tree building on [sample data]({{ "/data/sample.fasta" | relative_url }})
 
 
 <!--
@@ -52,7 +52,7 @@ Have some in-class exercise about the independent contrasts method? How about a 
 Have some sort of strange distance-based phylogenetics thing?
 -->
 
-#### Homework
+### Homework
 
 * Watch introduction to phylogenetics video
 * Review conditional probability
@@ -61,11 +61,11 @@ Have some sort of strange distance-based phylogenetics thing?
 ## Day 2: Phylogenetics methods
 
 * Quiz on video material
+* Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Practical: inferring trees
-* Lecture: phylogenetic sequence alignment
-* Practical: doing sequence alignment
+* Lecture: branch support
 
-#### Homework
+### Homework
 
 * Watch introduction to phylogenetic likelihood video
 * Get programs working if they aren't already
@@ -79,7 +79,7 @@ Have some sort of strange distance-based phylogenetics thing?
 * Lecture: codon models
 * Exercise: the Q matrix and stationarity; pulley principle
 
-#### Homework
+### Homework
 
 * Video: [phylogenetic models of gene expression evolution](https://www.youtube.com/watch?v=3lxqv_iJeLY)
 * Datamonkey
@@ -94,6 +94,6 @@ Have some sort of strange distance-based phylogenetics thing?
 * Lecture: Bayesian methods
 * Lecture: [coalescent and population size](http://bedford.io/projects/mitii/coalescent-and-selection/coalescent.html#/)
 
-#### Homework
+### Homework
 
 * Complete quantifying evolution project

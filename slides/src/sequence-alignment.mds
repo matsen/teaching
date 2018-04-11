@@ -1,0 +1,45 @@
+% Sequence alignment from the <br> phylogenetic perspective
+% Erick Matsen
+
+
+
+# In phylogenetics, *homology* means..
+
+^imgh figures/phylo/bigProtAln-column.svg
+
+
+# Structural alignment is another perspective
+
+^imgh figures/alignment/structural-alignment.png
+
+
+# Sequence alignment is hard!
+^imgh figures/alignment/alignment-and-phylogeny-protpal-truth-only.png
+
+
+# Sometimes it's more or less impossible
+^imgh figures/alignment/alignment-and-phylogeny-protpal-hard-case.png
+
+
+# Phylogenetic approach is best
+^imgw figures/alignment/alignment-and-phylogeny-protpal-tractable-case.png
+^div citation "[Westesson et al. 2012](http://dx.doi.org/10.1371/journal.pone.0034572)"
+
+
+# Muscle vs PRANK
+^imgw figures/alignment/alignment-and-phylogeny-prank.png
+<div class="citation">
+[Löytynoja and Goldman 2008](http://dx.doi.org/10.1126/science.1158395)
+</div>
+
+
+# [BAli-Phy](http://www.bali-phy.org/)
+Co-estimate tree & alignment using Bayesian methods
+^imgw figures/alignment/bali-phy.png
+
+
+# Multiple sequence alignment: summary
+* Use PRANK, perhaps through [Wasabi](http://wasabiapp.org/)
+* If you need a faster algorithm and are happy with a less good result, try [Muscle](http://drive5.com/muscle/)
+* If you really care about alignments (and trees) use BAli-Phy.
+
