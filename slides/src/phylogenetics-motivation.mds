@@ -3,7 +3,7 @@
 
 # Popular image of phylogenetics
 
-^imgh figures/motivation/sponges-sister-tree.png
+^img figures/motivation/sponges-sister-tree.png
 ^div caption "Simion *et al*, *Current Biology*, 2017"
 
 
@@ -51,10 +51,10 @@ Trait measurement is old-school. I am young and hip!
 ^imgh figures/comparative-method/hipster-rna-seq.svg 450
 
 #
-^imgh figures/comparative-method/dunn-pairwise-felsenstein-1.svg
+^img figures/comparative-method/dunn-pairwise-felsenstein-1.svg
 
 #
-^imgh figures/comparative-method/dunn-pairwise-felsenstein.svg
+^img figures/comparative-method/dunn-pairwise-felsenstein.svg
 
 # Dunn et al. reanalyze two papers
 
@@ -69,11 +69,11 @@ Trait measurement is old-school. I am young and hip!
 
 <br>
 
-^imgw figures/comparative-method/dunn-constrasts.png
+^img figures/comparative-method/dunn-constrasts.png
 
 #
 
-^imgh figures/comparative-method/dunn-mostacci-sim.png
+^img figures/comparative-method/dunn-mostacci-sim.png
 
 
 #
@@ -85,11 +85,11 @@ Trait measurement is old-school. I am young and hip!
 
 # Levin analysis
 
-^imgw figures/comparative-method/levin-hourglass.png
+^img figures/comparative-method/levin-hourglass.png
 
 # Levin re-analysis
 
-^imgh figures/comparative-method/dunn-reanalyzes-levin.png
+^img figures/comparative-method/dunn-reanalyzes-levin.png
 
 
 # For a paper that does it right...
@@ -102,17 +102,17 @@ Schraiber, J. G., Mostovoy, Y., Hsu, T. Y., & Brem, R. B. (2013). Inferring evol
 ^div bigpurple "Flu transmission patterns"
 
 # Where does the flu come from?
-^imgw figures/phylogeography/bedford-2010-migration-map.png
+^img figures/phylogeography/bedford-2010-migration-map.png
 
 <div class="fragment">
 Bedford, T., Cobey, S., Beerli, P., & Pascual, M. (2010). Global Migration Dynamics Underlie Evolution and Persistence of Human Influenza A (H3N2). PLoS Pathogens, 6(5), e1000918. [[DOI]](https://doi.org/10.1371/journal.ppat.1000918)
 </div>
 
 # Infer trunk location
-^imgw figures/phylogeography/bedford-2010-migration-tree.png
+^img figures/phylogeography/bedford-2010-migration-tree.png
 
 # Infer trunk location
-^imgw figures/phylogeography/bedford-2010-migration-trunk.png
+^img figures/phylogeography/bedford-2010-migration-trunk.png
 
 # Where is flu going?
 <br>
@@ -120,10 +120,10 @@ Bedford, T., Cobey, S., Beerli, P., & Pascual, M. (2010). Global Migration Dynam
 I.e. which virus is going to take over the population?
 
 # Local branching index
-^imgw figures/motivation/lbi-definition.png
+^img figures/motivation/lbi-definition.png
 
 # Local branching index in nextflu.org
-^imgw figures/motivation/lbi-nextflu.svg
+^img figures/motivation/lbi-nextflu.svg
 
 # Try it out
 

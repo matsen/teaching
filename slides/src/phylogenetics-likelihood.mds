@@ -3,13 +3,13 @@
 % Thank you to: Trevor Bedford (Fred Hutch)
 
 #
-^imgw figures/phylo/what_is_phylo.svg
+^img figures/phylo/what_is_phylo.svg
 
 #
-^imgw figures/phylo/what_is_phylo_taxa.svg
+^img figures/phylo/what_is_phylo_taxa.svg
 
 #
-^imgw figures/phylo/what_is_phylo_unrooted.svg
+^img figures/phylo/what_is_phylo_unrooted.svg
 
 # "data": sequence alignment
 
@@ -24,7 +24,7 @@
 
 
 # Distance-based phylogenetics
-^imgw figures/phylo/what_is_phylo_dist.svg
+^img figures/phylo/what_is_phylo_dist.svg
 
 # Parsimony phylogenetics
 
@@ -40,58 +40,58 @@ Among competing hypotheses that predict equally well, the one with the fewest as
 
 #
 Say we have three viruses
-^imgh figures/parsimony/parsimony_1.png
+^img figures/parsimony/parsimony_1.png
 
 #
 Say we have three viruses
-^imgh figures/parsimony/parsimony_2.png
+^img figures/parsimony/parsimony_2.png
 
 #
 We can explain these sequences with 3 mutations
-^imgh figures/parsimony/parsimony_3.png
+^img figures/parsimony/parsimony_3.png
 
 #
 Parsimony suggests this topology requires 3 mutations at minimum
-^imgh figures/parsimony/parsimony_4.png
+^img figures/parsimony/parsimony_4.png
 
 #
 Parsimony suggests both topologies equally tenable
 
 <br>
 
-^imgw figures/parsimony/parsimony_5.png
+^img figures/parsimony/parsimony_5.png
 
 #
 *Exercise: which topology is more parsimonious?*
-^imgh figures/parsimony/parsimony_exercise_1.png
+^img figures/parsimony/parsimony_exercise_1.png
 
 #
 *Exercise: which topology is more parsimonious?*
-^imgh figures/parsimony/parsimony_exercise_2.png
+^img figures/parsimony/parsimony_exercise_2.png
 
 #
 *Exercise: which topology is more parsimonious?*
-^imgh figures/parsimony/parsimony_exercise_3.png
+^img figures/parsimony/parsimony_exercise_3.png
 
 #
 *Exercise: which topology is more parsimonious?*
-^imgh figures/parsimony/parsimony_exercise_4.png
+^img figures/parsimony/parsimony_exercise_4.png
 
 #
 *Exercise: which topology is more parsimonious?*
-^imgh figures/parsimony/parsimony_exercise_5.png
+^img figures/parsimony/parsimony_exercise_5.png
 
 #
 *Exercise: which topology is more parsimonious?*
-^imgh figures/parsimony/parsimony_exercise_6.png
+^img figures/parsimony/parsimony_exercise_6.png
 
 #
 *Exercise: which topology is more parsimonious?*
-^imgh figures/parsimony/parsimony_exercise_7.png
+^img figures/parsimony/parsimony_exercise_7.png
 
 #
 *Exercise: which topology is more parsimonious?*
-^imgh figures/parsimony/parsimony_exercise_8.png
+^img figures/parsimony/parsimony_exercise_8.png
 
 #
 Parsimony seems sensible.
@@ -152,7 +152,7 @@ The *maximum likelihood estimate* of the parameter(s) of interest is the paramet
 #
 <s> The *maximum likelihood estimate* of the parameter(s) of interest is the parameter value(s) that maximize the likelihood. </s>
 
-^imgw figures/likelihood/prob-models-have-dials.svg
+^img figures/likelihood/prob-models-have-dials.svg
 
 Fiddle with the dials until it looks good.
 
@@ -182,7 +182,7 @@ Intuitively, would the shape of the likelihood curve be different with this larg
 # Setup for likelihood based phylogenetics
 The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model).
 
-^imgw figures/phylo/what_is_phylo_ML.scour.svg
+^img figures/phylo/what_is_phylo_ML.scour.svg
 
 Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.edu/phylip/felsenstein.html) was the [first](http://www.springerlink.com/content/g2202t346n826461/) to formalize this and develop efficient algorithms.
 
@@ -202,15 +202,15 @@ Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.ed
 
 
 # Model hierarchy, from [Posada and Crandall](http://bioinformatics.oxfordjournals.org/cgi/reprint/14/9/817)
-^imgh figures/phylo/hLRT_Posada_and_Crandal_bioInfo.png
+^img figures/phylo/hLRT_Posada_and_Crandal_bioInfo.png
 
 
 # Calculating likelihood of a single column
-^imgh figures/phylo/column_likelihood.svg
+^img figures/phylo/column_likelihood.svg
 
 
 # Likelihood of an alignment
-^imgw figures/phylo/aln_likelihood.scour.svg
+^img figures/phylo/aln_likelihood.scour.svg
 
 
 # The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model)
@@ -242,7 +242,7 @@ $$
 * But! Short alignment, 100 taxa = hours
 
 # Markov chain Monte Carlo
-^imgh figures/phylo/5-taxa-treespace-mcmc-unrooted.svg
+^img figures/phylo/5-taxa-treespace-mcmc-unrooted.svg
 
 # [Metropolis-Hastings algorithm](http://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm)
 * If you jump to a better tree, accept that move
@@ -250,10 +250,10 @@ $$
 * It's all arranged so that you sample trees in proportion to their posterior probability
 
 # Subset to high probability nodes
-^imgh figures/phylo/5-taxa-treespace-subgraph-unrooted.svg
+^img figures/phylo/5-taxa-treespace-subgraph-unrooted.svg
 
 # Real tree spaces have bottlenecks
-^imgh figures/phylo/ds6.png 550
+^img figures/phylo/ds6.png 550
 ^div caption "Whidden & M, *Systematic Biology*, 2015"
 
 
@@ -273,24 +273,24 @@ $$
 * the evolutionary process is identical on all branches of the tree
 
 # Sequence alignment is hard!
-^imgh figures/phylo/alignment-and-phylogeny-protpal-truth-only.png
+^img figures/phylo/alignment-and-phylogeny-protpal-truth-only.png
 
 # Sometimes it's more or less impossible
-^imgh figures/phylo/alignment-and-phylogeny-protpal-hard-case.png
+^img figures/phylo/alignment-and-phylogeny-protpal-hard-case.png
 
 # Phylogenetic approach is best
-^imgw figures/phylo/alignment-and-phylogeny-protpal-tractable-case.png
+^img figures/phylo/alignment-and-phylogeny-protpal-tractable-case.png
 ^div citation "[Westesson et al. 2012](http://dx.doi.org/10.1371/journal.pone.0034572)"
 
 # Muscle vs PRANK
-^imgw figures/phylo/alignment-and-phylogeny-prank.png
+^img figures/phylo/alignment-and-phylogeny-prank.png
 <div class="citation">
 [Löytynoja and Goldman 2008](http://dx.doi.org/10.1126/science.1158395)
 </div>
 
 # [BAli-Phy](http://www.bali-phy.org/)
 Co-estimate tree & alignment using Bayesian methods
-^imgw figures/phylo/bali-phy.png
+^img figures/phylo/bali-phy.png
 
 # Multiple sequence alignment: summary
 * Use PRANK, perhaps through [Wasabi](http://wasabiapp.org/)
@@ -299,10 +299,10 @@ Co-estimate tree & alignment using Bayesian methods
 
 
 # Natural selection inference
-^imgh figures/phylo/synonymous-vs-nonsyn.svg
+^img figures/phylo/synonymous-vs-nonsyn.svg
 
 # Yang-Nielsen 2000 model
-^imgw figures/phylo/yn00-model.png
+^img figures/phylo/yn00-model.png
 ^div citation "[Yang & Nielsen 2000](http://mbe.oxfordjournals.org/content/17/1/32.short)"
 
 # Natural selection inference is a HUGE topic

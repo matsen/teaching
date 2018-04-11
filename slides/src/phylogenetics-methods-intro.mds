@@ -3,13 +3,13 @@
 % Thank you to: Trevor Bedford (Fred Hutch)
 
 #
-^imgw figures/phylo/what_is_phylo.svg
+^img figures/phylo/what_is_phylo.svg
 
 #
-^imgw figures/phylo/what_is_phylo_taxa.svg
+^img figures/phylo/what_is_phylo_taxa.svg
 
 #
-^imgw figures/phylo/what_is_phylo_unrooted.svg
+^img figures/phylo/what_is_phylo_unrooted.svg
 
 
 # "data": sequence alignment
@@ -25,7 +25,7 @@
 
 # In phylogenetics, *homology* means..
 
-^imgh figures/phylo/bigProtAln-column.svg
+^img figures/phylo/bigProtAln-column.svg
 
 
 # Types of phylogenetic inference methods
@@ -37,7 +37,7 @@
 
 
 # Distance-based phylogenetics
-^imgw figures/phylo/what_is_phylo_dist.svg
+^img figures/phylo/what_is_phylo_dist.svg
 
 # Parsimony phylogenetics
 
@@ -165,7 +165,7 @@ The *maximum likelihood estimate* of the parameter(s) of interest is the paramet
 #
 <s> The *maximum likelihood estimate* of the parameter(s) of interest is the parameter value(s) that maximize the likelihood. </s>
 
-^imgw figures/likelihood/prob-models-have-dials.svg
+^img figures/likelihood/prob-models-have-dials.svg
 
 Fiddle with the dials until it looks good.
 
@@ -195,7 +195,7 @@ Intuitively, would the shape of the likelihood curve be different with this larg
 # Setup for likelihood based phylogenetics
 The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model).
 
-^imgw figures/phylo/what_is_phylo_ML.scour.svg
+^img figures/phylo/what_is_phylo_ML.scour.svg
 
 Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.edu/phylip/felsenstein.html) was the [first](http://www.springerlink.com/content/g2202t346n826461/) to formalize this and develop efficient algorithms.
 
@@ -215,15 +215,15 @@ Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.ed
 
 
 # Model hierarchy, from [Posada and Crandall](http://bioinformatics.oxfordjournals.org/cgi/reprint/14/9/817)
-^imgh figures/phylo/hLRT_Posada_and_Crandal_bioInfo.png
+^img figures/phylo/hLRT_Posada_and_Crandal_bioInfo.png
 
 
 # Calculating likelihood of a single column
-^imgh figures/phylo/column_likelihood.svg
+^img figures/phylo/column_likelihood.svg
 
 
 # Likelihood of an alignment
-^imgw figures/phylo/aln_likelihood.scour.svg
+^img figures/phylo/aln_likelihood.scour.svg
 
 
 # The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model)
@@ -255,7 +255,7 @@ $$
 * But! Short alignment, 100 taxa = hours
 
 # Markov chain Monte Carlo
-^imgh figures/phylo/5-taxa-treespace-mcmc-unrooted.svg
+^img figures/phylo/5-taxa-treespace-mcmc-unrooted.svg
 
 # [Metropolis-Hastings algorithm](http://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm)
 * If you jump to a better tree, accept that move
@@ -263,7 +263,7 @@ $$
 * It's all arranged so that you sample trees in proportion to their posterior probability
 
 # Subset to high probability nodes
-^imgh figures/phylo/5-taxa-treespace-subgraph-unrooted.svg
+^img figures/phylo/5-taxa-treespace-subgraph-unrooted.svg
 
 # Real tree spaces have bottlenecks
 ^imgh figures/phylo/ds6.png 550
