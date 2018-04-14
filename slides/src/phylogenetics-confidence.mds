@@ -27,11 +27,9 @@
 #
 ^img figures/confidence/bootstrap-explained.png
 
-^div citation "[Baldauf 2003](http://dx.doi.org/10.1016/S0168-9525(03)00112-4)"
-
 <br>
 
-_What assumption of phylogenetic methods underlies this application of the bootstrap?_
+_What assumption enables this application of the bootstrap?_
 
 
 # approximate likelihood ratio test

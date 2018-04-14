@@ -64,7 +64,7 @@ Have some sort of strange distance-based phylogenetics thing?
 * Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
 * Practical: support values
 * Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
-* Lecture: branch support
+* Practical: sequence alignment
 
 ### Homework
 
@@ -91,7 +91,6 @@ Have some sort of strange distance-based phylogenetics thing?
 
 * Quiz on video material
 * Independent contrasts?
-* Lecture: Phylogenetic sequence alignment
 * Lecture: Bayesian methods
 * Lecture: [coalescent and population size](http://bedford.io/projects/mitii/coalescent-and-selection/coalescent.html#/)
 
