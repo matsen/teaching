@@ -14,18 +14,25 @@
 
 # "data": sequence alignment
 
-^img figures/phylo/bigProtAln.png
+^img figures/alignment/bigProtAln.png
 
 
 # A sequence alignment is not a fact
 
-^img figures/phylo/bigProtAln.png
+^img figures/alignment/bigProtAln.png
 
 ... it is a complex inference.
 
-# In phylogenetics, *homology* means..
+# In molecular phylogenetics, *homology* means...
 
-^img figures/phylo/bigProtAln-column.svg
+^img figures/alignment/bigProtAln-column.svg
+
+# In molecular phylogenetics, *homology* means...
+
+^img figures/alignment/bigProtAln-column.svg
+
+Thus sequence alignment for phylogenetics is <br>
+a _super challenging inference_. More about this later.
 
 
 # Types of phylogenetic inference methods
@@ -38,6 +45,13 @@
 
 # Distance-based phylogenetics
 ^img figures/phylo/what_is_phylo_dist.svg
+
+
+# Distance-based phylogenetics
+^img figures/phylo/what_is_phylo_dist.svg
+
+Note that the matrix doesn't have to come from sequence data.
+
 
 # Parsimony phylogenetics
 
@@ -122,12 +136,12 @@ Is it the most popular phylogenetics method?
 # Long branch attraction
 ^imgh figures/parsimony/lba-tree-1.png 500
 
-<http://slideplayer.com/slide/9059488/>
+^div citation "http://slideplayer.com/slide/9059488/"
 
 # Long branch attraction
 ^imgh figures/parsimony/lba-tree-2.png 500
 
-<http://slideplayer.com/slide/9059488/>
+^div citation "http://slideplayer.com/slide/9059488/"
 
 # Are we cooked?
 

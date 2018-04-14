@@ -1,0 +1,48 @@
+% Confidence measures in phylogenetics
+% Erick Matsen
+
+# Examine the confidence measures for your trees.
+
+<br>
+
+^div fragment "... any thoughts about the data set we've been looking at?"
+
+
+#
+^img figures/confidence/felsenstein-bootstrap.png
+
+^div citation "[Felsenstein 1985](http://dx.doi.org/10.1111/j.1558-5646.1985.tb00420.x)"
+
+
+#
+^img figures/confidence/phylip-diskette.png
+
+
+#
+^img figures/confidence/bootstrap-explained.png
+
+^div citation "[Baldauf 2003](http://dx.doi.org/10.1016/S0168-9525(03)00112-4)"
+
+
+#
+^img figures/confidence/bootstrap-explained.png
+
+^div citation "[Baldauf 2003](http://dx.doi.org/10.1016/S0168-9525(03)00112-4)"
+
+<br>
+
+_What assumption of phylogenetic methods underlies this application of the bootstrap?_
+
+
+# approximate likelihood ratio test
+
+^img figures/confidence/alrt-1.svg
+
+^div citation "[Anisimova and Gascuel 2006](https://academic.oup.com/sysbio/article/55/4/539/1675125)"
+
+
+# approximate likelihood ratio test
+
+^img figures/confidence/alrt.svg
+
+^div citation "[Anisimova and Gascuel 2006](https://academic.oup.com/sysbio/article/55/4/539/1675125)"

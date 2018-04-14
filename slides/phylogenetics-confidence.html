@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Erick Matsen">
-  <title>Sequence alignment from the   phylogenetic perspective</title>
+  <title>Confidence measures in phylogenetics</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -67,54 +67,57 @@
     <div class="slides">
 
 <section>
-  <h1 class="title">Sequence alignment from the <br> phylogenetic perspective</h1>
+  <h1 class="title">Confidence measures in phylogenetics</h1>
   <p class="author">Erick Matsen</p>
 </section>
 
-<section id="in-phylogenetics-homology-means.." class="slide level1">
-<h1>In phylogenetics, <em>homology</em> means..</h1>
-<img src="figures/alignment/bigProtAln-column_nofonts.svg" class="stretch">
+<section id="examine-the-confidence-measures-for-your-trees." class="slide level1">
+<h1>Examine the confidence measures for your trees.</h1>
+<p><br></p>
 <div class="fragment">
-Why?
+… any thoughts about the data set we’ve been looking at?
 </div>
 </section>
-<section id="structural-alignment-is-another-perspective" class="slide level1">
-<h1>Structural alignment is another perspective</h1>
-<img src="figures/alignment/structural-alignment.png" class="stretch">
-</section>
-<section id="sequence-alignment-for-phylogenetics-is-hard" class="slide level1">
-<h1>Sequence alignment for phylogenetics is hard!</h1>
-<img src="figures/alignment/alignment-and-phylogeny-protpal-truth-only.png" class="stretch">
-</section>
-<section id="sometimes-its-more-or-less-impossible" class="slide level1">
-<h1>Sometimes it’s more or less impossible</h1>
-<img src="figures/alignment/alignment-and-phylogeny-protpal-hard-case.png" class="stretch">
-</section>
-<section id="phylogenetic-approach-is-best" class="slide level1">
-<h1>Phylogenetic approach is best</h1>
-<img src="figures/alignment/alignment-and-phylogeny-protpal-tractable-case.png" class="stretch">
+<section id="section" class="slide level1">
+<h1></h1>
+<img src="figures/confidence/felsenstein-bootstrap.png" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1371/journal.pone.0034572">Westesson et al. 2012</a>
+<a href="http://dx.doi.org/10.1111/j.1558-5646.1985.tb00420.x">Felsenstein 1985</a>
 </div>
 </section>
-<section id="muscle-vs-prank" class="slide level1">
-<h1>Muscle vs PRANK</h1>
-<img src="figures/alignment/alignment-and-phylogeny-prank.png" class="stretch">
+<section id="section-1" class="slide level1">
+<h1></h1>
+<img src="figures/confidence/phylip-diskette.png" class="stretch">
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<img src="figures/confidence/bootstrap-explained.png" class="stretch">
 <div class="citation">
-<p><a href="http://dx.doi.org/10.1126/science.1158395">Löytynoja and Goldman 2008</a></p>
+<a href="http://dx.doi.org/10.1016/S0168-9525(03)00112-4">Baldauf 2003</a>
 </div>
 </section>
-<section id="bali-phy" class="slide level1">
-<h1><a href="http://www.bali-phy.org/">BAli-Phy</a></h1>
-<p>Co-estimate tree &amp; alignment using Bayesian methods <img src="figures/alignment/bali-phy.png" class="stretch"></p>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<img src="figures/confidence/bootstrap-explained.png" class="stretch">
+<div class="citation">
+<a href="http://dx.doi.org/10.1016/S0168-9525(03)00112-4">Baldauf 2003</a>
+</div>
+<p><br></p>
+<p><em>What assumption of phylogenetic methods underlies this application of the bootstrap?</em></p>
 </section>
-<section id="multiple-sequence-alignment-summary" class="slide level1">
-<h1>Multiple sequence alignment: summary</h1>
-<ul>
-<li>Use PRANK, perhaps through <a href="http://wasabiapp.org/">Wasabi</a></li>
-<li>If you need a faster algorithm and are happy with a less good result, try <a href="http://drive5.com/muscle/">Muscle</a></li>
-<li>If you really care about alignments (and trees) use BAli-Phy.</li>
-</ul>
+<section id="approximate-likelihood-ratio-test" class="slide level1">
+<h1>approximate likelihood ratio test</h1>
+<img src="figures/confidence/alrt-1_nofonts.svg" class="stretch">
+<div class="citation">
+<a href="https://academic.oup.com/sysbio/article/55/4/539/1675125">Anisimova and Gascuel 2006</a>
+</div>
+</section>
+<section id="approximate-likelihood-ratio-test-1" class="slide level1">
+<h1>approximate likelihood ratio test</h1>
+<img src="figures/confidence/alrt_nofonts.svg" class="stretch">
+<div class="citation">
+<a href="https://academic.oup.com/sysbio/article/55/4/539/1675125">Anisimova and Gascuel 2006</a>
+</div>
 </section>
     </div>
   </div>

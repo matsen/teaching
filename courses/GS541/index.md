@@ -55,14 +55,15 @@ Have some sort of strange distance-based phylogenetics thing?
 ### Homework
 
 * Watch introduction to phylogenetics video
-* Review conditional probability
+* Play around with building trees. Do the different methods in seaview return different answers?
 
 
 ## Day 2: Phylogenetics methods
 
 * Quiz on video material
+* Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
+* Practical: support values
 * Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
-* Practical: inferring trees
 * Lecture: branch support
 
 ### Homework

@@ -3,7 +3,9 @@
 
 
 # In phylogenetics, *homology* means..
-^img figures/phylo/bigProtAln-column.svg
+^img figures/alignment/bigProtAln-column.svg
+
+^div fragment Why?
 
 
 # Structural alignment is another perspective
@@ -11,7 +13,7 @@
 ^img figures/alignment/structural-alignment.png
 
 
-# Sequence alignment is hard!
+# Sequence alignment for phylogenetics is hard!
 ^img figures/alignment/alignment-and-phylogeny-protpal-truth-only.png
 
 
