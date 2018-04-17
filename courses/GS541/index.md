@@ -62,10 +62,10 @@ Have some sort of strange distance-based phylogenetics thing?
 
 * Quiz on video material
 * [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) through the end
-* Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
-* Practical: support values
-* Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
-* Practical: sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
+* [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
+* Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
+* [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
+* Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
 
 
 ### Homework
@@ -77,7 +77,6 @@ Have some sort of strange distance-based phylogenetics thing?
 ## Day 3: Theory and codon models
 
 * Quiz on video material
-* Conditional probability exercises
 * Practical: a mysterious data set
 * Lecture: codon models
 * Exercise: the Q matrix and stationarity; pulley principle
@@ -92,9 +91,7 @@ Have some sort of strange distance-based phylogenetics thing?
 ## Day 4: Further topics
 
 * Quiz on video material
-* Independent contrasts?
 * Lecture: Bayesian methods
-* Lecture: [coalescent and population size](http://bedford.io/projects/mitii/coalescent-and-selection/coalescent.html#/)
 
 ### Homework
 
