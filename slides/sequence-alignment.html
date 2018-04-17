@@ -75,7 +75,7 @@
 <h1>In phylogenetics, <em>homology</em> means..</h1>
 <img src="figures/alignment/bigProtAln-column_nofonts.svg" class="stretch">
 <div class="fragment">
-Why?
+Quiz: Why?
 </div>
 </section>
 <section id="structural-alignment-is-another-perspective" class="slide level1">
@@ -97,23 +97,88 @@ Why?
 <a href="http://dx.doi.org/10.1371/journal.pone.0034572">Westesson et al. 2012</a>
 </div>
 </section>
-<section id="muscle-vs-prank" class="slide level1">
-<h1>Muscle vs PRANK</h1>
+<section id="clustal-w-vs-prank" class="slide level1">
+<h1>Clustal W vs PRANK</h1>
 <img src="figures/alignment/alignment-and-phylogeny-prank.png" class="stretch">
 <div class="citation">
 <p><a href="http://dx.doi.org/10.1126/science.1158395">Löytynoja and Goldman 2008</a></p>
 </div>
 </section>
-<section id="bali-phy" class="slide level1">
-<h1><a href="http://www.bali-phy.org/">BAli-Phy</a></h1>
-<p>Co-estimate tree &amp; alignment using Bayesian methods <img src="figures/alignment/bali-phy.png" class="stretch"></p>
+<section id="prank-is-a-smart-hack" class="slide level1">
+<h1>PRANK is a smart “hack”</h1>
+<img src="figures/alignment/prank.png" class="stretch">
+<div class="citation">
+<p><a href="http://dx.doi.org/10.1126/science.1158395">Löytynoja and Goldman 2008</a></p>
+</div>
+</section>
+<section id="bali-phy-is-fully-model-based" class="slide level1">
+<h1><a href="http://www.bali-phy.org/">BAli-Phy</a> is fully model-based</h1>
+<img src="figures/alignment/bali-phy-pairwise-1_nofonts.svg" class="stretch">
+<div class="citation">
+<p><a href="http://dx.doi.org/10.1080/10635150590947041">Redelings &amp; Suchard 2005</a></p>
+</div>
+</section>
+<section id="bali-phy-is-fully-model-based-1" class="slide level1">
+<h1><a href="http://www.bali-phy.org/">BAli-Phy</a> is fully model-based</h1>
+<img src="figures/alignment/bali-phy-pairwise-2_nofonts.svg" class="stretch">
+<div class="citation">
+<p><a href="http://dx.doi.org/10.1080/10635150590947041">Redelings &amp; Suchard 2005</a></p>
+</div>
+</section>
+<section id="bali-phy-is-fully-model-based-2" class="slide level1">
+<h1><a href="http://www.bali-phy.org/">BAli-Phy</a> is fully model-based</h1>
+<img src="figures/alignment/bali-phy-pairwise-3_nofonts.svg" class="stretch">
+<div class="citation">
+<p><a href="http://dx.doi.org/10.1080/10635150590947041">Redelings &amp; Suchard 2005</a></p>
+</div>
+</section>
+<section id="bali-phy-is-fully-model-based-3" class="slide level1">
+<h1><a href="http://www.bali-phy.org/">BAli-Phy</a> is fully model-based</h1>
+<img src="figures/alignment/bali-phy-pairwise_nofonts.svg" class="stretch">
+<div class="citation">
+<p><a href="http://dx.doi.org/10.1080/10635150590947041">Redelings &amp; Suchard 2005</a></p>
+</div>
+</section>
+<section id="bali-phy-is-fully-model-based-4" class="slide level1">
+<h1><a href="http://www.bali-phy.org/">BAli-Phy</a> is fully model-based</h1>
+<img src="figures/alignment/bali-phy-pairwise_nofonts.svg" class="stretch">
+<div class="citation">
+<p><a href="http://dx.doi.org/10.1080/10635150590947041">Redelings &amp; Suchard 2005</a></p>
+</div>
+<p>Note how BAli-Phy can trace the history of each site through <br> the tree, and the columns are simply a reflection of that.</p>
+</section>
+<section id="bali-phy-estimates-alignment-uncertainty" class="slide level1">
+<h1><a href="http://www.bali-phy.org/">BAli-Phy</a> estimates alignment uncertainty</h1>
+<p>BAli-Phy is fully Bayesian, so it has a rigorous notion of alignment uncertainty, which can be elegantly summarized by that software:</p>
+<img width="970" src="figures/alignment/bali-phy.png">
+</section>
+<section id="bali-phy-summary" class="slide level1">
+<h1><a href="http://www.bali-phy.org/">BAli-Phy</a> summary</h1>
+<ul>
+<li>Co-estimate tree &amp; alignment using Bayesian methods</li>
+<li>Can also use codon models for selection analysis; integrating out alignments <a href="http://dx.doi.org/10.1093/molbev/msu174">eliminates artifacts</a></li>
+<li>Very computationally expensive: 60 sequences may take days</li>
+</ul>
 </section>
 <section id="multiple-sequence-alignment-summary" class="slide level1">
-<h1>Multiple sequence alignment: summary</h1>
+<h1>Multiple sequence alignment summary</h1>
+<p><br></p>
 <ul>
-<li>Use PRANK, perhaps through <a href="http://wasabiapp.org/">Wasabi</a></li>
-<li>If you need a faster algorithm and are happy with a less good result, try <a href="http://drive5.com/muscle/">Muscle</a></li>
-<li>If you really care about alignments (and trees) use BAli-Phy.</li>
+<li class="fragment">
+If you really care about alignments (and trees) use <a href="http://www.bali-phy.org/">BAli-Phy</a>
+</li>
+<li class="fragment">
+<a href="https://mafft.cbrc.jp/alignment/software/">MAFFT</a> ranked the best in a recent <a href="http://dx.doi.org/10.1093/molbev/msy055">benchmark</a> by the authors of PRANK concerning ancestral sequence reconstruction
+</li>
+<li class="fragment">
+If you want good alignment using <a href="http://dx.doi.org/10.1126/science.1158395">PRANK</a> <br> with a lovely web-based GUI, use <a href="http://wasabiapp.org/">Wasabi</a>
+</li>
+<li class="fragment">
+If you want a quick and dirty alignment, use <a href="http://drive5.com/muscle/">Muscle</a> <br> (esp. if your sequences aren’t too divergent)
+</li>
+<li class="fragment">
+Do not use any variant of Clustal, even if your friends say to.
+</li>
 </ul>
 </section>
     </div>

@@ -5,7 +5,7 @@
 # In phylogenetics, *homology* means..
 ^img figures/alignment/bigProtAln-column.svg
 
-^div fragment Why?
+^div fragment "Quiz: Why?"
 
 
 # Structural alignment is another perspective
@@ -26,20 +26,84 @@
 ^div citation "[Westesson et al. 2012](http://dx.doi.org/10.1371/journal.pone.0034572)"
 
 
-# Muscle vs PRANK
+# Clustal W vs PRANK
 ^img figures/alignment/alignment-and-phylogeny-prank.png
 <div class="citation">
 [Löytynoja and Goldman 2008](http://dx.doi.org/10.1126/science.1158395)
 </div>
 
 
-# [BAli-Phy](http://www.bali-phy.org/)
-Co-estimate tree & alignment using Bayesian methods
-^img figures/alignment/bali-phy.png
+# PRANK is a smart "hack"
+^img figures/alignment/prank.png
+<div class="citation">
+[Löytynoja and Goldman 2008](http://dx.doi.org/10.1126/science.1158395)
+</div>
 
 
-# Multiple sequence alignment: summary
-* Use PRANK, perhaps through [Wasabi](http://wasabiapp.org/)
-* If you need a faster algorithm and are happy with a less good result, try [Muscle](http://drive5.com/muscle/)
-* If you really care about alignments (and trees) use BAli-Phy.
+# [BAli-Phy](http://www.bali-phy.org/) is fully model-based
+^img figures/alignment/bali-phy-pairwise-1.svg
+<div class="citation">
+[Redelings & Suchard 2005](http://dx.doi.org/10.1080/10635150590947041)
+</div>
 
+
+# [BAli-Phy](http://www.bali-phy.org/) is fully model-based
+^img figures/alignment/bali-phy-pairwise-2.svg
+<div class="citation">
+[Redelings & Suchard 2005](http://dx.doi.org/10.1080/10635150590947041)
+</div>
+
+# [BAli-Phy](http://www.bali-phy.org/) is fully model-based
+^img figures/alignment/bali-phy-pairwise-3.svg
+<div class="citation">
+[Redelings & Suchard 2005](http://dx.doi.org/10.1080/10635150590947041)
+</div>
+
+# [BAli-Phy](http://www.bali-phy.org/) is fully model-based
+^img figures/alignment/bali-phy-pairwise.svg
+<div class="citation">
+[Redelings & Suchard 2005](http://dx.doi.org/10.1080/10635150590947041)
+</div>
+
+
+# [BAli-Phy](http://www.bali-phy.org/) is fully model-based
+^img figures/alignment/bali-phy-pairwise.svg
+<div class="citation">
+[Redelings & Suchard 2005](http://dx.doi.org/10.1080/10635150590947041)
+</div>
+
+Note how BAli-Phy can trace the history of each site through <br> the tree, and the columns are simply a reflection of that.
+
+# [BAli-Phy](http://www.bali-phy.org/) estimates alignment uncertainty
+
+BAli-Phy is fully Bayesian, so it has a rigorous notion of alignment uncertainty, which can be elegantly summarized by that software:
+
+^imgw figures/alignment/bali-phy.png
+
+# [BAli-Phy](http://www.bali-phy.org/) summary
+
+* Co-estimate tree & alignment using Bayesian methods
+* Can also use codon models for selection analysis; integrating out alignments [eliminates artifacts](http://dx.doi.org/10.1093/molbev/msu174)
+* Very computationally expensive: 60 sequences may take days
+
+# Multiple sequence alignment summary
+
+<br>
+
+<ul>
+<li class=fragment>
+If you really care about alignments (and trees) use [BAli-Phy](http://www.bali-phy.org/)
+</li>
+<li class=fragment>
+[MAFFT](https://mafft.cbrc.jp/alignment/software/) ranked the best in a recent [benchmark](http://dx.doi.org/10.1093/molbev/msy055) by the authors of PRANK concerning ancestral sequence reconstruction
+</li>
+<li class=fragment>
+If you want good alignment using [PRANK](http://dx.doi.org/10.1126/science.1158395) <br> with a lovely web-based GUI, use [Wasabi](http://wasabiapp.org/)
+</li>
+<li class=fragment>
+If you want a quick and dirty alignment, use [Muscle](http://drive5.com/muscle/) <br> (esp. if your sequences aren't too divergent)
+</li>
+<li class=fragment>
+Do not use any variant of Clustal, even if your friends say to.
+</li>
+</ul>

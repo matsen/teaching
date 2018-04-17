@@ -44,8 +44,8 @@ with open('data.fasta', 'w') as f:
 
 * Lecture: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
 * Perform sequence alignment on [sample data]({{ "/data/sample.fasta" | relative_url }}) using seaview
-* [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }})
-
+* [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) to parsimony
+* Try using various algorithms to build trees with seaview; then try clicking "Full, Swap, Re-root, and Subtree"
 
 <!--
 Have some in-class exercise about the independent contrasts method? How about a parameter count of how much signal there is in the data?
@@ -55,16 +55,18 @@ Have some sort of strange distance-based phylogenetics thing?
 ### Homework
 
 * Watch introduction to phylogenetics video
-* Play around with building trees. Do the different methods in seaview return different answers?
+* Play around with building trees.
 
 
 ## Day 2: Phylogenetics methods
 
 * Quiz on video material
+* [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) through the end
 * Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
 * Practical: support values
 * Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
-* Practical: sequence alignment
+* Practical: sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
+
 
 ### Homework
 
