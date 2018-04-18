@@ -15,10 +15,6 @@ After this course, I hope you will be able to
 
 ## Prerequisites
 
-### Conceptual prerequisites
-
-* Basic probability, including conditional probability. [A refresher](https://www.khanacademy.org/math/statistics-probability/probability-library#conditional-probability-independence).
-
 ### Software prerequisite
 
 Please download and make sure you can run [seaview](http://doua.prabi.fr/software/seaview) as soon as possible.
@@ -54,7 +50,7 @@ Have some sort of strange distance-based phylogenetics thing?
 
 ### Homework
 
-* Watch introduction to phylogenetics video
+* Watch [introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) ([slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
 * Play around with building trees.
 
 
@@ -70,7 +66,7 @@ Have some sort of strange distance-based phylogenetics thing?
 
 ### Homework
 
-* Watch introduction to phylogenetic likelihood video
+* Watch introduction to phylogenetic models video
 * Get programs working if they aren't already
 
 
