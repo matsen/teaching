@@ -20,20 +20,7 @@ After this course, I hope you will be able to
 Please download and make sure you can run [seaview](http://doua.prabi.fr/software/seaview) as soon as possible.
 
 <!--
-https://molevol.mbl.edu/index.php/Paul_Lewis
-http://hydrodictyon.eeb.uconn.edu/people/plewis/downloads/wh2017/Likelihood_Lewis_22July2017.pdf
-https://lukejharmon.github.io/ilhabela/instruction/2015/07/02/phylogenetic-independent-contrasts/
-
-This has some great homeworks:
 https://phylogeny.uconn.edu/courses/
-
-
-l = [''.join([random.choice('AGCT') for i in xrange(200)]) for j in xrange(6)]
-
-with open('data.fasta', 'w') as f:
-    for s in l:
-        f.write('>x\n')
-        f.write(s+'\n')
 -->
 
 ## Day 1: Phylogenetics motivation and intro
@@ -43,12 +30,7 @@ with open('data.fasta', 'w') as f:
 * [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) to parsimony
 * Try using various algorithms to build trees with seaview; then try clicking "Full, Swap, Re-root, and Subtree"
 
-<!--
-Have some in-class exercise about the independent contrasts method? How about a parameter count of how much signal there is in the data?
-Have some sort of strange distance-based phylogenetics thing?
--->
-
-### Homework
+### Homework 1a
 
 * Watch [introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) ([slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
 * Play around with building trees.
@@ -61,34 +43,42 @@ Have some sort of strange distance-based phylogenetics thing?
 * [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
 * Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
 * [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
+* Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
 * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
 
-
-### Homework
+### Homework 1b
 
 * Watch introduction to phylogenetic models video
-* Get programs working if they aren't already
 
 
 ## Day 3: Theory and codon models
 
 * Quiz on video material
-* Practical: a mysterious data set
+* A little about recombination
+* Testing for recombination using [GARD](http://datamonkey.org/gard)
 * Lecture: codon models
-* Exercise: the Q matrix and stationarity; pulley principle
 
-### Homework
+### Homework 2
 
-* Video: [phylogenetic models of gene expression evolution](https://www.youtube.com/watch?v=3lxqv_iJeLY)
-* Datamonkey
-* Start quantifying evolution project
+Analyze sequence data from [Elde et al., 2009](https://www.nature.com/articles/nature07529).
+I have put some of their data [here]({{ "/data/elde/elde.fasta" | relative_url }}) (it's not all the sequences from the paper, but it's enough for this exercise).
+
+The homework is simply to apply what you have learned in the class to this data:
+
+* perform appropriate sequence alignment
+* investigate the phylogenetic relationships between the sequences
+* test for per-branch natural selection
+
+and write a short report (however suits you, but exported to PDF) on your findings.
 
 
 ## Day 4: Further topics
 
-* Quiz on video material
+* Lecture: tests for selection
 * Lecture: Bayesian methods
 
-### Homework
 
-* Complete quantifying evolution project
+<!--
+elde gard result
+http://datamonkey.org/gard/5ad7526f4faf7e5040df1c52
+-->

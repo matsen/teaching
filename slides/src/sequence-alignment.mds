@@ -86,6 +86,13 @@ BAli-Phy is fully Bayesian, so it has a rigorous notion of alignment uncertainty
 * Can also use codon models for selection analysis; integrating out alignments [eliminates artifacts](http://dx.doi.org/10.1093/molbev/msu174)
 * Very computationally expensive: 60 sequences may take days
 
+# What's funny about this protein-coding alignment?
+^img figures/alignment/codon-1.svg
+
+# What's funny about this protein-coding alignment?
+^img figures/alignment/codon.svg
+
+
 # Multiple sequence alignment summary
 
 <br>
@@ -105,5 +112,8 @@ If you want a quick and dirty alignment, use [Muscle](http://drive5.com/muscle/)
 </li>
 <li class=fragment>
 Do not use any variant of Clustal, even if your friends say to.
+</li>
+<li class=fragment>
+Use a codon alignment if you have protein-coding genes.
 </li>
 </ul>
