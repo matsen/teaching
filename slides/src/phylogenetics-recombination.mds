@@ -1,0 +1,65 @@
+% Recombination in trees
+% Erick Matsen
+
+# What is the impact of recombination on phylogenies?
+
+
+# What is the impact of recombination on phylogenies?
+
+^img figures/recombination/effect.png
+
+^div citation "[Martin et al. 2011](http://dx.doi.org/10.1111/j.1755-0998.2011.03026.x)"
+
+
+# Testing for recombination
+
+<br>
+
+Tools for recombination detection look for signals of multiple trees.
+
+
+#
+
+^imghl figures/recombination/martins-decision.png 550
+
+^div citation "[Martin et al. 2011](http://dx.doi.org/10.1111/j.1755-0998.2011.03026.x)"
+
+
+# Recombination detection as model comparison
+
+^imgw figures/recombination/regression.jpg 500
+
+^div citation "[Minitab](http://www.minitab.com/en-us/Published-Articles/Advantages-of-Minitab-s-General-Regression-Tool/)"
+
+
+# [Akaike information criterion](https://en.wikipedia.org/wiki/Akaike_information_criterion)
+
+<br>
+
+$$
+\mathrm {AIC} =2k-2\ln({\hat {L}})
+$$
+
+$$
+\mathrm {AICc} =\mathrm {AIC} +{\frac {2k^{2}+2k}{n-k-1}}
+$$
+
+
+# Recombination detection as model comparison
+^img figures/recombination/model-comparison-1.svg
+
+
+# Recombination detection as model comparison
+^img figures/recombination/model-comparison.svg
+
+
+# GARD
+
+^img figures/recombination/gard.png
+
+^div citation "[Kosakovsky Pond et al., 2006](http://dx.doi.org/10.1093/molbev/msl051)"
+
+
+# GARD pre-bake
+
+<http://datamonkey.org/gard/5ad88315fbe9ab580f8f73cb>

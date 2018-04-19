@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Erick Matsen">
+  <title>Recombination in trees</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <style type="text/css">
+      .reveal { font-size: 32px; }
+      .reveal h1 { font-size: 1.35em; }
+  
+      .reveal section img {
+          border: none;
+          box-shadow: none;
+          vertical-align: middle;
+      }
+  
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 {
+        font-family: "News Cycle", Lato, sans-serif;
+        text-shadow: none; }
+  
+      div.bigpurple {
+        font-size: 3em;
+        line-height: 1em;
+        color: purple;
+      }
+  
+      div.caption {
+        font-size: 24px;
+        line-height: 1em;
+      }
+  
+      div.citation {
+          position: absolute;
+          bottom:0px;
+          right:0px;
+          z-index:100;
+          font-size: 0.45em !important;
+      }
+  
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Recombination in trees</h1>
+  <p class="author">Erick Matsen</p>
+</section>
+
+<section id="what-is-the-impact-of-recombination-on-phylogenies" class="slide level1">
+<h1>What is the impact of recombination on phylogenies?</h1>
+</section>
+<section id="what-is-the-impact-of-recombination-on-phylogenies-1" class="slide level1">
+<h1>What is the impact of recombination on phylogenies?</h1>
+<img src="figures/recombination/effect.png" class="stretch">
+<div class="citation">
+<a href="http://dx.doi.org/10.1111/j.1755-0998.2011.03026.x">Martin et al. 2011</a>
+</div>
+</section>
+<section id="testing-for-recombination" class="slide level1">
+<h1>Testing for recombination</h1>
+<p><br></p>
+<p>Tools for recombination detection look for signals of multiple trees.</p>
+</section>
+<section id="section" class="slide level1">
+<h1></h1>
+<p><a href="figures/recombination/martins-decision.png" target="_blank"><img src="figures/recombination/martins-decision.png" height="550"></a></p>
+<div class="citation">
+<a href="http://dx.doi.org/10.1111/j.1755-0998.2011.03026.x">Martin et al. 2011</a>
+</div>
+</section>
+<section id="recombination-detection-as-model-comparison" class="slide level1">
+<h1>Recombination detection as model comparison</h1>
+<img width="500" src="figures/recombination/regression.jpg">
+<div class="citation">
+<a href="http://www.minitab.com/en-us/Published-Articles/Advantages-of-Minitab-s-General-Regression-Tool/">Minitab</a>
+</div>
+</section>
+<section id="akaike-information-criterion" class="slide level1">
+<h1><a href="https://en.wikipedia.org/wiki/Akaike_information_criterion">Akaike information criterion</a></h1>
+<p><br></p>
+<p><span class="math display">\[
+\mathrm {AIC} =2k-2\ln({\hat {L}})
+\]</span></p>
+<p><span class="math display">\[
+\mathrm {AICc} =\mathrm {AIC} +{\frac {2k^{2}+2k}{n-k-1}}
+\]</span></p>
+</section>
+<section id="recombination-detection-as-model-comparison-1" class="slide level1">
+<h1>Recombination detection as model comparison</h1>
+<img src="figures/recombination/model-comparison-1_nofonts.svg" class="stretch">
+</section>
+<section id="recombination-detection-as-model-comparison-2" class="slide level1">
+<h1>Recombination detection as model comparison</h1>
+<img src="figures/recombination/model-comparison_nofonts.svg" class="stretch">
+</section>
+<section id="gard" class="slide level1">
+<h1>GARD</h1>
+<img src="figures/recombination/gard.png" class="stretch">
+<div class="citation">
+<a href="http://dx.doi.org/10.1093/molbev/msl051">Kosakovsky Pond et al., 2006</a>
+</div>
+</section>
+<section id="gard-pre-bake" class="slide level1">
+<h1>GARD pre-bake</h1>
+<p><a href="http://datamonkey.org/gard/5ad88315fbe9ab580f8f73cb" class="uri">http://datamonkey.org/gard/5ad88315fbe9ab580f8f73cb</a></p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

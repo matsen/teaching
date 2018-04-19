@@ -27,7 +27,7 @@ https://phylogeny.uconn.edu/courses/
 
 * Lecture: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
 * Perform sequence alignment on [sample data]({{ "/data/sample.fasta" | relative_url }}) using seaview
-* [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) to parsimony
+* Lecture: [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) to parsimony
 * Try using various algorithms to build trees with seaview; then try clicking "Full, Swap, Re-root, and Subtree"
 
 ### Homework 1a
@@ -38,9 +38,9 @@ https://phylogeny.uconn.edu/courses/
 
 ## Day 2: Phylogenetics methods
 
-* Quiz on video material
-* [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) through the end
-* [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
+* Quiz on and discussion of video material
+* Lecture: [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) through the end
+* Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
 * Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
 * [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
@@ -53,8 +53,8 @@ https://phylogeny.uconn.edu/courses/
 
 ## Day 3: Theory and codon models
 
-* Quiz on video material
-* A little about recombination
+* Quiz on and discussion of video material
+* Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
 * Lecture: codon models
 
