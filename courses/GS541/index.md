@@ -3,6 +3,10 @@ layout: default
 title: 'GS541 home'
 ---
 
+<!--
+https://docs.google.com/document/d/1bDTYk5WPVvvuVzD3DEVma-03TxJL5bjbYpwMvIwHRNE/edit
+-->
+
 _Welcome to the phylogenetics module of Genome Sciences 541._
 
 After this course, I hope you will be able to
@@ -19,10 +23,6 @@ After this course, I hope you will be able to
 
 Please download and make sure you can run [seaview](http://doua.prabi.fr/software/seaview) as soon as possible.
 
-<!--
-https://phylogeny.uconn.edu/courses/
--->
-
 ## Day 1: Phylogenetics motivation and intro
 
 * Lecture: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
@@ -32,7 +32,7 @@ https://phylogeny.uconn.edu/courses/
 
 ### Homework 1a
 
-* Watch [introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) ([slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
+* Watch [introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
 * Play around with building trees.
 
 
@@ -56,7 +56,7 @@ https://phylogeny.uconn.edu/courses/
 * Quiz on and discussion of video material
 * Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
-* Lecture: codon models
+* Lecture: codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }})
 
 ### Homework 2
 
@@ -74,15 +74,10 @@ and write a short report (however suits you, but exported to PDF) on your findin
 
 ## Day 4: Further topics
 
-* Lecture: tests for selection
+* Lecture: [codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }}), continued
 * Lecture: [Bayesian methods]({{ "/slides/phylogenetics-bayesian.html" | relative_url }})
 * Play with [MCMC Robot](https://phylogeny.uconn.edu/mcmc-robot/)
 
-
-<!--
-elde gard result
-http://datamonkey.org/gard/5ad7526f4faf7e5040df1c52
--->
 
 <hr>
 
@@ -98,3 +93,4 @@ http://datamonkey.org/gard/5ad7526f4faf7e5040df1c52
 * [RAxML](http://wwwkramer.in.tum.de/exelixis/software.html), [PhyML](http://www.atgc-montpellier.fr/phyml/), and [IQ-TREE](http://www.iqtree.org/) -- somewhat less approximate ML
 * [BEAST](http://beast.bio.ed.ac.uk/) -- Bayesian, inferring event times and rooted trees
 * [MrBayes](http://mrbayes.csit.fsu.edu/) and [RevBayes](http://revbayes.github.io/) -- Bayesian, inferring unrooted trees
+* [DataMonkey](http://datamonkey.org), your one-stop online shop for selection and recombination analysis
