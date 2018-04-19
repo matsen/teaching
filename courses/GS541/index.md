@@ -75,10 +75,26 @@ and write a short report (however suits you, but exported to PDF) on your findin
 ## Day 4: Further topics
 
 * Lecture: tests for selection
-* Lecture: Bayesian methods
+* Lecture: [Bayesian methods]({{ "/slides/phylogenetics-bayesian.html" | relative_url }})
+* Play with [MCMC Robot](https://phylogeny.uconn.edu/mcmc-robot/)
 
 
 <!--
 elde gard result
 http://datamonkey.org/gard/5ad7526f4faf7e5040df1c52
 -->
+
+<hr>
+
+
+## Books
+* [*Inferring Phylogenies*](http://www.sinauer.com/detail.php?id=1775) by Felsenstein
+* [*The Phylogenetic Handbook*](http://www.cambridge.org/gb/knowledge/isbn/item2327447/?site_locale=en_GB) edited by Lemey, Salemi, and Vandamme, chapters by the stars
+
+
+## Software
+
+* [FastTree](http://www.microbesonline.org/fasttree/) -- approximate ML
+* [RAxML](http://wwwkramer.in.tum.de/exelixis/software.html), [PhyML](http://www.atgc-montpellier.fr/phyml/), and [IQ-TREE](http://www.iqtree.org/) -- somewhat less approximate ML
+* [BEAST](http://beast.bio.ed.ac.uk/) -- Bayesian, inferring event times and rooted trees
+* [MrBayes](http://mrbayes.csit.fsu.edu/) and [RevBayes](http://revbayes.github.io/) -- Bayesian, inferring unrooted trees

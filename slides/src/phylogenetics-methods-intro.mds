@@ -205,7 +205,7 @@ Intuitively, would the shape of the likelihood curve be different with this larg
 * To apply likelihood, we need a *model* of the system under investigation
 * In general, the "likelihood" is the likelihood of generating the data under the given parameters, written $P(D | \theta),$ where $D$ is the data and $\theta$ are the parameters.
 
-
+<!--
 # Setup for likelihood based phylogenetics
 The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model).
 
@@ -238,60 +238,7 @@ Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.ed
 
 # Likelihood of an alignment
 ^img figures/phylo/aln_likelihood.scour.svg
-
-
-# The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model)
-<div class="incremental">
-* Maximum likelihood gives a point estimate
-* Confidence is assessed using the [bootstrap](http://www.jstor.org/pss/2408678)
-(* There are other ways, such as the [aLRT](http://sysbio.oxfordjournals.org/content/55/4/539.short) test in PhyML.
-* Lots of flexibility with models
-</div>
-
-
-# Bayes is [magic](http://en.wikipedia.org/wiki/Bayes%27_theorem)
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-$$
-P(\theta \mid D) \propto P(D \mid \theta) P(\theta)
-$$
-
-
-# The posterior probability of a tree is the probability that the observed tree is correct (given the model and priors)
-* Bayesians sample from this posterior
-* If you can deal with a prior, it's the statistically right thing to do
-* Sometimes we aren't actually interested in the tree, so we can integrate it out
-* But! Short alignment, 100 taxa = hours
-
-# Markov chain Monte Carlo
-^img figures/phylo/5-taxa-treespace-mcmc-unrooted.svg
-
-# [Metropolis-Hastings algorithm](http://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm)
-* If you jump to a better tree, accept that move
-* If you jump to a worse tree, accept that move with a non-zero probability
-* It's all arranged so that you sample trees in proportion to their posterior probability
-
-# Subset to high probability nodes
-^img figures/phylo/5-taxa-treespace-subgraph-unrooted.svg
-
-# Real tree spaces have bottlenecks
-^imgh figures/phylo/ds6.png 550
-^div caption "Whidden & M, *Systematic Biology*, 2015"
-
-
-# Likelihood phylogenetics recap
-<div class="incremental">
-* In likelihood phylogenetics, explicitly model mutation process
-* This allows complex models to be used
-* Statistical basis allows us to make formal statements about uncertainty
-* But on the other hand our models are over-simple!
-</div>
-
+-->
 
 # Crazy but typical model assumptions
 
@@ -299,19 +246,4 @@ $$
 * evolution happens on each column independently
 * sequences are evolving according to *reversible* models (this excludes selection and directional evolution of base composition)
 * the evolutionary process is identical on all branches of the tree
-
-
-# To read
-* [*Inferring Phylogenies*](http://www.sinauer.com/detail.php?id=1775) by Felsenstein
-* [*The phylogenetic handbook*](http://www.cambridge.org/gb/knowledge/isbn/item2327447/?site_locale=en_GB) edited by Lemey, Salemi, and Vandamme, chapters by the stars
-* [Bodega phylogenetics tutorials](http://treethinkers.org/tutorials/)
-
-
-# Software
-
-* [FastTree](http://www.microbesonline.org/fasttree/) -- approximate ML
-* [RAxML](http://wwwkramer.in.tum.de/exelixis/software.html) and [PhyML](http://www.atgc-montpellier.fr/phyml/) -- somewhat less approximate ML
-* [BEAST](http://beast.bio.ed.ac.uk/) -- Bayesian
-* [MrBayes](http://mrbayes.csit.fsu.edu/) -- Bayesian
-* many others, but these are the ones I know ...
 

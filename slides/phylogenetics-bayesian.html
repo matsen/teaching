@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Erick Matsen">
+  <title>Bayesian phylogenetics</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <style type="text/css">
+      .reveal { font-size: 32px; }
+      .reveal h1 { font-size: 1.35em; }
+  
+      .reveal section img {
+          border: none;
+          box-shadow: none;
+          vertical-align: middle;
+      }
+  
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 {
+        font-family: "News Cycle", Lato, sans-serif;
+        text-shadow: none; }
+  
+      div.bigpurple {
+        font-size: 3em;
+        line-height: 1em;
+        color: purple;
+      }
+  
+      div.caption {
+        font-size: 24px;
+        line-height: 1em;
+      }
+  
+      div.citation {
+          position: absolute;
+          bottom:0px;
+          right:0px;
+          z-index:100;
+          font-size: 0.45em !important;
+      }
+  
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Bayesian phylogenetics</h1>
+  <p class="author">Erick Matsen</p>
+</section>
+
+<section id="section" class="slide level1">
+<h1></h1>
+Modern technology gives us the ability to <em>observe</em> in great detail <img width="970" src="figures/inference/edge-detection-first.jpg">
+<aside class="notes">
+Modern technology gives us the ability to <em>observe</em> in great detail, which is wonderful, but in order to actually gain understanding we need to simplify and abstract.
+</aside>
+<p> </p>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<p>But very detailed observation is not the same as understanding <img width="970" src="figures/inference/edge-detection.jpg"></p>
+<p>To <em>understand</em> we need to simplify and abstract.</p>
+</section>
+<section id="what-abstractions-do-we-have-at-our-disposal" class="slide level1">
+<h1>What abstractions do we have at our disposal?</h1>
+</section>
+<section id="section-2" class="slide level1">
+<h1> </h1>
+<section data-background="figures/inference/abstraction-3_nofonts.svg">
+</section>
+<p> </p>
+<aside class="notes">
+<ul>
+<li>Here is the number 3, which is one abstraction we all know and love.</li>
+<li>This is such a basic abstraction that sometimes we forget that it’s an abstraction at all.</li>
+<li>But it really is– you can’t have “three” in your pocket.</li>
+<li>You can have three coins, three pipette tips or three wombats in your pocket, but you can’t have “three”.</li>
+<li>I think we can all agree that conducting science without the letter 3 and its ilk would be rather difficult.</li>
+</ul>
+So now I’m going to skip over the square root of 2 and the completely bizarre notion of negative numbers to <span class="math inline">\(x\)</span>.
+</aside>
+</section>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<section data-background="figures/inference/abstraction-x_nofonts.svg">
+</section>
+<aside class="notes">
+<ul>
+<li><span class="math inline">\(x\)</span> is like 3 in that it represents an abstract quantity, but in the case of <span class="math inline">\(x\)</span> it’s an unknown abstract quantity.</li>
+<li><span class="math inline">\(x\)</span> is SO COOL.</li>
+<li><span class="math inline">\(x\)</span> is SO COOL because it allows us to describe knowledge in an implicit way.</li>
+</ul>
+</aside>
+</section>
+<section id="x-is-useful-and-we-love-it-dearly" class="slide level1">
+<h1><span class="math inline">\(x\)</span> is useful and we love it dearly!</h1>
+<p> </p>
+<p><span class="math inline">\(x\)</span> allows us to describe knowledge in an implicit way:</p>
+<p> </p>
+<p><span class="math display">\[
+f(x)=y
+\]</span></p>
+<p> </p>
+<p>then we can work towards <em>solving</em> for <span class="math inline">\(x\)</span>.</p>
+<p> </p>
+<p> </p>
+<div class="fragment">
+<p>Alternatively, one might be interested in taking the average of <span class="math inline">\(f(x)\)</span> between two values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+</div>
+<aside class="notes">
+<ul>
+<li>For example, here we have <span class="math inline">\(x\)</span></li>
+<li><span class="math inline">\(x\)</span> is SO COOL.</li>
+<li>It allows us to describe knowledge in an implicit way.</li>
+</ul>
+</aside>
+</section>
+<section id="define-int_ab-fx-dx-as-area" class="slide level1">
+<h1>Define <span class="math inline">\(\int_a^b f(x) \ dx\)</span> as area</h1>
+<img src="figures/inference/integral-auc_nofonts.svg" height="550">
+</section>
+<section id="b-a-cdot-int_ab-fx-dx-is-average" class="slide level1">
+<h1><span class="math inline">\(1/(b-a) \cdot \int_a^b f(x) \ dx\)</span> is average</h1>
+<img src="figures/inference/integral-average_nofonts.svg" height="550">
+</section>
+<section id="variables-allow-us-to-solve" class="slide level1">
+<h1>Variables allow us to solve</h1>
+<img width="970" src="figures/inference/cannon-deterministic_nofonts.svg">
+<ul>
+<li><em>Problem 1</em>: given <span class="math inline">\(y\)</span>, solve for <span class="math inline">\(x\)</span>.</li>
+<li><em>Problem 2</em>: predict if a 10% bigger charge will hit the castle. <br> Say the answer to this is <span class="math inline">\(\text{hit}_{10}(x)\)</span>, such that <span class="math inline">\(\text{hit}_{10}(x)\)</span> is 1 if that <span class="math inline">\(x\)</span> will make the cannonball hit the castle, and 0 otherwise.</li>
+</ul>
+<aside class="notes">
+<ul>
+<li>I will leave the actual solution as an exercise.</li>
+<li>But actually I would like to use this toy problem as a way to point out that normal sorts of variables only allow us to solve…</li>
+</ul>
+</aside>
+</section>
+<section id="variables-allow-us-to-solve-1" class="slide level1">
+<h1>Variables allow us to solve</h1>
+<img width="970" src="figures/inference/cannon-deterministic_nofonts.svg">
+<p> </p>
+<p> </p>
+<p>… in a <em>deterministic</em> framework.</p>
+<aside class="notes">
+<ul>
+<li>This implicitly assumes that not only does the process happen in exactly the same way each time, it also means that we have a complete description of the process.</li>
+<li>Given x, the cannonball is going to take exactly the same trajectory each time.</li>
+<li>No variation in wind, no strange turbulence effects with slightly different shaped cannonballs, no anything that might make the path do anything other than strict Newtonian motion.</li>
+<li>So here is a picture of something that inhabits this world:</li>
+</ul>
+</aside>
+</section>
+<section id="section-4" class="slide level1">
+<h1></h1>
+<section data-background="figures/inference/coin-flipping-machine.jpg">
+</section>
+</section>
+<section id="section-5" class="slide level1">
+<h1></h1>
+<section data-background="figures/inference/coin-flipping-hand.jpg">
+</section>
+<p> </p>
+</section>
+<section id="section-6" class="slide level1">
+<h1></h1>
+<p>Life is a probabilistic process.</p>
+<p> </p>
+<p> </p>
+<p>How do we abstract probabilistic quantities?</p>
+</section>
+<section id="section-7" class="slide level1">
+<h1></h1>
+<section data-background="figures/inference/abstraction-X.svg">
+</section>
+</section>
+<section id="random-variables-x-abstract-variables" class="slide level1">
+<h1>Random variables <span class="math inline">\(X\)</span> abstract variables</h1>
+<p>It doesn’t have a fixed value: <em>we have to “ask” it for a value.</em></p>
+<img height="350" src="figures/inference/coin-flipping-hand.jpg">
+<p>Random variables are capricious, <br> but they are well defined behind their stochastic exterior.</p>
+<aside class="notes">
+Random variables are defined according to their distribution.
+</aside>
+</section>
+<section id="random-variable-sampling-determined-by-distributions" class="slide level1">
+<h1>Random variable sampling determined by <em>distributions</em></h1>
+<p> </p>
+<p>Sometimes discrete:</p>
+<p><span class="math display">\[
+\begin{align}
+P(\text{heads}) &amp; = 0.51 \\
+P(\text{tails}) &amp; = 0.49
+\end{align}
+\]</span></p>
+<p> </p>
+<div class="fragment">
+<p>Sometimes continuous:</p>
+<img width="500" src="figures/inference/Gaussian_distribution_nofonts.svg">
+</div>
+</section>
+<section id="working-with-random-variables-x" class="slide level1">
+<h1>Working with <em>random variables</em> <span class="math inline">\(X\)</span>:</h1>
+<p> </p>
+<div class="fragment">
+<p>We can solve for <span class="math inline">\(X\)</span> in “equations” like <span class="math inline">\(f(X) \sim Y\)</span>, obtaining expressions such as <span class="math inline">\(\mathbb P(X \mid Y);\)</span> this is called <em>inference</em>.</p>
+</div>
+<p> </p>
+<p> </p>
+<div class="fragment">
+<p>We can also <em>average</em> with respect to <span class="math inline">\(X\)</span>:</p>
+<p><span class="math display">\[
+\int f(X) \, d\mathbb P(X \mid Y)
+\]</span></p>
+<p>where now we are averaging out with respect to a probability.</p>
+</div>
+</section>
+<section id="probabilistic-approach-to-prediction" class="slide level1">
+<h1>Probabilistic approach to prediction</h1>
+<img width="970" src="figures/inference/cannon-probabilistic_nofonts.svg">
+<ul>
+<li><span class="math inline">\(Y\)</span>: horizontal distance traveled by a cannonball (random variable)</li>
+<li><span class="math inline">\(X\)</span>: cannon angle (inferred random variable)</li>
+<li><em>Problem 1</em>: given observed distribution <span class="math inline">\(Y\)</span>, infer distribution of <span class="math inline">\(X\)</span>.</li>
+<li><em>Problem 2</em>: find probability that a 10% bigger charge will hit castle.</li>
+</ul>
+<p> </p>
+<ol type="1">
+<li>Solve <span class="math inline">\(f(X) = Y\)</span>   to get   <span class="math inline">\(\mathbb P(X \mid Y)\)</span>.</li>
+<li>Integrate <span class="math inline">\(\int \text{hit}_{10}(X) \, d\mathbb P(X \mid Y)\)</span>.</li>
+</ol>
+</section>
+<section id="biological-experiments-are-measurements-with-uncertainty" class="slide level1">
+<h1>Biological experiments are measurements with uncertainty</h1>
+<img width="970" src="figures/inference/sequencing_nofonts.svg">
+</section>
+<section id="model-based-statistical-inference" class="slide level1">
+<h1>Model-based statistical inference <span style="color:green"> ✓ </span></h1>
+<p> </p>
+<p>We can solve for <span class="math inline">\(X\)</span> in “equations” like <span class="math inline">\(f(X) \sim Y\)</span>, <br> <em>inferring</em> an unknown distribution for <span class="math inline">\(X\)</span> <br> (what can we learn about the angle of the cannon).</p>
+<p> </p>
+<p> </p>
+<div class="fragment">
+<p>We can push uncertainty through an analysis using integrals like <span class="math display">\[
+\int_a^b f(X) \, d\mathbb P(X \mid Y).
+\]</span> (we don’t care what the angle of the cannon is really, we just want to know with what probability the shot is going to hit the castle!)</p>
+</div>
+</section>
+<section id="bayes-is-magic" class="slide level1">
+<h1>Bayes is <a href="http://en.wikipedia.org/wiki/Bayes%27_theorem">magic</a></h1>
+<p> </p>
+<p> </p>
+<p> </p>
+<p><span class="math display">\[
+P(X \mid D) \propto P(D \mid X) P(X)
+\]</span></p>
+</section>
+<section id="now-what-is-model-based-statistical-inference-on-discrete-mathematical-objects" class="slide level1">
+<h1>Now, what is model-based statistical inference on <em>discrete mathematical objects</em>?</h1>
+<p> </p>
+</section>
+<section id="motivation-we-would-like-to-decide-whether-an-individual-has-been-superinfected-i.e.infected-with-a-second-viral-variant-in-a-separate-event" class="slide level1">
+<h1>Motivation: we would like to decide whether an individual has been <em>superinfected</em>, i.e. infected with a second viral variant in a separate event</h1>
+<p> </p>
+<img width="550" src="figures/inference/superinfection-definition_nofonts.svg">
+</section>
+<section id="integrate-out-phylogenetic-uncertainty" class="slide level1">
+<h1>Integrate out phylogenetic uncertainty</h1>
+<img src="figures/inference/phylogenetic-posterior_nofonts.svg" class="stretch">
+<p> </p>
+<p>To decide superinfection, we would like to calculate <span class="math display">\[
+\int_S f(X) \, d\mathbb P(X \mid Y)
+\]</span> where <span class="math inline">\(X\)</span> is now a <em>phylogenetic-tree-valued random variable</em>.</p>
+</section>
+<section id="time-to-count-your-blessings." class="slide level1">
+<h1>Time to count your blessings.</h1>
+ 
+<ul style="list-style-type: none;">
+  
+<li class="fragment">
+<em>Real numbers are equipped with a total order.</em>         (<span class="math inline">\(3 &lt; 4\)</span>)
+</li>
+  
+<li class="fragment">
+<em>Real numbers are equipped with a simply-computed distance <br> that is compatible with the total order.</em>         (<span class="math inline">\(\,|7-3| = 4\,\)</span>)
+</li>
+  
+<li class="fragment">
+<em>Real numbers form a continuum.</em>             (<span class="math inline">\(2.9 &lt; 2.95 &lt; 3\)</span>)
+</li>
+</ul>
+</section>
+<section id="we-can-thus-define-the-integral" class="slide level1">
+<h1>We can thus define the integral</h1>
+<img src="figures/inference/riemann-integral_nofonts.svg" class="stretch">
+<p>for real-valued <span class="math inline">\(\int_a^b f(x) dx\)</span> and <span class="math inline">\(\int_a^b f(X) \, d\mathbb P(X \mid Y)\)</span>.</p>
+</section>
+<section id="integrating-over-phylogenetic-trees" class="slide level1">
+<h1>Integrating over phylogenetic trees?</h1>
+<p>Phylogenetic trees have discrete topologies, there is no canonical distance between them, nor a natural total order.</p>
+<p> </p>
+<div class="fragment">
+<p>But we still want to do inference and integration in this setting!</p>
+<img width="600" src="figures/phylo/bayesian_phylo_hearts_nofonts.svg">
+</div>
+</section>
+<section id="subtree-prune-regraft-rspr-definition" class="slide level1">
+<h1>Subtree-prune-regraft (rSPR) definition</h1>
+<p> </p>
+<img width="970" src="figures/phylo/spr-definition_nofonts.svg">
+<p> </p>
+<p>These trees are then distance 1 apart.</p>
+</section>
+<section id="tree-graph-connected-by-rspr-moves" class="slide level1">
+<h1>Tree graph connected by rSPR moves</h1>
+<img src="figures/phylo/5-taxa-treespace-unrooted_nofonts.svg" class="stretch">
+</section>
+<section id="metropolis-hastings-algorithm" class="slide level1">
+<h1><a href="http://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm">Metropolis-Hastings algorithm</a></h1>
+<ul>
+<li>If you jump to a better tree, accept that move</li>
+<li>If you jump to a worse tree, accept that move with a non-zero probability</li>
+<li>It’s all arranged so that you sample trees in proportion to their posterior probability</li>
+</ul>
+</section>
+<section id="markov-chain-monte-carlo" class="slide level1">
+<h1>Markov chain Monte Carlo</h1>
+<img src="figures/phylo/5-taxa-treespace-mcmc-unrooted_nofonts.svg" class="stretch">
+</section>
+<section id="subset-to-high-probability-nodes" class="slide level1">
+<h1>Subset to high probability nodes</h1>
+<img src="figures/phylo/5-taxa-treespace-subgraph-unrooted_nofonts.svg" class="stretch">
+</section>
+<section id="the-top-4096-trees-for-a-data-set" class="slide level1">
+<h1>The top 4096 trees for a data set</h1>
+<img src="figures/phylo/ds6.png" height="620">
+</section>
+<section id="the-posterior-probability-of-a-tree-is-the-probability-that-the-observed-tree-is-correct-given-the-model-and-priors" class="slide level1">
+<h1>The posterior probability of a tree is the probability that the observed tree is correct (given the model and priors)</h1>
+<ul>
+<li>Bayesians sample from this posterior</li>
+<li>If you can deal with a prior, it’s the statistically right thing to do</li>
+<li>Sometimes we aren’t actually interested in the tree, so we can integrate it out</li>
+<li>But! Short alignment, 100 taxa = hours</li>
+</ul>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
