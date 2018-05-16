@@ -48,7 +48,7 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 
 ### Homework 1b
 
-* Watch introduction to phylogenetic models video
+* Watch introduction to [phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y)
 
 
 ## Day 3: Theory and codon models
