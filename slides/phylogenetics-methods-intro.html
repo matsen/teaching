@@ -152,43 +152,37 @@ The next few slides are from Trevor Bedford.
 </section>
 <section id="section-7" class="slide level1">
 <h1></h1>
-<p>Parsimony suggests both topologies equally tenable</p>
-<p><br></p>
-<img width="970" src="figures/parsimony/parsimony_5.png">
+<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_1.png" height="620"></p>
 </section>
 <section id="section-8" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_1.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_2.png" height="620"></p>
 </section>
 <section id="section-9" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_2.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_3.png" height="620"></p>
 </section>
 <section id="section-10" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_3.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_4.png" height="620"></p>
 </section>
 <section id="section-11" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_4.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_5.png" height="620"></p>
 </section>
 <section id="section-12" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_5.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_6.png" height="620"></p>
 </section>
 <section id="section-13" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_6.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_7.png" height="620"></p>
 </section>
 <section id="section-14" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_7.png" height="620"></p>
-</section>
-<section id="section-15" class="slide level1">
-<h1></h1>
 <p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_8.png" height="620"></p>
 </section>
-<section id="section-16" class="slide level1">
+<section id="section-15" class="slide level1">
 <h1></h1>
 <p>Parsimony seems sensible.</p>
 <p>Is it the most popular phylogenetics method?</p>
@@ -196,7 +190,7 @@ The next few slides are from Trevor Bedford.
 <p><em>No. There are situations in which the correct tree has more mutations.</em></p>
 </div>
 </section>
-<section id="section-17" class="slide level1">
+<section id="section-16" class="slide level1">
 <h1></h1>
 <img width="970" src="figures/parsimony/felsenstein-zone-title.png"> <img width="320" src="figures/parsimony/felsenstein-zone-tree.png">
 </section>
@@ -243,7 +237,7 @@ Given enough data, likelihood methods will converge to the true tree.
 <img src="figures/likelihood/ripe-likelihood_nofonts.svg" height="450">
 <p>The <em>maximum likelihood estimate</em> of the parameter(s) of interest is the parameter value(s) that maximize the likelihood.</p>
 </section>
-<section id="section-18" class="slide level1">
+<section id="section-17" class="slide level1">
 <h1></h1>
 <p><s> The <em>maximum likelihood estimate</em> of the parameter(s) of interest is the parameter value(s) that maximize the likelihood. </s></p>
 <img src="figures/likelihood/prob-models-have-dials_nofonts.svg" class="stretch">
@@ -271,106 +265,40 @@ Intuitively, would the shape of the likelihood curve be different with this larg
 <li>To apply likelihood, we need a <em>model</em> of the system under investigation</li>
 <li>In general, the “likelihood” is the likelihood of generating the data under the given parameters, written <span class="math inline">\(P(D | \theta),\)</span> where <span class="math inline">\(D\)</span> is the data and <span class="math inline">\(\theta\)</span> are the parameters.</li>
 </ul>
-</section>
-<section id="setup-for-likelihood-based-phylogenetics" class="slide level1">
-<h1>Setup for likelihood based phylogenetics</h1>
-<p>The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model).</p>
+<!--
+# Setup for likelihood based phylogenetics
+The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model).
+
 <img src="figures/phylo/what_is_phylo_ML.scour_nofonts.svg" class="stretch">
-<p>Note that the UW’s own <a href="http://evolution.genetics.washington.edu/phylip/felsenstein.html">Joe Felsenstein</a> was the <a href="http://www.springerlink.com/content/g2202t346n826461/">first</a> to formalize this and develop efficient algorithms.</p>
-</section>
-<section id="sequence-evolution-models-tell-us-the-probability-of-seeing-a-certain-mutation-in-some-period-of-evolutionary-time" class="slide level1">
-<h1><a href="http://en.wikipedia.org/wiki/Substitution_model">Sequence evolution models</a> tell us the probability of seeing a certain mutation in some period of (evolutionary) time</h1>
+
+Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.edu/phylip/felsenstein.html) was the [first](http://www.springerlink.com/content/g2202t346n826461/) to formalize this and develop efficient algorithms.
+
+
+# [Sequence evolution models](http://en.wikipedia.org/wiki/Substitution_model) tell us the probability of seeing a certain mutation in some period of (evolutionary) time
 <div class="incremental">
-<ul>
-<li>Nucleotide models are fit “on the fly”
-<ul>
-<li>e.g. F81, HKY, GTR</li>
-</ul></li>
-<li>Protein models are typically pre-made
-<ul>
-<li>e.g. <a href="http://www.scopus.com/record/display.url?eid=2-s2.0-0026691182&amp;origin=inward&amp;txGid=u2307zIZ5me4AtASSSuc_3u%3a2">JTT</a> (Jones, Taylor, and Thornton), and <a href="http://mbe.oxfordjournals.org/content/18/5/691.short">WAG</a> (Whelan and Goldman) matrices</li>
-</ul></li>
-<li>Codon models are a great idea
-<ul>
-<li>Position matters!</li>
-<li>e.g. <a href="http://mbe.oxfordjournals.org/content/23/1/7.full">SRD06</a> model</li>
-</ul></li>
-</ul>
+* Nucleotide models are fit "on the fly"
+    * e.g. F81, HKY, GTR
+
+* Protein models are typically pre-made
+    * e.g. [JTT](http://www.scopus.com/record/display.url?eid=2-s2.0-0026691182&origin=inward&txGid=u2307zIZ5me4AtASSSuc_3u%3a2) (Jones, Taylor, and Thornton), and [WAG](http://mbe.oxfordjournals.org/content/18/5/691.short) (Whelan and Goldman) matrices
+
+* Codon models are a great idea
+    * Position matters!
+    * e.g. [SRD06](http://mbe.oxfordjournals.org/content/23/1/7.full) model
 </div>
-</section>
-<section id="model-hierarchy-from-posada-and-crandall" class="slide level1">
-<h1>Model hierarchy, from <a href="http://bioinformatics.oxfordjournals.org/cgi/reprint/14/9/817">Posada and Crandall</a></h1>
+
+
+# Model hierarchy, from [Posada and Crandall](http://bioinformatics.oxfordjournals.org/cgi/reprint/14/9/817)
 <img src="figures/phylo/hLRT_Posada_and_Crandal_bioInfo.png" class="stretch">
-</section>
-<section id="calculating-likelihood-of-a-single-column" class="slide level1">
-<h1>Calculating likelihood of a single column</h1>
+
+
+# Calculating likelihood of a single column
 <img src="figures/phylo/column_likelihood_nofonts.svg" class="stretch">
-</section>
-<section id="likelihood-of-an-alignment" class="slide level1">
-<h1>Likelihood of an alignment</h1>
+
+
+# Likelihood of an alignment
 <img src="figures/phylo/aln_likelihood.scour_nofonts.svg" class="stretch">
-</section>
-<section id="the-phylogenetic-likelihood-of-a-tree-is-the-likelihood-of-generating-the-observed-data-given-that-tree-under-the-sequence-evolution-model" class="slide level1">
-<h1>The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model)</h1>
-<div class="incremental">
-<ul>
-<li>Maximum likelihood gives a point estimate</li>
-<li>Confidence is assessed using the <a href="http://www.jstor.org/pss/2408678">bootstrap</a></li>
-<li>Lots of flexibility with models</li>
-</ul>
-</div>
-</section>
-<section id="bayes-is-magic" class="slide level1">
-<h1>Bayes is <a href="http://en.wikipedia.org/wiki/Bayes%27_theorem">magic</a></h1>
-<p> </p>
-<p> </p>
-<p> </p>
-<p><span class="math display">\[
-P(\theta \mid D) \propto P(D \mid \theta) P(\theta)
-\]</span></p>
-</section>
-<section id="the-posterior-probability-of-a-tree-is-the-probability-that-the-observed-tree-is-correct-given-the-model-and-priors" class="slide level1">
-<h1>The posterior probability of a tree is the probability that the observed tree is correct (given the model and priors)</h1>
-<ul>
-<li>Bayesians sample from this posterior</li>
-<li>If you can deal with a prior, it’s the statistically right thing to do</li>
-<li>Sometimes we aren’t actually interested in the tree, so we can integrate it out</li>
-<li>But! Short alignment, 100 taxa = hours</li>
-</ul>
-</section>
-<section id="markov-chain-monte-carlo" class="slide level1">
-<h1>Markov chain Monte Carlo</h1>
-<img src="figures/phylo/5-taxa-treespace-mcmc-unrooted_nofonts.svg" class="stretch">
-</section>
-<section id="metropolis-hastings-algorithm" class="slide level1">
-<h1><a href="http://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm">Metropolis-Hastings algorithm</a></h1>
-<ul>
-<li>If you jump to a better tree, accept that move</li>
-<li>If you jump to a worse tree, accept that move with a non-zero probability</li>
-<li>It’s all arranged so that you sample trees in proportion to their posterior probability</li>
-</ul>
-</section>
-<section id="subset-to-high-probability-nodes" class="slide level1">
-<h1>Subset to high probability nodes</h1>
-<img src="figures/phylo/5-taxa-treespace-subgraph-unrooted_nofonts.svg" class="stretch">
-</section>
-<section id="real-tree-spaces-have-bottlenecks" class="slide level1">
-<h1>Real tree spaces have bottlenecks</h1>
-<img src="figures/phylo/ds6.png" height="550">
-<div class="caption">
-Whidden &amp; M, <em>Systematic Biology</em>, 2015
-</div>
-</section>
-<section id="likelihood-phylogenetics-recap" class="slide level1">
-<h1>Likelihood phylogenetics recap</h1>
-<div class="incremental">
-<ul>
-<li>In likelihood phylogenetics, explicitly model mutation process</li>
-<li>This allows complex models to be used</li>
-<li>Statistical basis allows us to make formal statements about uncertainty</li>
-<li>But on the other hand our models are over-simple!</li>
-</ul>
-</div>
+-->
 </section>
 <section id="crazy-but-typical-model-assumptions" class="slide level1">
 <h1>Crazy but typical model assumptions</h1>
@@ -379,24 +307,6 @@ Whidden &amp; M, <em>Systematic Biology</em>, 2015
 <li>evolution happens on each column independently</li>
 <li>sequences are evolving according to <em>reversible</em> models (this excludes selection and directional evolution of base composition)</li>
 <li>the evolutionary process is identical on all branches of the tree</li>
-</ul>
-</section>
-<section id="to-read" class="slide level1">
-<h1>To read</h1>
-<ul>
-<li><a href="http://www.sinauer.com/detail.php?id=1775"><em>Inferring Phylogenies</em></a> by Felsenstein</li>
-<li><a href="http://www.cambridge.org/gb/knowledge/isbn/item2327447/?site_locale=en_GB"><em>The phylogenetic handbook</em></a> edited by Lemey, Salemi, and Vandamme, chapters by the stars</li>
-<li><a href="http://treethinkers.org/tutorials/">Bodega phylogenetics tutorials</a></li>
-</ul>
-</section>
-<section id="software" class="slide level1">
-<h1>Software</h1>
-<ul>
-<li><a href="http://www.microbesonline.org/fasttree/">FastTree</a> – approximate ML</li>
-<li><a href="http://wwwkramer.in.tum.de/exelixis/software.html">RAxML</a> and <a href="http://www.atgc-montpellier.fr/phyml/">PhyML</a> – somewhat less approximate ML</li>
-<li><a href="http://beast.bio.ed.ac.uk/">BEAST</a> – Bayesian</li>
-<li><a href="http://mrbayes.csit.fsu.edu/">MrBayes</a> – Bayesian</li>
-<li>many others, but these are the ones I know …</li>
 </ul>
 </section>
     </div>

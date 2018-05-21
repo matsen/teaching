@@ -48,15 +48,14 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 
 ### Homework 1b
 
-* Watch introduction to [phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y)
-
+* Watch introduction to [phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf))
 
 ## Day 3: Theory and codon models
 
 * Quiz on and discussion of video material
 * Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
-* Lecture: codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }})
+* Lecture: [codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }})
 
 ### Homework 2
 
