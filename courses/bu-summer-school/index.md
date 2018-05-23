@@ -22,6 +22,7 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 * Lecture: [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) to parsimony
 * Perform sequence alignment on [sample data]({{ "/data/sample.fasta" | relative_url }}) using seaview
 * Try using various algorithms to build trees with seaview; then try clicking "Full, Swap, Re-root, and Subtree"
+* Lecture: [Likelihood methods in phylogenetics]({{ "/slides/phylogenetics-likelihood.html" | relative_url }})
 * Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
 * Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
 * [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
@@ -40,8 +41,13 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 
 
 ## Videos
-* Watch [introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
-* Watch introduction to [phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf))
+* [Introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
+* [Introduction to phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf))
+
+
+## Papers
+* Hoehn et. al, [The Diversity and Molecular Evolution of B-Cell Receptors during Infection](https://doi.org/10.1093/molbev/msw015)
+* Our paper on [Bayesian immune repertoire analysis](https://arxiv.org/pdf/1804.10964.pdf)
 
 
 ## Software

@@ -131,9 +131,8 @@ Life is a probabilistic process.
 
 How do we abstract probabilistic quantities?
 
-
 #
-<section data-background="figures/inference/abstraction-X.svg"> </section>
+<section data-background="figures/inference/abstraction-X_nofonts.svg"> </section>
 
 # Random variables $X$ abstract variables
 It doesn't have a fixed value: *we have to "ask" it for a value.*

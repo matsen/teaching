@@ -1,126 +1,6 @@
-% Phylogenetics methods
+% Phylogenetics methods: likelihood
 % Erick Matsen
-% Thank you to: Trevor Bedford (Fred Hutch)
 
-#
-^img figures/phylo/what_is_phylo.svg
-
-#
-^img figures/phylo/what_is_phylo_taxa.svg
-
-#
-^img figures/phylo/what_is_phylo_unrooted.svg
-
-# "data": sequence alignment
-
-^img figures/phylo/bigProtAln.png
-
-# Types of phylogenetic inference methods
-* Distance-based
-* Parsimony
-* Likelihood-based
-    * Maximum likelihood
-    * Bayesian
-
-
-# Distance-based phylogenetics
-^img figures/phylo/what_is_phylo_dist.svg
-
-# Parsimony phylogenetics
-
-<br>
-
-[Parsimony](https://en.wikipedia.org/wiki/Maximum_parsimony_(phylogenetics)) is based on [Occam's razor](https://en.wikipedia.org/wiki/Occam's_razor)
-
-Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected.
-
-<br>
-
-^div caption "The next few slides are from Trevor Bedford."
-
-#
-Say we have three viruses
-^img figures/parsimony/parsimony_1.png
-
-#
-Say we have three viruses
-^img figures/parsimony/parsimony_2.png
-
-#
-We can explain these sequences with 3 mutations
-^img figures/parsimony/parsimony_3.png
-
-#
-Parsimony suggests this topology requires 3 mutations at minimum
-^img figures/parsimony/parsimony_4.png
-
-#
-Parsimony suggests both topologies equally tenable
-
-<br>
-
-^img figures/parsimony/parsimony_5.png
-
-#
-*Exercise: which topology is more parsimonious?*
-^img figures/parsimony/parsimony_exercise_1.png
-
-#
-*Exercise: which topology is more parsimonious?*
-^img figures/parsimony/parsimony_exercise_2.png
-
-#
-*Exercise: which topology is more parsimonious?*
-^img figures/parsimony/parsimony_exercise_3.png
-
-#
-*Exercise: which topology is more parsimonious?*
-^img figures/parsimony/parsimony_exercise_4.png
-
-#
-*Exercise: which topology is more parsimonious?*
-^img figures/parsimony/parsimony_exercise_5.png
-
-#
-*Exercise: which topology is more parsimonious?*
-^img figures/parsimony/parsimony_exercise_6.png
-
-#
-*Exercise: which topology is more parsimonious?*
-^img figures/parsimony/parsimony_exercise_7.png
-
-#
-*Exercise: which topology is more parsimonious?*
-^img figures/parsimony/parsimony_exercise_8.png
-
-#
-Parsimony seems sensible.
-
-Is it the most popular phylogenetics method?
-
-<div class="fragment">
-*No. There are situations in which the correct tree has more mutations.*
-</div>
-
-#
-^imgw figures/parsimony/felsenstein-zone-title.png
-^imgw figures/parsimony/felsenstein-zone-tree.png 320
-
-# Long branch attraction
-^imgh figures/parsimony/lba-tree-1.png 500
-
-<http://slideplayer.com/slide/9059488/>
-
-# Long branch attraction
-^imgh figures/parsimony/lba-tree-2.png 500
-
-<http://slideplayer.com/slide/9059488/>
-
-# Are we cooked?
-
-<br>
-
-^div fragment "Given enough data, likelihood methods will converge to the true tree."
 
 # Likelihood setup
 * Come up with a *statistical model* of experiment
@@ -187,8 +67,20 @@ The phylogenetic likelihood of a tree is the likelihood of generating the observ
 Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.edu/phylip/felsenstein.html) was the [first](http://www.springerlink.com/content/g2202t346n826461/) to formalize this and develop efficient algorithms.
 
 
-# [Sequence evolution models](http://en.wikipedia.org/wiki/Substitution_model) tell us the probability of seeing a certain mutation in some period of (evolutionary) time
-<div class="incremental">
+
+# [Sequence evolution models](http://en.wikipedia.org/wiki/Substitution_model) describe the rate of substitution from one symbol to another
+
+$$
+Q={\begin{pmatrix}-\mu _{A}&\mu _{AG}&\mu _{AC}&\mu _{AT}\\\mu _{GA}&-\mu _{G}&\mu _{GC}&\mu _{GT}\\\mu _{CA}&\mu _{CG}&-\mu _{C}&\mu _{CT}\\\mu _{TA}&\mu _{TG}&\mu _{TC}&-\mu _{T}\end{pmatrix}}
+$$
+
+<div class="fragment">
+$$
+Q_{\text{HKY}}={\begin{pmatrix}{*}&{\kappa \pi _{G}}&{\pi _{C}}&{\pi _{T}}\\{\kappa \pi _{A}}&{*}&{\pi _{C}}&{\pi _{T}}\\{\pi _{A}}&{\pi _{G}}&{*}&{\kappa \pi _{T}}\\{\pi _{A}}&{\pi _{G}}&{\kappa \pi _{C}}&{*}\end{pmatrix}}
+$$
+</div>
+
+# Different models for different data
 * Nucleotide models are fit "on the fly"
     * e.g. F81, HKY, GTR
 
@@ -198,8 +90,6 @@ Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.ed
 * Codon models are a great idea
     * Position matters!
     * e.g. [SRD06](http://mbe.oxfordjournals.org/content/23/1/7.full) model
-</div>
-
 
 # Model hierarchy, from [Posada and Crandall](http://bioinformatics.oxfordjournals.org/cgi/reprint/14/9/817)
 ^img figures/phylo/hLRT_Posada_and_Crandal_bioInfo.png
@@ -213,54 +103,10 @@ Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.ed
 ^img figures/phylo/aln_likelihood.scour.svg
 
 
-# The phylogenetic likelihood of a tree is the likelihood of generating the observed data given that tree (under the sequence evolution model)
-<div class="incremental">
-* Maximum likelihood gives a point estimate
-* Confidence is assessed using the [bootstrap](http://www.jstor.org/pss/2408678)
-(* There are other ways, such as the [aLRT](http://sysbio.oxfordjournals.org/content/55/4/539.short) test in PhyML.
-* Lots of flexibility with models
-</div>
-
-
-# Bayes is [magic](http://en.wikipedia.org/wiki/Bayes%27_theorem)
-
-&nbsp;
-
-&nbsp;
-
-&nbsp;
-
-$$
-P(\theta \mid D) \propto P(D \mid \theta) P(\theta)
-$$
-
-
-# The posterior probability of a tree is the probability that the observed tree is correct (given the model and priors)
-* Bayesians sample from this posterior
-* If you can deal with a prior, it's the statistically right thing to do
-* Sometimes we aren't actually interested in the tree, so we can integrate it out
-* But! Short alignment, 100 taxa = hours
-
-# Markov chain Monte Carlo
-^img figures/phylo/5-taxa-treespace-mcmc-unrooted.svg
-
-# [Metropolis-Hastings algorithm](http://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm)
-* If you jump to a better tree, accept that move
-* If you jump to a worse tree, accept that move with a non-zero probability
-* It's all arranged so that you sample trees in proportion to their posterior probability
-
-# Subset to high probability nodes
-^img figures/phylo/5-taxa-treespace-subgraph-unrooted.svg
-
-# Real tree spaces have bottlenecks
-^img figures/phylo/ds6.png 550
-^div caption "Whidden & M, *Systematic Biology*, 2015"
-
-
 # Likelihood phylogenetics recap
 <div class="incremental">
 * In likelihood phylogenetics, explicitly model mutation process
-* This allows complex models to be used
+* This allows "complex" models to be used
 * Statistical basis allows us to make formal statements about uncertainty
 * But on the other hand our models are over-simple!
 </div>
@@ -271,60 +117,3 @@ $$
 * evolution happens on each column independently
 * sequences are evolving according to *reversible* models (this excludes selection and directional evolution of base composition)
 * the evolutionary process is identical on all branches of the tree
-
-# Sequence alignment is hard!
-^img figures/phylo/alignment-and-phylogeny-protpal-truth-only.png
-
-# Sometimes it's more or less impossible
-^img figures/phylo/alignment-and-phylogeny-protpal-hard-case.png
-
-# Phylogenetic approach is best
-^img figures/phylo/alignment-and-phylogeny-protpal-tractable-case.png
-^div citation "[Westesson et al. 2012](http://dx.doi.org/10.1371/journal.pone.0034572)"
-
-# Muscle vs PRANK
-^img figures/phylo/alignment-and-phylogeny-prank.png
-<div class="citation">
-[Löytynoja and Goldman 2008](http://dx.doi.org/10.1126/science.1158395)
-</div>
-
-# [BAli-Phy](http://www.bali-phy.org/)
-Co-estimate tree & alignment using Bayesian methods
-^img figures/phylo/bali-phy.png
-
-# Multiple sequence alignment: summary
-* Use PRANK, perhaps through [Wasabi](http://wasabiapp.org/)
-* If you need a faster algorithm and are happy with a less good result, try [Muscle](http://drive5.com/muscle/)
-* If you really care about alignments (and trees) use BAli-Phy.
-
-
-# Natural selection inference
-^img figures/phylo/synonymous-vs-nonsyn.svg
-
-# Yang-Nielsen 2000 model
-^img figures/phylo/yn00-model.png
-^div citation "[Yang & Nielsen 2000](http://mbe.oxfordjournals.org/content/17/1/32.short)"
-
-# Natural selection inference is a HUGE topic
-
-&nbsp;
-
-We can't really cover it today.
-
-However, you can do great by reading the tutorial information on [datamonkey.org](http://datamonkey.org/help/index.php) and using their tools.
-
-
-# To read
-* [*Inferring Phylogenies*](http://www.sinauer.com/detail.php?id=1775) by Felsenstein
-* [*The phylogenetic handbook*](http://www.cambridge.org/gb/knowledge/isbn/item2327447/?site_locale=en_GB) edited by Lemey, Salemi, and Vandamme, chapters by the stars
-* [Bodega phylogenetics tutorials](http://treethinkers.org/tutorials/)
-
-
-# Software
-
-* [FastTree](http://www.microbesonline.org/fasttree/) -- approximate ML
-* [RAxML](http://wwwkramer.in.tum.de/exelixis/software.html) and [PhyML](http://www.atgc-montpellier.fr/phyml/) -- somewhat less approximate ML
-* [BEAST](http://beast.bio.ed.ac.uk/) -- Bayesian
-* [MrBayes](http://mrbayes.csit.fsu.edu/) -- Bayesian
-* many others, but these are the ones I know ...
-
