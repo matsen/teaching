@@ -28,6 +28,7 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 * [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
 * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
+* Lecture: [Mutation and selection in B cells]({{ "/slides/molecular-evolution-bcells.html" | relative_url }})
 * Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
 * Lecture: [codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }})

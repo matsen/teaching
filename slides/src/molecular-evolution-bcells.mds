@@ -1,0 +1,95 @@
+% Mutation and selection in B cells
+% Erick Matsen
+% Thanks to [Sarah Cobey](http://cobeylab.uchicago.edu/) for some of the slides
+
+# Structure of a B cell receptor
+
+^img figures/bcell/bcr.png
+^div citation "[Georgiou et al. 2014](http://www.nature.com/nbt/journal/v32/n2/abs/nbt.2782.html)"
+
+
+# VDJ recombination
+^img figures/bcell/overview-top.svg
+^div citation "modified from [Murugan et al. 2012](http://dx.doi.org/10.1073/pnas.1212755109)"
+
+
+# VDJ loci
+^img figures/bcell/watson-eichler-breden.png
+^div citation "[Watson et al. 2013](http://dx.doi.org/10.1016/j.ajhg.2013.03.004)"
+
+#
+<iframe class=stretch src="https://www.youtube.com/embed/Ts7Dt4D96h0?rel=0&amp;ecver=2"></iframe>
+
+^div citation "[Tas et al. 2016](http://dx.doi.org/10.1126/science.aad3439)"
+
+
+#
+^img figures/bcell/gc-victora-mesin-1.svg
+^div citation "[Victora and Mesin 2016](http://dx.doi.org/10.1016/j.coi.2014.02.010)"
+
+#
+^img figures/bcell/gc-victora-mesin-2.svg
+^div citation "[Victora and Mesin 2016](http://dx.doi.org/10.1016/j.coi.2014.02.010)"
+
+#
+^img figures/bcell/gc-victora-mesin-3.svg
+^div citation "[Victora and Mesin 2016](http://dx.doi.org/10.1016/j.coi.2014.02.010)"
+
+#
+^img figures/bcell/gc-victora-mesin-4.svg
+^div citation "[Victora and Mesin 2016](http://dx.doi.org/10.1016/j.coi.2014.02.010)"
+
+#
+^img figures/bcell/gc-victora-mesin-5.svg
+^div citation "[Victora and Mesin 2016](http://dx.doi.org/10.1016/j.coi.2014.02.010)"
+
+#
+^img figures/bcell/gc-victora-mesin-6.svg
+^div citation "[Victora and Mesin 2016](http://dx.doi.org/10.1016/j.coi.2014.02.010)"
+
+#
+^img figures/bcell/gc-victora-mesin-7.svg
+^div citation "[Victora and Mesin 2016](http://dx.doi.org/10.1016/j.coi.2014.02.010)"
+
+#
+^img figures/bcell/gc-victora-mesin.svg
+^div citation "[Victora and Mesin 2016](http://dx.doi.org/10.1016/j.coi.2014.02.010)"
+
+#
+^img figures/bcell/many-gcs.svg
+
+#
+^img figures/bcell/gc-trees.svg
+
+# Somatic hypermutation is AID + repair
+^img figures/bcell/methot-shm.svg
+^div citation "[Methot and Di Noia 2017](http://www.sciencedirect.com/science/article/pii/S0065277616300530)"
+
+# The mutations have peculiar biases
+^img figures/bcell/yeap-alt-1.svg
+
+# The mutations have peculiar biases
+^img figures/bcell/yeap-alt.svg
+
+# One would like to quantify these biases
+^img figures/bcell/samm-explanation.svg
+
+# Phylogenetics is not straightforward
+^img figures/bcell/hoehn-mean-field.png
+^div citation "[Hoehn et al. 2017](http://dx.doi.org/10.1534/genetics.116.196303)"
+
+# Incorporating context sensitivity helps performance
+^img figures/bcell/bcr-phylo-benchmark-COAR.svg
+
+# Weak selection?
+^img figures/bcell/kuraoka-avidities.svg
+^div citation "[Kuraoka et al. 2016](http://www.sciencedirect.com/science/article/pii/S1074761316300486)"
+
+# Antibody isotypes
+^img figures/bcell/isotypes.png
+^div citation "[Absolute Antibody](http://absoluteantibody.com/antibody-resources/antibody-overview/antibody-isotypes-subtypes/)"
+
+# Isotype switching
+^img https://upload.wikimedia.org/wikipedia/commons/b/b3/Class_switch_recombination.png
+^div citation "[Wikipedia](https://en.wikipedia.org/wiki/Immunoglobulin_class_switching)"
+
