@@ -25,7 +25,7 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 * Lecture: [Likelihood methods in phylogenetics]({{ "/slides/phylogenetics-likelihood.html" | relative_url }})
 * Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
 * Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
-* [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
+* Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
 * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
 * Lecture: [Mutation and selection in B cells]({{ "/slides/molecular-evolution-bcells.html" | relative_url }})
