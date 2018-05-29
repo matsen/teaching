@@ -1,0 +1,65 @@
+% Where does the matrix exponential $e^{tQ}$ come from?
+% Erick Matsen
+
+# What is the expansion of $e^t$ as a sum?
+<div class="fragment">
+$$
+e^t = 1 + t + {\frac{t^2}{2!}} + {\frac{t^3}{3!}} + {\frac{t^4}{4!}} + \cdots
+$$
+</div>
+
+# What are the salient properties of the Poisson distribution?
+
+^div fragment "It is a constant-rate random process."
+
+# What is the formula for the Poisson?
+<div class="fragment">
+$$
+P(k{\text{ events}})=e^{-\lambda}{\frac {\lambda^{k}}{k!}}
+$$
+</div>
+
+<div class="fragment">
+$$
+P(k{\text{ events in interval }}t)=e^{-rt}{\frac {(rt)^{k}}{k!}}
+$$
+</div>
+
+# Let's take rate 1 and drop the constant
+$$
+P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
+$$
+
+# $Q$ matrix reminder
+<br>
+$Q_{ij}$ is the rate of transitioning from state $i$ to state $j$.
+
+<div class="fragment">
+So how to interpret $\left( Q^2 \right)_{ij}$?
+</div>
+
+<br>
+
+<br>
+
+<div class="fragment">
+Hint: $\left( Q^2 \right)_{ij} = \sum_\ell Q_{i\ell} Q_{\ell j}$
+</div>
+
+
+# Therefore,
+
+$$
+P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
+$$
+
+$\left( Q^k \right)_{ij}$ is the rate of transitioning from state $i$ to state $j$ in $k$ jumps
+
+<br>
+
+<div class="fragment">
+$$
+\left(\frac{t^{k} Q^k}{k!}\right)_{ij} = \left(e^{tQ} \right)_{ij}
+$$
+is the probability of transitioning from $i$ to $j$ in time $t$.
+</div>

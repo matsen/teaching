@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Erick Matsen">
+  <title>Where does the matrix exponential e^{tQ} come from?</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <style type="text/css">
+      .reveal { font-size: 32px; }
+      .reveal h1 { font-size: 1.35em; }
+  
+      .reveal section img {
+          border: none;
+          box-shadow: none;
+          vertical-align: middle;
+      }
+  
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 {
+        font-family: "News Cycle", Lato, sans-serif;
+        text-shadow: none; }
+  
+      div.bigpurple {
+        font-size: 3em;
+        line-height: 1em;
+        color: purple;
+      }
+  
+      div.caption {
+        font-size: 24px;
+        line-height: 1em;
+      }
+  
+      div.citation {
+          position: absolute;
+          bottom:0px;
+          right:0px;
+          z-index:100;
+          font-size: 0.45em !important;
+      }
+  
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Where does the matrix exponential <span class="math inline">\(e^{tQ}\)</span> come from?</h1>
+  <p class="author">Erick Matsen</p>
+</section>
+
+<section id="what-is-the-expansion-of-et-as-a-sum" class="slide level1">
+<h1>What is the expansion of <span class="math inline">\(e^t\)</span> as a sum?</h1>
+<div class="fragment">
+<p><span class="math display">\[
+e^t = 1 + t + {\frac{t^2}{2!}} + {\frac{t^3}{3!}} + {\frac{t^4}{4!}} + \cdots
+\]</span></p>
+</div>
+</section>
+<section id="what-are-the-salient-properties-of-the-poisson-distribution" class="slide level1">
+<h1>What are the salient properties of the Poisson distribution?</h1>
+<div class="fragment">
+It is a constant-rate random process.
+</div>
+</section>
+<section id="what-is-the-formula-for-the-poisson" class="slide level1">
+<h1>What is the formula for the Poisson?</h1>
+<div class="fragment">
+<p><span class="math display">\[
+P(k{\text{ events}})=e^{-\lambda}{\frac {\lambda^{k}}{k!}}
+\]</span></p>
+</div>
+<div class="fragment">
+<p><span class="math display">\[
+P(k{\text{ events in interval }}t)=e^{-rt}{\frac {(rt)^{k}}{k!}}
+\]</span></p>
+</div>
+</section>
+<section id="lets-take-rate-1-and-drop-the-constant" class="slide level1">
+<h1>Let’s take rate 1 and drop the constant</h1>
+<p><span class="math display">\[
+P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
+\]</span></p>
+</section>
+<section id="q-matrix-reminder" class="slide level1">
+<h1><span class="math inline">\(Q\)</span> matrix reminder</h1>
+<p><br> <span class="math inline">\(Q_{ij}\)</span> is the rate of transitioning from state <span class="math inline">\(i\)</span> to state <span class="math inline">\(j\)</span>.</p>
+<div class="fragment">
+<p>So how to interpret <span class="math inline">\(\left( Q^2 \right)_{ij}\)</span>?</p>
+</div>
+<p><br></p>
+<p><br></p>
+<div class="fragment">
+<p>Hint: <span class="math inline">\(\left( Q^2 \right)_{ij} = \sum_\ell Q_{i\ell} Q_{\ell j}\)</span></p>
+</div>
+</section>
+<section id="therefore" class="slide level1">
+<h1>Therefore,</h1>
+<p><span class="math display">\[
+P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
+\]</span></p>
+<p><span class="math inline">\(\left( Q^k \right)_{ij}\)</span> is the rate of transitioning from state <span class="math inline">\(i\)</span> to state <span class="math inline">\(j\)</span> in <span class="math inline">\(k\)</span> jumps</p>
+<p><br></p>
+<div class="fragment">
+<p><span class="math display">\[
+\left(\frac{t^{k} Q^k}{k!}\right)_{ij} = \left(e^{tQ} \right)_{ij}
+\]</span> is the probability of transitioning from <span class="math inline">\(i\)</span> to <span class="math inline">\(j\)</span> in time <span class="math inline">\(t\)</span>.</p>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

@@ -52,7 +52,7 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 
 ## Day 3: Theory and codon models
 
-* Quiz on and discussion of video material
+* Quiz on and discussion of video material, with [notes about matrix exponential]({{ "/slides/matrix-exp.html" | relative_url }})
 * Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
 * Lecture: [codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }})
