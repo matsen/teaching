@@ -65,11 +65,12 @@ I have put some of their data [here]({{ "/data/elde/elde.fasta" | relative_url }
 The homework is simply to apply what you have learned in the class to this data and write a short report (however suits you, but exported to PDF) on your findings.
 Perform the following steps, and justify the choices you made in each step-- each step should have at least a sentence or two, and some should get a paragraph.
 
-1. Perform appropriate sequence alignment. Write a sentence or two describing why you aligned in the way that you did.
+1. Perform appropriate sequence alignment.
 1. Find evidence of recombination in the tree. Find recombination breakpoint(s). Draw a diagram showing the recombinant sequence(s) and where different parts of them fit in the tree on the non-recombinant sequence sets. You don't have to get fancy here-- feel free to draw it out on paper or the whiteboard, then take a photo of it for your report.
 1. Test for per-branch natural selection on the various partitions (i.e. the sub-alignments between the recombination breakpoint(s)). You'll have to find a way of splitting apart the subalignments (I used [seqmagick](http://seqmagick.readthedocs.io/en/latest/) but you can use whatever you like).
 1. Test for per-branch natural selection on the original (non-partitioned) sequence alignment.
-1. Compare the results. Do you think that any differences can be explained by recombination (see http://www.genetics.org/content/164/3/1229)?
+1. Compare the results. Do you think that any differences can be explained by recombination (see <http://www.genetics.org/content/164/3/1229>)?
+1. Perform some additional analysis of natural selection motivated by the questions in the paper.
 
 
 ## Day 4: Further topics
