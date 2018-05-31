@@ -1,6 +1,8 @@
 % Bayesian phylogenetics
 % Erick Matsen
 
+# Review: what does likelihood mean? Simulation interpretation?
+
 #
 Modern technology gives us the ability to *observe* in great detail
 ^imgw figures/inference/edge-detection-first.jpg
@@ -320,6 +322,10 @@ These trees are then distance 1 apart.
 * If you jump to a better tree, accept that move
 * If you jump to a worse tree, accept that move with a non-zero probability
 * It's all arranged so that you sample trees in proportion to their posterior probability
+
+<br>
+
+Try out [MCMC robot](https://phylogeny.uconn.edu/mcmc-robot/)!
 
 
 # Markov chain Monte Carlo

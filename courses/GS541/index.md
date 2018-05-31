@@ -75,9 +75,9 @@ Perform the following steps, and justify the choices you made in each step-- eac
 
 ## Day 4: Further topics
 
-* Lecture: [codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }}), continued
 * Lecture: [Bayesian methods]({{ "/slides/phylogenetics-bayesian.html" | relative_url }})
 * Play with [MCMC Robot](https://phylogeny.uconn.edu/mcmc-robot/)
+* Work on homework
 
 
 <hr>
