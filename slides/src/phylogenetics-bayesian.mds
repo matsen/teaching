@@ -1,7 +1,12 @@
 % Bayesian phylogenetics
 % Erick Matsen
 
-# Review: what does likelihood mean? Simulation interpretation?
+# Review
+
+<br>
+
+* What does likelihood mean?
+* What is its interpretation in terms of simulation?
 
 #
 Modern technology gives us the ability to *observe* in great detail
@@ -241,6 +246,9 @@ $$
 P(X \mid D) \propto P(D \mid X) P(X)
 $$
 
+
+# What is our height relative the average elevation?
+^img figures/inference/everest-view.jpg
 
 # Now, what is model-based statistical inference on *discrete mathematical objects*?
 
