@@ -6,8 +6,8 @@ title: 'Boston University Computational Immunology Summer School'
 After this course, I hope you will be able to
 
 * understand basic features of evolutionary trees
-* be familiar with the various types of tree inference, and when they are useful
-* be able to apply codon-based tests for natural selection.
+* be familiar with the various types of tree inference, when they are useful, and their assumptions
+* understand the basis of codon-based tests for natural selection.
 
 
 ## Prerequisites
@@ -25,15 +25,18 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 * Lecture: [Likelihood methods in phylogenetics]({{ "/slides/phylogenetics-likelihood.html" | relative_url }})
 * Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
 * Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
+* Lecture: [Codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }}) (part)
+* Lecture: [Mutation and selection in B cells]({{ "/slides/molecular-evolution-bcells.html" | relative_url }})
+
+
+## Extra material in case we have time
 * Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
 * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
-* Lecture: [Mutation and selection in B cells]({{ "/slides/molecular-evolution-bcells.html" | relative_url }})
-* Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
-* Testing for recombination using [GARD](http://datamonkey.org/gard)
-* Lecture: [codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }})
 * Lecture: [Bayesian methods]({{ "/slides/phylogenetics-bayesian.html" | relative_url }})
 * Play with [MCMC Robot](https://phylogeny.uconn.edu/mcmc-robot/)
+* Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
+* Testing for recombination using [GARD](http://datamonkey.org/gard)
 
 
 ## Books

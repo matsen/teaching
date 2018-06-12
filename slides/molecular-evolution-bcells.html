@@ -22,6 +22,7 @@
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
+  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <style type="text/css">
       .reveal { font-size: 32px; }
       .reveal h1 { font-size: 1.35em; }
@@ -180,10 +181,6 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <h1>The mutations have peculiar biases</h1>
 <img src="figures/bcell/yeap-alt_nofonts.svg" class="stretch">
 </section>
-<section id="one-would-like-to-quantify-these-biases" class="slide level1">
-<h1>One would like to quantify these biases</h1>
-<img src="figures/bcell/samm-explanation_nofonts.svg" class="stretch">
-</section>
 <section id="phylogenetics-is-not-straightforward" class="slide level1">
 <h1>Phylogenetics is not straightforward</h1>
 <img src="figures/bcell/hoehn-mean-field.png" class="stretch">
@@ -195,26 +192,179 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <h1>Incorporating context sensitivity helps performance</h1>
 <img src="figures/bcell/bcr-phylo-benchmark-COAR_nofonts.svg" class="stretch">
 </section>
-<section id="weak-selection" class="slide level1">
-<h1>Weak selection?</h1>
+<section id="what-about-natural-selection" class="slide level1">
+<h1>What about natural selection?</h1>
+<p><strong>Remember goal:</strong> get per-site selection inferences,</p>
+<ul>
+<li><span class="math inline">\(\omega &gt; 1\)</span> indicates positive selection (“invites change”)</li>
+<li><span class="math inline">\(\omega &lt; 1\)</span> indicates negative selection (“does not tolerate change”)</li>
+</ul>
+</section>
+<section id="natural-selection-inferences-are-also-not-straightforward" class="slide level1">
+<h1>Natural selection inferences are also not straightforward</h1>
+<img src="figures/bcell/selection-vs-mut-bias-1_nofonts.svg" class="stretch">
+</section>
+<section id="natural-selection-inferences-are-also-not-straightforward-1" class="slide level1">
+<h1>Natural selection inferences are also not straightforward</h1>
+<img src="figures/bcell/selection-vs-mut-bias_nofonts.svg" class="stretch">
+</section>
+<section id="natural-selection-inferences-are-also-not-straightforward-2" class="slide level1">
+<h1>Natural selection inferences are also not straightforward</h1>
+<img src="figures/bcell/selection-vs-mut-bias_nofonts.svg" class="stretch">
+<p>Context-sensitive mutation can confound <br> natural selection inference for B cells.</p>
+</section>
+<section id="correct-for-mutation-rate-variation" class="slide level1">
+<h1>Correct for mutation rate variation</h1>
+<p><br></p>
+<ul>
+<li><span class="math inline">\(\lambda_l^{(N-I)}\)</span>: nonsynonymous in-frame rate for site <span class="math inline">\(l\)</span></li>
+<li><span class="math inline">\(\lambda_l^{(N-N)}\)</span>: nonsynonymous neutral rate for site <span class="math inline">\(l\)</span></li>
+<li><span class="math inline">\(\lambda_l^{(S-I)}\)</span>: synonymous in-frame rate for site <span class="math inline">\(l\)</span></li>
+<li><span class="math inline">\(\lambda_l^{(S-N)}\)</span>: synonymous neutral rate for site <span class="math inline">\(l\)</span></li>
+</ul>
+<p><br></p>
+<p><span class="math display">\[
+\omega_l = \frac{\lambda_l^{(N-I)} / \lambda_l^{(N-N)}}{\lambda_l^{(S-I)} / \lambda_l^{(S-N)}}
+\]</span></p>
+</section>
+<section id="how-do-we-get-neutral-per-site-substitution-rate" class="slide level1">
+<h1>How do we get neutral per-site substitution rate?</h1>
+</section>
+<section id="productive-vs.out-of-frame-receptors" class="slide level1">
+<h1>Productive vs. out-of-frame receptors</h1>
+<p> </p>
+<p><a href="figures/bcell/vdj_recomb_out_of_frame_nofonts.svg" target="_blank"><img width="970" src="figures/bcell/vdj_recomb_out_of_frame_nofonts_nofonts.svg"></a></p>
+<p> </p>
+<p>Out-of-frame reads can be used to infer neutral mutation rate.</p>
+</section>
+<section id="one-can-also-use-passenger-alleles" class="slide level1">
+<h1>One can also use passenger alleles</h1>
+<ul>
+<li>Yeap, Hwang, Du, Meyers, …, Alt, F. W. <em>Cell</em>, 2015</li>
+<li>Cui, Di Niro, Vander Heiden, Briggs, … , Kleinstein <em>J Immunol</em>, 2016.</li>
+</ul>
+<p>and fit a mutation model.</p>
+</section>
+<section id="one-would-like-to-quantify-these-biases" class="slide level1">
+<h1>One would like to quantify these biases</h1>
+<img src="figures/bcell/samm-explanation_nofonts.svg" class="stretch">
+</section>
+<section id="classic-work-by-kleinstein-group" class="slide level1">
+<h1>Classic work by Kleinstein group</h1>
+<p><br></p>
+<img width="970" src="figures/bcell/yaari2015-hedgehog-overall.png">
+<ul>
+<li>Yaari, Vander Heiden, Uduman, Gadala-Maria, Gupta, Stern, Kleinstein, <em>Front Immunol</em>, 2013.</li>
+<li>Cui, Di Niro, Vander Heiden, Briggs, … , Kleinstein <em>J Immunol</em>, 2016.</li>
+</ul>
+</section>
+<section id="have-extended-this-framework" class="slide level1">
+<h1>Have extended this framework</h1>
+<img width="970" src="figures/bcell/3-5_nofonts.svg">
+<p>We can add overlapping motifs.</p>
+<div class="fragment">
+<p>Now the <span class="math inline">\(\theta\)</span> entry for a 5-mer answers the question: <br> what is this 5-mer telling me that the inner 3-mer did not? <br></p>
+</div>
+<div class="fragment">
+<p>These get automatically zeroed out if not informative.</p>
+</div>
+</section>
+<section id="section-11" class="slide level1">
+<h1></h1>
+<img width="970" src="figures/bcell/samm_shazam_comparison_nofonts.svg">
+<p>Feng, Shaw, Minin, Simon, &amp; M, <em>arXiv</em>, <em>in revision for Ann. Applied Stat.</em></p>
+</section>
+<section id="inferring-natural-selection" class="slide level1">
+<h1>Inferring natural selection</h1>
+<ul>
+<li>BASELINe infers overall selection: Yaari, Uduman, Kleinstein <em>Nucleic Acids Research</em>, 2012 [<a href="https://doi.org/10.1093/nar/gks457">DOI</a>]</li>
+<li>Infer whole-repertoire per-base selection: McCoy, Bedford, M <em>Phil. Trans. Royal Soc. London</em>, 2015 [<a href="https://doi.org/10.1098/rstb.2014.0244">DOI</a>]</li>
+<li>IgPhyML infers selection in a phylogenetic context: Hoehn, Lunter, &amp; Pybus <em>Genetics</em>, 2017. [<a href="https://doi.org/10.1534/genetics.116.196303">DOI</a>]</li>
+</ul>
+</section>
+<section id="its-not-all-bad-news" class="slide level1">
+<h1>It’s not all bad news!</h1>
+</section>
+<section id="motivation" class="slide level1">
+<h1>Motivation</h1>
+<img width="970" src="figures/bcell/tas-victora-tree.png">
+</section>
+<section id="goal" class="slide level1">
+<h1>Goal:</h1>
+<p><br></p>
+<p>Accurate tree inference using not-very-diverged sequences <br> which are sampled with meaningful counts</p>
+</section>
+<section id="section-12" class="slide level1">
+<h1></h1>
+<img src="figures/bcell/collapsed-trees_nofonts.svg" height="620">
+</section>
+<section id="section-13" class="slide level1">
+<h1></h1>
+<img src="figures/bcell/collapsed-trees-reconstruction-1_nofonts.svg" height="620">
+</section>
+<section id="section-14" class="slide level1">
+<h1></h1>
+<img src="figures/bcell/collapsed-trees-reconstruction_nofonts.svg" height="620">
+</section>
+<section id="a-simple-infinite-type-branching-process-model" class="slide level1">
+<h1>A simple infinite-type branching process model</h1>
+<ul>
+<li><span class="math inline">\(p\)</span>: probability of division</li>
+<li><span class="math inline">\(q\)</span>: probability of mutation</li>
+</ul>
+<p><br></p>
+<img width="970" src="figures/bcell/offspring_nofonts.svg">
+</section>
+<section id="gctree-likelihood" class="slide level1">
+<h1>“GCTree” likelihood</h1>
+<img src="figures/bcell/likelihood-of-collapsed_nofonts.svg" height="620">
+</section>
+<section id="section-15" class="slide level1">
+<h1></h1>
+<img src="figures/bcell/likelihood-of-collapsed-comparison_nofonts.svg" height="620">
+</section>
+<section id="incorporating-model-likelihood" class="slide level1">
+<h1>Incorporating model likelihood</h1>
+<ul>
+<li>Given sequence data, construct maximum parsimony trees <br> (there are lots, typically)</li>
+<li>Pick the tree with the highest model likelihood</li>
+</ul>
+<p><br></p>
+<div class="fragment">
+<p>Validation:</p>
+<ul>
+<li>Simulate tree using a more complex model (arbitrary offspring distribution, finite sampling time, incomplete sampling)</li>
+<li>Simulate sequences down tree (context-sensitive mutation)</li>
+<li>Run inference; compare to simulation</li>
+</ul>
+</div>
+</section>
+<section id="section-16" class="slide level1">
+<h1></h1>
+<img width="970" src="figures/bcell/gctree-validation-warmup_nofonts.svg">
+</section>
+<section id="gctree-works-in-simulation" class="slide level1">
+<h1>GCtree works in simulation</h1>
+<p><br></p>
+<img width="970" src="figures/bcell/gctree-validation_nofonts.svg">
+</section>
+<section id="gctree-finds-more-common-igh-and-igl-trees" class="slide level1">
+<h1>GCtree finds more common IgH and IgL trees</h1>
+<p><br></p>
+<img width="970" src="figures/bcell/gctree-empval_nofonts.svg">
+<!--
+# Weak selection?
 <img src="figures/bcell/kuraoka-avidities_nofonts.svg" class="stretch">
-<div class="citation">
-<a href="http://www.sciencedirect.com/science/article/pii/S1074761316300486">Kuraoka et al. 2016</a>
-</div>
-</section>
-<section id="antibody-isotypes" class="slide level1">
-<h1>Antibody isotypes</h1>
+<div class="citation">[Kuraoka et al. 2016](http://www.sciencedirect.com/science/article/pii/S1074761316300486)</div>
+
+# Antibody isotypes
 <img src="figures/bcell/isotypes.png" class="stretch">
-<div class="citation">
-<a href="http://absoluteantibody.com/antibody-resources/antibody-overview/antibody-isotypes-subtypes/">Absolute Antibody</a>
-</div>
-</section>
-<section id="isotype-switching" class="slide level1">
-<h1>Isotype switching</h1>
+<div class="citation">[Absolute Antibody](http://absoluteantibody.com/antibody-resources/antibody-overview/antibody-isotypes-subtypes/)</div>
+
+# Isotype switching
 <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/Class_switch_recombination.png" class="stretch">
-<div class="citation">
-<a href="https://en.wikipedia.org/wiki/Immunoglobulin_class_switching">Wikipedia</a>
-</div>
+<div class="citation">[Wikipedia](https://en.wikipedia.org/wiki/Immunoglobulin_class_switching)</div>
+-->
 </section>
     </div>
   </div>

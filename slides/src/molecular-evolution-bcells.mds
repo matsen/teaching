@@ -71,9 +71,6 @@
 # The mutations have peculiar biases
 ^img figures/bcell/yeap-alt.svg
 
-# One would like to quantify these biases
-^img figures/bcell/samm-explanation.svg
-
 # Phylogenetics is not straightforward
 ^img figures/bcell/hoehn-mean-field.png
 ^div citation "[Hoehn et al. 2017](http://dx.doi.org/10.1534/genetics.116.196303)"
@@ -81,6 +78,167 @@
 # Incorporating context sensitivity helps performance
 ^img figures/bcell/bcr-phylo-benchmark-COAR.svg
 
+# What about natural selection?
+
+**Remember goal:** get per-site selection inferences,
+
+* $\omega > 1$ indicates positive selection ("invites change")
+* $\omega < 1$ indicates negative selection ("does not tolerate change")
+
+# Natural selection inferences are also not straightforward
+^img figures/bcell/selection-vs-mut-bias-1.svg
+
+# Natural selection inferences are also not straightforward
+^img figures/bcell/selection-vs-mut-bias.svg
+
+# Natural selection inferences are also not straightforward
+^img figures/bcell/selection-vs-mut-bias.svg
+
+Context-sensitive mutation can confound <br> natural selection inference for B cells.
+
+# Correct for mutation rate variation
+
+<br>
+
+* $\lambda_l^{(N-I)}$: nonsynonymous in-frame rate for site $l$
+* $\lambda_l^{(N-N)}$: nonsynonymous neutral rate for site $l$
+* $\lambda_l^{(S-I)}$: synonymous in-frame rate for site $l$
+* $\lambda_l^{(S-N)}$: synonymous neutral rate for site $l$
+
+<br>
+
+$$
+\omega_l = \frac{\lambda_l^{(N-I)} / \lambda_l^{(N-N)}}{\lambda_l^{(S-I)} / \lambda_l^{(S-N)}}
+$$
+
+# How do we get neutral per-site substitution rate?
+
+# Productive vs. out-of-frame receptors
+&nbsp;
+
+^imgwl figures/bcell/vdj_recomb_out_of_frame.svg
+
+&nbsp;
+
+Out-of-frame reads can be used to infer neutral mutation rate.
+
+# One can also use passenger alleles
+
+* Yeap, Hwang, Du, Meyers, ..., Alt, F. W. *Cell*, 2015
+* Cui, Di Niro, Vander Heiden, Briggs, ... , Kleinstein *J Immunol*, 2016.
+
+and fit a mutation model.
+
+
+# One would like to quantify these biases
+^img figures/bcell/samm-explanation.svg
+
+# Classic work by Kleinstein group
+
+<br>
+
+^imgw figures/bcell/yaari2015-hedgehog-overall.png
+
+* Yaari, Vander Heiden, Uduman, Gadala-Maria, Gupta, Stern, Kleinstein, *Front Immunol*, 2013.
+* Cui, Di Niro, Vander Heiden, Briggs, ... , Kleinstein *J Immunol*, 2016.
+
+
+# Have extended this framework
+
+^imgw figures/bcell/3-5.svg
+
+We can add overlapping motifs.
+
+<div class="fragment">
+
+Now the $\theta$ entry for a 5-mer answers the question: <br>
+what is this 5-mer telling me that the inner 3-mer did not? <br>
+</div>
+
+<div class="fragment">
+These get automatically zeroed out if not informative.
+</div>
+
+#
+
+^imgw figures/bcell/samm_shazam_comparison.svg
+
+Feng, Shaw, Minin, Simon, & M, *arXiv*, *in revision for Ann. Applied Stat.*
+
+# Inferring natural selection
+
+* BASELINe infers overall selection: Yaari, Uduman, Kleinstein *Nucleic Acids Research*, 2012 [[DOI](https://doi.org/10.1093/nar/gks457)]
+* Infer whole-repertoire per-base selection: McCoy, Bedford, M *Phil. Trans. Royal Soc. London*, 2015 [[DOI](https://doi.org/10.1098/rstb.2014.0244)]
+* IgPhyML infers selection in a phylogenetic context: Hoehn, Lunter, & Pybus *Genetics*, 2017. [[DOI](https://doi.org/10.1534/genetics.116.196303)]
+
+# It's not all bad news!
+
+# Motivation
+^imgw figures/bcell/tas-victora-tree.png
+
+# Goal:
+
+<br>
+
+Accurate tree inference using not-very-diverged sequences <br>
+which are sampled with meaningful counts
+
+#
+^imgh figures/bcell/collapsed-trees.svg
+
+#
+^imgh figures/bcell/collapsed-trees-reconstruction-1.svg
+
+#
+^imgh figures/bcell/collapsed-trees-reconstruction.svg
+
+# A simple infinite-type branching process model
+
+* $p$: probability of division
+* $q$: probability of mutation
+
+<br>
+
+^imgw figures/bcell/offspring.svg
+
+# "GCTree" likelihood
+^imgh figures/bcell/likelihood-of-collapsed.svg
+
+#
+^imgh figures/bcell/likelihood-of-collapsed-comparison.svg
+
+# Incorporating model likelihood
+
+* Given sequence data, construct maximum parsimony trees <br> (there are lots, typically)
+* Pick the tree with the highest model likelihood
+
+<br>
+
+<div class="fragment">
+Validation:
+
+* Simulate tree using a more complex model (arbitrary offspring distribution, finite sampling time, incomplete sampling)
+* Simulate sequences down tree (context-sensitive mutation)
+* Run inference; compare to simulation
+</div>
+
+#
+^imgw figures/bcell/gctree-validation-warmup.svg
+
+# GCtree works in simulation
+
+<br>
+
+^imgw figures/bcell/gctree-validation.svg
+
+# GCtree finds more common IgH and IgL trees
+
+<br>
+
+^imgw figures/bcell/gctree-empval.svg
+
+
+<!--
 # Weak selection?
 ^img figures/bcell/kuraoka-avidities.svg
 ^div citation "[Kuraoka et al. 2016](http://www.sciencedirect.com/science/article/pii/S1074761316300486)"
@@ -92,4 +250,4 @@
 # Isotype switching
 ^img https://upload.wikimedia.org/wikipedia/commons/b/b3/Class_switch_recombination.png
 ^div citation "[Wikipedia](https://en.wikipedia.org/wiki/Immunoglobulin_class_switching)"
-
+-->
