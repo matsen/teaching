@@ -6,3 +6,4 @@ package.json
 .ipynb_checkpoints
 .jekyll-metadata
 .Rhistory
+.RData
