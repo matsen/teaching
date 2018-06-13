@@ -3,6 +3,8 @@ layout: default
 title: 'Boston University Computational Immunology Summer School'
 ---
 
+# Phylogenetics module of the Boston University Computational Immunology Summer School
+
 After this course, I hope you will be able to
 
 * understand basic features of evolutionary trees
