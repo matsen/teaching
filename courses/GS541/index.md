@@ -33,7 +33,7 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 ### Homework 1a
 
 * Watch [introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
-* Play around with building trees.
+* Do quiz questions (sent by email).
 
 
 ## Day 2: Phylogenetics methods
@@ -49,6 +49,10 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 ### Homework 1b
 
 * Watch [introduction to phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf))
+* Do quiz questions (sent by email).
+* Install a tree manipulation package, preferably the Python package [ETE](http://etetoolkit.org). If you only use R, use [ape](https://cran.r-project.org/web/packages/ape/index.html), and perhaps [ggtree](https://github.com/GuangchuangYu/ggtree)
+* Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}). Write a little script using Python or R to find the longest branch in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.) Submit both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF.
+
 
 ## Day 3: Theory and codon models
 
@@ -59,18 +63,12 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 
 ### Homework 2
 
-Analyze sequence data from [Elde et al., 2009](https://www.nature.com/articles/nature07529).
-I have put some of their data [here]({{ "/data/elde/elde.fasta" | relative_url }}) (it's not all the sequences from the paper, but it's enough for this exercise).
+Do the following in a script, either submitting both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF.
 
-The homework is simply to apply what you have learned in the class to this data and write a short report (however suits you, but exported to PDF) on your findings.
-Perform the following steps, and justify the choices you made in each step-- each step should have at least a sentence or two, and some should get a paragraph.
-
-1. Perform appropriate sequence alignment.
-1. Find evidence of recombination in the tree. Find recombination breakpoint(s). Draw a diagram showing the recombinant sequence(s) and where different parts of them fit in the tree on the non-recombinant sequence sets. You don't have to get fancy here-- feel free to draw it out on paper or the whiteboard, then take a photo of it for your report.
-1. Test for per-branch natural selection on the various partitions (i.e. the sub-alignments between the recombination breakpoint(s)). You'll have to find a way of splitting apart the subalignments (I used [seqmagick](http://seqmagick.readthedocs.io/en/latest/) but you can use whatever you like).
-1. Test for per-branch natural selection on the original (non-partitioned) sequence alignment.
-1. Compare the results. Do you think that any differences can be explained by recombination (see <http://www.genetics.org/content/164/3/1229>)?
-1. Perform some additional analysis of natural selection motivated by the questions in the paper.
+* Use the same measles tree built in the previous homework, and make a scatter plot for each branch of the tree, with the x axis being the length of the branch and the y axis being the number of descendants of that branch (`len(n)` gives the number of descendants of a node in ETE).
+* Use matrix exponentiation ([expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html) in SciPy) on the matrix `[[-1, 1],[1, -1]]` to get a transition matrix for the binary model in terms of branch length. Check that it's the same as Paul Lewis' formula in his second lecture, slide 40 (note that his mu and beta are the same).
+* Write a likelihood function for the binary model given two sequences that have 20 identical sites and 4 differing ones. Plot this likelihood function for a range of values containing the mean.
+* Simulate sequence evolution down the measles tree using the binary symmetric model. (Python hints: I used numpy's [binomial](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.binomial.html) and stored values on the tree using [add_feature](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#node-annotation)).
 
 
 ## Day 4: Further topics
