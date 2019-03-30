@@ -50,16 +50,17 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 
 * Watch [introduction to phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf))
 * Do quiz questions (sent by email).
-* Install a tree manipulation package, preferably the Python package [ETE](http://etetoolkit.org). If you only use R, use [ape](https://cran.r-project.org/web/packages/ape/index.html), and perhaps [ggtree](https://github.com/GuangchuangYu/ggtree)
+* Install a tree manipulation package, preferably the Python package [ETE](http://etetoolkit.org). If you only use R, use [ape](https://cran.r-project.org/web/packages/ape/index.html), and perhaps [ggtree](https://github.com/GuangchuangYu/ggtree). (Note that tree traversal in R is significantly more difficult, though you can [see an example here](http://rpubs.com/ematsen/ape-traversal-sample)).
 * Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}). Write a little script using Python or R to find the longest branch in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.) Submit both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF.
 
 
-## Day 3: Theory and codon models
+## Day 3: Recombination and trees as data structures
 
 * Quiz on and discussion of video material, with [notes about matrix exponential]({{ "/slides/matrix-exp.html" | relative_url }})
 * Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
-* Lecture: [codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }})
+* Working with trees as data structures: preorder and postorder traversal
+* In-class period for working on tree traversal
 
 ### Homework 2
 
@@ -69,6 +70,8 @@ Do the following in a script, either submitting both the script and the output, 
 * Use matrix exponentiation ([expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html) in SciPy) on the matrix `[[-1, 1],[1, -1]]` to get a transition matrix for the binary model in terms of branch length. Check that it's the same as Paul Lewis' formula in his second lecture, slide 40 (note that his mu and beta are the same).
 * Write a likelihood function for the binary model given two sequences that have 20 identical sites and 4 differing ones. Plot this likelihood function for a range of values containing the mean.
 * Simulate sequence evolution down the measles tree using the binary symmetric model. (Python hints: I used numpy's [binomial](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.binomial.html) and stored values on the tree using [add_feature](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#node-annotation)).
+* Implement the [Fitch algorithm](http://www.cs.ubc.ca/labs/beta/Courses/CPSC536A-01/Class10/class10-notes.html) to calculate parsimony scores on your simulated data. I found it useful while debugging my version to annotate the inferences on my tree with `n.add_face(TextFace(str(fitch_cost)), column=0, position = "branch-top")` with another for `fitch_state`.
+* Make a plot such that each simulated data set is a single point, with the x axis representing the number of simulated mutations, and the y axis representing the parsimony score. What do you notice?
 
 
 ## Day 4: Further topics
