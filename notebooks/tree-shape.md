@@ -9,7 +9,7 @@ output: html_document
 
 ## R setup
 
-Install [apTreeshape](https://cran.r-project.org/web/packages/apTreeshape/index.html).
+Install [apTreeshape](https://cran.r-project.org/package=apTreeshape).
 
 ```r
 install.packages("apTreeshape")
@@ -22,7 +22,7 @@ install.packages("apTreeshape")
 library(apTreeshape)
 ```
 
-Load the tree into R with the `read.tree` function of [ape](https://cran.r-project.org/web/packages/ape/):
+Load the tree into R with the `read.tree` function of [ape](https://cran.r-project.org/package=ape/):
 
 ```r
 t = read.tree('../data/processed/measles.nwk')
