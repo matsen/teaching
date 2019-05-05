@@ -19,9 +19,12 @@ After this course, I hope you will be able to
 
 ## Prerequisites
 
-### Software prerequisite
+### Software prerequisites
 
-Please download and make sure you can run [seaview](http://doua.prabi.fr/software/seaview) as soon as possible.
+* [seaview](http://doua.prabi.fr/software/seaview)
+* Anaconda. If you have an existing installation, excellent. Otherwise I recommend [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+* Install ETE and friends with `conda install -c etetoolkit ete3 ete_toolchain`
+
 
 ## Day 1: Phylogenetics motivation and intro
 
