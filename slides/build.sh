@@ -13,7 +13,6 @@ theme="simple"
     --variable transition="none" \
     --variable controls="false" \
     --variable history="true" \
-    --smart \
     -o "$2"
 
 # The third line unwraps images from their paragraphs, which has the lovely effect of allowing reveal's stretch feature to work.
