@@ -147,13 +147,28 @@ Is it the most popular phylogenetics method?
 * Parametrize that model
 * Evaluate likelihood under various parameter values
 
+# Example: picking peaches
+
+Say $p$ is the probability of getting a ripe peach, and each draw is independent.
+
+<ul>
+<li class=fragment>
+What is the probability of getting two ripe peaches in a row?
+</li>
+<li class=fragment>
+What about if after harvesting two peaches, we have one ripe one?
+</li>
+<li class=fragment>
+What about if after harvesting 20 peaches, we have 6 ripe ones?
+</li>
+</ul>
+
 
 # Example: picking peaches
 Say that, after harvesting 20 peaches, we have 6 ripe ones.
 
-Model using the
-[binomial distribution](http://en.wikipedia.org/wiki/Binomial_distribution).
 Say $p$ is the probability of getting a ripe peach, and each draw is independent.
+Model using the [binomial distribution](http://en.wikipedia.org/wiki/Binomial_distribution).
 
 &nbsp;
 
@@ -162,6 +177,7 @@ $$
 { {20} \choose 6} \, p^6 \, (1-p)^{20-6}.
 $$
 Recall: ${ {20} \choose 6}$ is the number of ways of choosing 6 items out of 20.
+
 
 # Peach picking likelihood surface
 ^imgh figures/likelihood/ripe-likelihood.svg 450

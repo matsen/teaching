@@ -225,8 +225,23 @@ Given enough data, likelihood methods will converge to the true tree.
 </section>
 <section id="example-picking-peaches" class="slide level1">
 <h1>Example: picking peaches</h1>
+<p>Say <span class="math inline">\(p\)</span> is the probability of getting a ripe peach, and each draw is independent.</p>
+<ul>
+<li class="fragment">
+What is the probability of getting two ripe peaches in a row?
+</li>
+<li class="fragment">
+What about if after harvesting two peaches, we have one ripe one?
+</li>
+<li class="fragment">
+What about if after harvesting 20 peaches, we have 6 ripe ones?
+</li>
+</ul>
+</section>
+<section id="example-picking-peaches-1" class="slide level1">
+<h1>Example: picking peaches</h1>
 <p>Say that, after harvesting 20 peaches, we have 6 ripe ones.</p>
-<p>Model using the <a href="http://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a>. Say <span class="math inline">\(p\)</span> is the probability of getting a ripe peach, and each draw is independent.</p>
+<p>Say <span class="math inline">\(p\)</span> is the probability of getting a ripe peach, and each draw is independent. Model using the <a href="http://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a>.</p>
 <p> </p>
 <p>The <em>likelihood</em> of getting the observed result is <span class="math display">\[
 { {20} \choose 6} \, p^6 \, (1-p)^{20-6}.
