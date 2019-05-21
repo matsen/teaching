@@ -1,0 +1,89 @@
+% Model assumptions in phylogenetics
+
+# Let's take a look at the Newick string for a tree inferred from `mystery.fasta`...
+
+<br>
+
+^div fragment "Why does it look that way?"
+
+# Mathematically, what are the primary common model assumptions in phylogenetics?
+<br>
+
+<ul>
+<li class=fragment>
+Stationarity: overall base composition does not change on the tree
+</li>
+<li class=fragment>
+Time reversibility: substitution process is the same going forward and backward in time
+</li>
+<li class=fragment>
+Homogeneity: same across branches of the tree
+</li>
+</ul>
+
+# Time reversibility is not symmetry
+
+Symmetry:
+
+$$
+\Pr(X_t = \mathtt A | X_0 = \mathtt C) = \Pr(X_t = \mathtt C | X_0 = \mathtt A)
+$$
+
+<br>
+
+Time-reversibility:
+
+$$
+\Pr(X_0 = \mathtt C, X_t = \mathtt A) = \Pr(X_0 = \mathtt A, X_t = \mathtt C)
+$$
+
+<div class="fragment">
+or
+
+$$
+\Pr(X_0 = \mathtt C | X_t = \mathtt A) \Pr(X_t = \mathtt A) = \Pr(X_0 = \mathtt A | X_t = \mathtt C) \Pr(X_t = \mathtt C)
+$$
+</div>
+
+<div class="fragment">
+... which is by what principle ...
+
+$$
+\Pr(X_0 = \mathtt C | X_t = \mathtt A) \pi_{\mathtt A} = \Pr(X_0 = \mathtt A | X_t = \mathtt C) \pi_{\mathtt C}
+$$
+</div>
+
+
+# Time-reversibility is why our tree structures come out unrooted.
+
+<br>
+
+The "pulley principle" says that one can move the root around anywhere under reversible models.
+This is handy for saving computation doing tree rearrangements under reversible models.
+
+<br>
+
+^div fragment "Outgroups can give us back a rooted tree."
+
+
+# [GC content is _not_ stationary...](https://www.pnas.org/content/111/39/E4096)
+
+^imghl https://www.pnas.org/content/pnas/111/39/E4096/F1.large.jpg
+
+
+# There are methods that enable use of non-reversible models
+
+<br>
+
+Boussau, B., & Gouy, M. (2006). Efficient likelihood computations with nonreversible models of evolution. Systematic Biology, 55(5), 756–768. <https://doi.org/10.1080/10635150600975218>
+
+
+# Phylogenetic invariants can infer under a non-homogeneous General Markov model of evolution!
+
+<br>
+
+Fernández-Sánchez, J., & Casanellas, M. (2016). Invariant Versus Classical Quartet Inference When Evolution is Heterogeneous Across Sites and Lineages. Systematic Biology, 65(2), 280–291. <https://doi.org/10.1093/sysbio/syv086>
+
+<br>
+
+If you want to learn more, we had a phyloseminar session on invariants <http://phyloseminar.org/recorded.html>

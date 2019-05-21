@@ -59,7 +59,7 @@ After this course, I hope you will be able to
 
 ## Day 3: Recombination and trees as data structures
 
-* Quiz on and discussion of video material, with [notes about matrix exponential]({{ "/slides/matrix-exp.html" | relative_url }})
+* Quiz on and discussion of video material, with [notes about matrix exponential]({{ "/slides/matrix-exp.html" | relative_url }}) and [discussion of phylogenetic model assumptions]({{ "/slides/phylogenetic-model-assumptions.html" | relative_url }})
 * Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
 * Working with trees as data structures: preorder and postorder traversal

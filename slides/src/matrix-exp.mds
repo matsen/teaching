@@ -59,7 +59,7 @@ $\left( Q^k \right)_{ij}$ is the rate of transitioning from state $i$ to state $
 
 <div class="fragment">
 $$
-\left(\frac{t^{k} Q^k}{k!}\right)_{ij} = \left(e^{tQ} \right)_{ij}
+\left(\sum_k \frac{t^{k} Q^k}{k!}\right)_{ij} = \left(e^{tQ} \right)_{ij}
 $$
 is the probability of transitioning from $i$ to $j$ in time $t$.
 </div>

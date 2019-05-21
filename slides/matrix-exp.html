@@ -69,7 +69,7 @@
 
 <section>
   <h1 class="title">Where does the matrix exponential <span class="math inline">\(e^{tQ}\)</span> come from?</h1>
-  <p class="author">Erick Matsen</p>
+  <h2 class="author">Erick Matsen</h2>
 </section>
 
 <section id="what-is-the-expansion-of-et-as-a-sum" class="slide level1">
@@ -100,7 +100,7 @@ P(k{\text{ events in interval }}t)=e^{-rt}{\frac {(rt)^{k}}{k!}}
 </div>
 </section>
 <section id="lets-take-rate-1-and-drop-the-constant" class="slide level1">
-<h1>Let’s take rate 1 and drop the constant</h1>
+<h1>Let's take rate 1 and drop the constant</h1>
 <p><span class="math display">\[
 P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
 \]</span></p>
@@ -126,7 +126,7 @@ P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
 <p><br></p>
 <div class="fragment">
 <p><span class="math display">\[
-\left(\frac{t^{k} Q^k}{k!}\right)_{ij} = \left(e^{tQ} \right)_{ij}
+\left(\sum_k \frac{t^{k} Q^k}{k!}\right)_{ij} = \left(e^{tQ} \right)_{ij}
 \]</span> is the probability of transitioning from <span class="math inline">\(i\)</span> to <span class="math inline">\(j\)</span> in time <span class="math inline">\(t\)</span>.</p>
 </div>
 </section>
@@ -152,7 +152,7 @@ P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>

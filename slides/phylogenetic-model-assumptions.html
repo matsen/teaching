@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Model assumptions in phylogenetics</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <style type="text/css">
+      .reveal { font-size: 32px; }
+      .reveal h1 { font-size: 1.35em; }
+  
+      .reveal section img {
+          border: none;
+          box-shadow: none;
+          vertical-align: middle;
+      }
+  
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 {
+        font-family: "News Cycle", Lato, sans-serif;
+        text-shadow: none; }
+  
+      div.bigpurple {
+        font-size: 3em;
+        line-height: 1em;
+        color: purple;
+      }
+  
+      div.caption {
+        font-size: 24px;
+        line-height: 1em;
+      }
+  
+      div.citation {
+          position: absolute;
+          bottom:0px;
+          right:0px;
+          z-index:100;
+          font-size: 0.45em !important;
+      }
+  
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+  <h1 class="title">Model assumptions in phylogenetics</h1>
+</section>
+
+<section id="lets-take-a-look-at-the-newick-string-for-a-tree-inferred-from-mystery.fasta..." class="slide level1">
+<h1>Let's take a look at the Newick string for a tree inferred from <code>mystery.fasta</code>...</h1>
+<p><br></p>
+<div class="fragment">
+Why does it look that way?
+</div>
+</section>
+<section id="mathematically-what-are-the-primary-common-model-assumptions-in-phylogenetics" class="slide level1">
+<h1>Mathematically, what are the primary common model assumptions in phylogenetics?</h1>
+<p><br></p>
+<ul>
+<li class="fragment">
+Stationarity: overall base composition does not change on the tree
+</li>
+<li class="fragment">
+Time reversibility: substitution process is the same going forward and backward in time
+</li>
+<li class="fragment">
+Homogeneity: same across branches of the tree
+</li>
+</ul>
+</section>
+<section id="time-reversibility-is-not-symmetry" class="slide level1">
+<h1>Time reversibility is not symmetry</h1>
+<p>Symmetry:</p>
+<p><span class="math display">\[
+\Pr(X_t = \mathtt A | X_0 = \mathtt C) = \Pr(X_t = \mathtt C | X_0 = \mathtt A)
+\]</span></p>
+<p><br></p>
+<p>Time-reversibility:</p>
+<p><span class="math display">\[
+\Pr(X_0 = \mathtt C, X_t = \mathtt A) = \Pr(X_0 = \mathtt A, X_t = \mathtt C)
+\]</span></p>
+<div class="fragment">
+<p>or</p>
+<p><span class="math display">\[
+\Pr(X_0 = \mathtt C | X_t = \mathtt A) \Pr(X_t = \mathtt A) = \Pr(X_0 = \mathtt A | X_t = \mathtt C) \Pr(X_t = \mathtt C)
+\]</span></p>
+</div>
+<div class="fragment">
+<p>... which is by what principle ...</p>
+<p><span class="math display">\[
+\Pr(X_0 = \mathtt C | X_t = \mathtt A) \pi_{\mathtt A} = \Pr(X_0 = \mathtt A | X_t = \mathtt C) \pi_{\mathtt C}
+\]</span></p>
+</div>
+</section>
+<section id="time-reversibility-is-why-our-tree-structures-come-out-unrooted." class="slide level1">
+<h1>Time-reversibility is why our tree structures come out unrooted.</h1>
+<p><br></p>
+<p>The &quot;pulley principle&quot; says that one can move the root around anywhere under reversible models. This is handy for saving computation doing tree rearrangements under reversible models.</p>
+<p><br></p>
+<div class="fragment">
+Outgroups can give us back a rooted tree.
+</div>
+</section>
+<section id="gc-content-is-not-stationary..." class="slide level1">
+<h1><a href="https://www.pnas.org/content/111/39/E4096">GC content is <em>not</em> stationary...</a></h1>
+<p><a href="https://www.pnas.org/content/pnas/111/39/E4096/F1.large.jpg" target="_blank"><img src="https://www.pnas.org/content/pnas/111/39/E4096/F1.large.jpg" height="620"></a></p>
+</section>
+<section id="there-are-methods-that-enable-use-of-non-reversible-models" class="slide level1">
+<h1>There are methods that enable use of non-reversible models</h1>
+<p><br></p>
+<p>Boussau, B., &amp; Gouy, M. (2006). Efficient likelihood computations with nonreversible models of evolution. Systematic Biology, 55(5), 756–768. <a href="https://doi.org/10.1080/10635150600975218" class="uri">https://doi.org/10.1080/10635150600975218</a></p>
+</section>
+<section id="phylogenetic-invariants-can-infer-under-a-non-homogeneous-general-markov-model-of-evolution" class="slide level1">
+<h1>Phylogenetic invariants can infer under a non-homogeneous General Markov model of evolution!</h1>
+<p><br></p>
+<p>Fernández-Sánchez, J., &amp; Casanellas, M. (2016). Invariant Versus Classical Quartet Inference When Evolution is Heterogeneous Across Sites and Lineages. Systematic Biology, 65(2), 280–291. <a href="https://doi.org/10.1093/sysbio/syv086" class="uri">https://doi.org/10.1093/sysbio/syv086</a></p>
+<p><br></p>
+<p>If you want to learn more, we had a phyloseminar session on invariants <a href="http://phyloseminar.org/recorded.html" class="uri">http://phyloseminar.org/recorded.html</a></p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
