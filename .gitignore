@@ -7,3 +7,4 @@ package.json
 .jekyll-metadata
 .Rhistory
 .RData
+_ignore

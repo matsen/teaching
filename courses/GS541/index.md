@@ -33,11 +33,6 @@ After this course, I hope you will be able to
 * Lecture: [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }}) to parsimony
 * Try using various algorithms to build trees with seaview; then try clicking "Full, Swap, Re-root, and Subtree"
 
-### Homework 1a
-
-* Watch [introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
-* Do quiz questions (sent by email).
-
 
 ## Day 2: Phylogenetics methods
 
@@ -49,12 +44,12 @@ After this course, I hope you will be able to
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
 * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
 
-### Homework 1b
+### Homework 1
 
-* Watch [introduction to phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf))
-* Do quiz questions (sent by email).
 * Install a tree manipulation package, preferably the Python package [ETE](http://etetoolkit.org). If you only use R, use [ape](https://cran.r-project.org/web/packages/ape/index.html), and perhaps [ggtree](https://github.com/GuangchuangYu/ggtree). (Note that tree traversal in R is significantly more difficult, though you can [see an example here](http://rpubs.com/ematsen/ape-traversal-sample)).
-* Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}). Write a little Python script to find the longest branch (a.k.a. edge) in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.) Submit both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF.
+* Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}). Write a little Python script to find the longest branch (a.k.a. edge) in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.)
+* Use the same measles tree built in the previous homework, and make a scatter plot for each branch of the tree, with the x axis being the length of the branch and the y axis being the number of descendants of that branch (`len(n)` gives the number of descendants of a node in ETE).
+* Submit both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF.
 
 
 ## Day 3: Recombination and trees as data structures
@@ -69,7 +64,6 @@ After this course, I hope you will be able to
 
 Do the following in a script, either submitting both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF. PDF is best, but if you encounter problems with the PDF export you may submit (in order of preference) HTML or the `.ipynb` file.
 
-* Use the same measles tree built in the previous homework, and make a scatter plot for each branch of the tree, with the x axis being the length of the branch and the y axis being the number of descendants of that branch (`len(n)` gives the number of descendants of a node in ETE).
 * Use matrix exponentiation ([expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html) in SciPy) on the matrix `[[-1, 1],[1, -1]]` to get a transition matrix for the binary symmetric model. Demonstrate that this exponentiation gives the same values as Paul Lewis' formula in his second lecture, slide 40, for ν=1.
 * Write a likelihood function for the binary symmetric model given two sequences that have 20 identical sites and 4 differing ones. Plot the logarithm of the likelihood function for a range of branch length values containing the maximum likelihood branch length. (Note that this part of the assignment does not involve a proper tree, just two sequences evolving from one to the other.)
 * Simulate sequence evolution down the measles tree using the binary symmetric model starting with a uniform draw for the root state, returning one "column" of sequence data at a time (i.e. a single 0/1 value for each tip). (Python hints: I used numpy's [binomial](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.binomial.html) with n=1 and stored values on the tree using [add_feature](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#node-annotation)). Display the tree with an example set of simulated tip states from running your simulator.
@@ -90,6 +84,13 @@ Do the following in a script, either submitting both the script and the output, 
 ## Books
 * [*Inferring Phylogenies*](http://www.sinauer.com/detail.php?id=1775) by Felsenstein
 * [*The Phylogenetic Handbook*](http://www.cambridge.org/gb/knowledge/isbn/item2327447/?site_locale=en_GB) edited by Lemey, Salemi, and Vandamme, chapters by the stars
+
+
+## Introductory lecture series
+* [Introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
+* [Introduction to phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf))
+* [Introduction to Bayesian statistics and how it is used in phylogenetics](https://www.youtube.com/watch?v=4PWlnNsfz90) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/78lewis/phyloseminar-lewis-part3a.pdf))
+* [More Bayesian phylogenetics: proposals, prior distributions, hierarchical models, and Bayes factors](https://www.youtube.com/watch?v=TLtOS--YwkU) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/78lewis/phyloseminar-lewis-part3b.pdf))
 
 
 ## Software
