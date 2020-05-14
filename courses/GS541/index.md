@@ -14,7 +14,8 @@ After this course, I hope you will be able to
 * recognize situations when evolutionary thinking is important
 * understand basic features of evolutionary trees
 * be familiar with the various types of tree inference, and when they are useful
-* be able to apply codon-based tests for natural selection.
+* understand likelihood-based tree inference
+* understand potential pitfalls of tree inference methods
 
 
 ## Prerequisites
@@ -45,6 +46,7 @@ After this course, I hope you will be able to
 
 * Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}) using seaview. Write a little Python script to find the longest branch (a.k.a. edge) in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.)
 * Use the same measles tree built in the previous homework, and make a scatter plot for each branch of the tree, with the x axis being the length of the branch and the y axis being the number of descendants of that branch (`len(n)` gives the number of descendants of a node in ETE).
+* Imagine that instead of 4 DNA bases, we have just two bases, named 0 and 1. Follow through the development of the transition probabilities starting on Lewis' slide 59 to obtain a likelihood function for the corresponding model in terms of branch length nu (written ν in the slides) given two sequences that have 20 identical sites and 4 differing ones. Plot the logarithm of the likelihood function for a range of branch length values containing the maximum likelihood branch length. (Note that this part of the assignment does not involve a proper tree, just two sequences evolving from one to the other.)
 * Submit both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF.
 
 
@@ -60,9 +62,7 @@ After this course, I hope you will be able to
 
 Do the following in a script, either submitting both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF. PDF is best, but if you encounter problems with the PDF export you may submit (in order of preference) HTML or the `.ipynb` file.
 
-* Use matrix exponentiation ([expm](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.expm.html) in SciPy) on the matrix `[[-1, 1],[1, -1]]` to get a transition matrix for the binary symmetric model. Demonstrate that this exponentiation gives the same values as Paul Lewis' formula in his second lecture, slide 40, for ν=1.
-* Write a likelihood function for the binary symmetric model given two sequences that have 20 identical sites and 4 differing ones. Plot the logarithm of the likelihood function for a range of branch length values containing the maximum likelihood branch length. (Note that this part of the assignment does not involve a proper tree, just two sequences evolving from one to the other.)
-* Simulate sequence evolution down the measles tree using the binary symmetric model starting with a uniform draw for the root state, returning one "column" of sequence data at a time (i.e. a single 0/1 value for each tip). (Python hints: I used numpy's [binomial](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.binomial.html) with n=1 and stored values on the tree using [add_feature](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#node-annotation)). Display the tree with an example set of simulated tip states from running your simulator.
+* Simulate sequence evolution down the measles tree using the 0/1 model from homework 1 starting with a uniform draw for the root state, returning one "column" of sequence data at a time (i.e. a single 0/1 value for each tip). (Python hints: I used numpy's [binomial](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.binomial.html) with n=1 and stored values on the tree using [add_feature](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#node-annotation)). Display the tree with an example set of simulated tip states from running your simulator.
 * Implement the [Fitch algorithm](http://www.cs.ubc.ca/labs/beta/Courses/CPSC536A-01/Class10/class10-notes.html) to calculate parsimony scores on your simulated data. I found it useful while debugging my version to annotate the inferences on my tree with `n.add_face(TextFace(str(fitch_cost)), column=0, position = "branch-top")` with another annotation for `fitch_state`.
 * Simulate 1000 times on the Measles tree and run the Fitch algorithm on each of these. Make a plot such that each simulated data set is a single point, with the x axis representing the number of simulated mutations, and the y axis representing the parsimony score. What do you notice?
 
