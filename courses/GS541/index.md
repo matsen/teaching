@@ -50,8 +50,9 @@ After this course, I hope you will be able to
 * Submit both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF.
 
 
-## Day 3: Recombination and trees as data structures
+## Day 3: Sequence alignment, recombination and trees as data structures
 
+* Trees as data structures: pre and post-order traversal
 * Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
 * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
