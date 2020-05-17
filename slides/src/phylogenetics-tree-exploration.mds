@@ -1,0 +1,19 @@
+% Phylogenetics methods: tree exploration
+% Erick Matsen
+
+#
+<section data-background="figures/phylo/number-of-trees.jpg">
+</section>
+
+# Subtree prune regraft
+^imgw figures/phylo/spr-definition.svg
+
+# Typical cycle for a ML program
+
+1. Start with quick heuristic tree (e.g. parsimony, distance-based).
+2. Try all local tree modifications; optimize branch lengths for each.
+3. If we found something better, return to 2. Otherwise stop.
+
+# Tree traversal
+
+See jupyter notebook
