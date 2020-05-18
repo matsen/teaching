@@ -8,7 +8,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -21,7 +26,6 @@
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
-  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <style type="text/css">
       .reveal { font-size: 32px; }
       .reveal h1 { font-size: 1.35em; }
@@ -66,12 +70,12 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
+<section id="title-slide">
   <h1 class="title">Model assumptions in phylogenetics</h1>
 </section>
 
-<section id="lets-take-a-look-at-the-newick-string-for-a-tree-inferred-from-mystery.fasta..." class="slide level1">
-<h1>Let's take a look at the Newick string for a tree inferred from <code>mystery.fasta</code>...</h1>
+<section id="lets-take-a-look-at-the-newick-string-for-a-tree-inferred-from-mystery.fasta" class="slide level1">
+<h1>Let’s take a look at the Newick string for a tree inferred from <code>mystery.fasta</code>…</h1>
 <p><br></p>
 <div class="fragment">
 Why does it look that way?
@@ -110,7 +114,7 @@ Homogeneity: same across branches of the tree
 \]</span></p>
 </div>
 <div class="fragment">
-<p>... which is by what principle ...</p>
+<p>… which is by what principle …</p>
 <p><span class="math display">\[
 \Pr(X_0 = \mathtt C | X_t = \mathtt A) \pi_{\mathtt A} = \Pr(X_0 = \mathtt A | X_t = \mathtt C) \pi_{\mathtt C}
 \]</span></p>
@@ -119,14 +123,14 @@ Homogeneity: same across branches of the tree
 <section id="time-reversibility-is-why-our-tree-structures-come-out-unrooted." class="slide level1">
 <h1>Time-reversibility is why our tree structures come out unrooted.</h1>
 <p><br></p>
-<p>The &quot;pulley principle&quot; says that one can move the root around anywhere under reversible models. This is handy for saving computation doing tree rearrangements under reversible models.</p>
+<p>The “pulley principle” says that one can move the root around anywhere under reversible models. This is handy for saving computation doing tree rearrangements under reversible models.</p>
 <p><br></p>
 <div class="fragment">
 Outgroups can give us back a rooted tree.
 </div>
 </section>
-<section id="gc-content-is-not-stationary..." class="slide level1">
-<h1><a href="https://www.pnas.org/content/111/39/E4096">GC content is <em>not</em> stationary...</a></h1>
+<section id="gc-content-is-not-stationary" class="slide level1">
+<h1><a href="https://www.pnas.org/content/111/39/E4096">GC content is <em>not</em> stationary…</a></h1>
 <p><a href="https://www.pnas.org/content/pnas/111/39/E4096/F1.large.jpg" target="_blank"><img src="https://www.pnas.org/content/pnas/111/39/E4096/F1.large.jpg" height="620"></a></p>
 </section>
 <section id="there-are-methods-that-enable-use-of-non-reversible-models" class="slide level1">
@@ -158,11 +162,28 @@ Outgroups can give us back a rooted tree.
         history: true,
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: 'MathJax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true },
           { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });

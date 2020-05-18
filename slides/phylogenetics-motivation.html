@@ -9,7 +9,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -22,7 +27,6 @@
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
-  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <style type="text/css">
       .reveal { font-size: 32px; }
       .reveal h1 { font-size: 1.35em; }
@@ -67,9 +71,9 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
+<section id="title-slide">
   <h1 class="title">Why phylogenetics?</h1>
-  <h2 class="author">Erick Matsen</h2>
+  <p class="author">Erick Matsen</p>
 </section>
 
 <section id="popular-image-of-phylogenetics" class="slide level1">
@@ -135,15 +139,15 @@ Need to correct for evolutionary history to test evolution hypothesis.
 <h1></h1>
 <img src="figures/comparative-method/dunn-pairwise-felsenstein_nofonts.svg" class="stretch">
 </section>
-<section id="dunn-et-al.-reanalyze-two-papers" class="slide level1">
-<h1>Dunn et al. reanalyze two papers</h1>
+<section id="dunn-et-al.reanalyze-two-papers" class="slide level1">
+<h1>Dunn et al. reanalyze two papers</h1>
 <ul>
 <li>Kryuchkova-Mostacci, N., &amp; Robinson-Rechavi, M. (2016). Tissue-Specificity of Gene Expression Diverges Slowly between Orthologs, and Rapidly between Paralogs. PLoS Computational Biology, 12(12), e1005274. <a href="https://doi.org/10.1371/journal.pcbi.1005274">[DOI]</a></li>
 <li>Levin, M., Anavy, L., Cole, A. G., Winter, E., Mostov, N., Khair, S., … Yanai, I. (2016). The mid-developmental transition and the evolution of animal body plans. Nature, 531, 637. <a href="https://doi.org/10.1038/nature16994">[DOI]</a></li>
 </ul>
 <p><br></p>
 <div class="fragment">
-Let's take a look.
+Let’s take a look.
 </div>
 </section>
 <section id="kryuchkova-mostacci-re-analysis" class="slide level1">
@@ -158,7 +162,7 @@ Let's take a look.
 <section id="section-6" class="slide level1">
 <h1></h1>
 <img src="figures/comparative-method/dunn-mostacci-sim.png" height="450">
-<p><em>... simulate under null...</em> As in the original study, there is higher (P &lt; 2e-16) correlation coefficient across orthologs (0.73) than paralogs (0.28) when not considering node age.</p>
+<p><em>… simulate under null…</em> As in the original study, there is higher (P &lt; 2e-16) correlation coefficient across orthologs (0.73) than paralogs (0.28) when not considering node age.</p>
 </section>
 <section id="levin-analysis" class="slide level1">
 <h1>Levin analysis</h1>
@@ -168,8 +172,8 @@ Let's take a look.
 <h1>Levin re-analysis</h1>
 <img src="figures/comparative-method/dunn-reanalyzes-levin.png" class="stretch">
 </section>
-<section id="for-a-paper-that-does-it-right..." class="slide level1">
-<h1>For a paper that does it right...</h1>
+<section id="for-a-paper-that-does-it-right" class="slide level1">
+<h1>For a paper that does it right…</h1>
 <p>Schraiber, J. G., Mostovoy, Y., Hsu, T. Y., &amp; Brem, R. B. (2013). Inferring evolutionary histories of pathway regulation from transcriptional profiling data. PLoS Computational Biology, 9(10), e1003255. <a href="https://doi.org/10.1371/journal.pcbi.1003255">[DOI]</a></p>
 <p><a href="https://www.youtube.com/watch?v=3lxqv_iJeLY" class="uri">https://www.youtube.com/watch?v=3lxqv_iJeLY</a></p>
 </section>
@@ -213,7 +217,7 @@ Flu transmission patterns
 <p>Neher, R. A., &amp; Bedford, T. (2015). nextflu: Real-time tracking of seasonal influenza virus evolution in humans. Bioinformatics . <a href="https://doi.org/10.1093/bioinformatics/btv381">[DOI]</a></p>
 <p>Neher, R. A., Russell, C. A., &amp; Shraiman, B. I. (2014). Predicting evolution from the shape of genealogical trees. eLife, 3. <a href="https://doi.org/10.7554/eLife.03568">[DOI]</a></p>
 <p><a href="http://nextstrain.org/" class="uri">http://nextstrain.org/</a></p>
-<p>Hadfield, Megill, Bell, Huddleston, Potter, Callender, ..., Bedford, Neher, (2018). Nextstrain: real-time tracking of pathogen evolution. Bioinformatics. <a href="https://doi.org/10.1093/bioinformatics/bty407">[DOI]</a></p>
+<p>Hadfield, Megill, Bell, Huddleston, Potter, Callender, …, Bedford, Neher, (2018). Nextstrain: real-time tracking of pathogen evolution. Bioinformatics. <a href="https://doi.org/10.1093/bioinformatics/bty407">[DOI]</a></p>
 </section>
     </div>
   </div>
@@ -232,11 +236,28 @@ Flu transmission patterns
         history: true,
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: 'MathJax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true },
           { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });

@@ -9,7 +9,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -22,7 +27,6 @@
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
-  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <style type="text/css">
       .reveal { font-size: 32px; }
       .reveal h1 { font-size: 1.35em; }
@@ -67,9 +71,9 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
+<section id="title-slide">
   <h1 class="title">Where does the matrix exponential <span class="math inline">\(e^{tQ}\)</span> come from?</h1>
-  <h2 class="author">Erick Matsen</h2>
+  <p class="author">Erick Matsen</p>
 </section>
 
 <section id="what-is-the-expansion-of-et-as-a-sum" class="slide level1">
@@ -100,7 +104,7 @@ P(k{\text{ events in interval }}t)=e^{-rt}{\frac {(rt)^{k}}{k!}}
 </div>
 </section>
 <section id="lets-take-rate-1-and-drop-the-constant" class="slide level1">
-<h1>Let's take rate 1 and drop the constant</h1>
+<h1>Let’s take rate 1 and drop the constant</h1>
 <p><span class="math display">\[
 P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
 \]</span></p>
@@ -147,11 +151,28 @@ P(k{\text{ events in interval }}t) \propto {\frac {t^{k}}{k!}}
         history: true,
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: 'MathJax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true },
           { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });

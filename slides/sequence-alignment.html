@@ -9,7 +9,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -66,7 +71,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
+<section id="title-slide">
   <h1 class="title">Sequence alignment from the <br> phylogenetic perspective</h1>
   <p class="author">Erick Matsen</p>
 </section>
@@ -94,7 +99,7 @@ Quiz: Why?
 <h1>Phylogenetic approach is best</h1>
 <img src="figures/alignment/alignment-and-phylogeny-protpal-tractable-case.png" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1371/journal.pone.0034572">Westesson et al. 2012</a>
+<a href="http://dx.doi.org/10.1371/journal.pone.0034572">Westesson et al. 2012</a>
 </div>
 </section>
 <section id="clustal-w-vs-prank" class="slide level1">
@@ -182,7 +187,7 @@ If you really care about alignments (and trees) use <a href="http://www.bali-phy
 If you want good alignment using <a href="http://dx.doi.org/10.1126/science.1158395">PRANK</a> <br> with a lovely web-based GUI, use <a href="http://wasabiapp.org/">Wasabi</a>
 </li>
 <li class="fragment">
-If you want a quick and dirty alignment, use <a href="http://drive5.com/muscle/">Muscle</a> <br> (esp. if your sequences aren’t too divergent)
+If you want a quick and dirty alignment, use <a href="http://drive5.com/muscle/">Muscle</a> <br> (esp. if your sequences aren’t too divergent)
 </li>
 <li class="fragment">
 Do not use any variant of Clustal, even if your friends say to.
@@ -209,12 +214,29 @@ Use a codon alignment if you have protein-coding genes.
         history: true,
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: 'MathJax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/math/math.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>

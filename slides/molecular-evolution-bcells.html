@@ -9,7 +9,12 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
   <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
   <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
   <!-- Printing and PDF exports -->
   <script>
@@ -22,7 +27,6 @@
   <!--[if lt IE 9]>
   <script src="reveal.js/lib/js/html5shiv.js"></script>
   <![endif]-->
-  <script src="MathJax/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
   <style type="text/css">
       .reveal { font-size: 32px; }
       .reveal h1 { font-size: 1.35em; }
@@ -67,7 +71,7 @@
   <div class="reveal">
     <div class="slides">
 
-<section>
+<section id="title-slide">
   <h1 class="title">Mutation and selection in B cells</h1>
   <p class="author">Erick Matsen</p>
   <p class="date">Thanks to <a href="http://cobeylab.uchicago.edu/">Sarah Cobey</a> for some of the slides</p>
@@ -77,21 +81,21 @@
 <h1>Structure of a B cell receptor</h1>
 <img src="figures/bcell/bcr.png" class="stretch">
 <div class="citation">
-<a href="http://www.nature.com/nbt/journal/v32/n2/abs/nbt.2782.html">Georgiou et al. 2014</a>
+<a href="http://www.nature.com/nbt/journal/v32/n2/abs/nbt.2782.html">Georgiou et al. 2014</a>
 </div>
 </section>
 <section id="vdj-recombination" class="slide level1">
 <h1>VDJ recombination</h1>
 <img src="figures/bcell/overview-top_nofonts.svg" class="stretch">
 <div class="citation">
-modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al. 2012</a>
+modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al. 2012</a>
 </div>
 </section>
 <section id="vdj-loci" class="slide level1">
 <h1>VDJ loci</h1>
 <img src="figures/bcell/watson-eichler-breden.png" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.ajhg.2013.03.004">Watson et al. 2013</a>
+<a href="http://dx.doi.org/10.1016/j.ajhg.2013.03.004">Watson et al. 2013</a>
 </div>
 </section>
 <section id="section" class="slide level1">
@@ -99,7 +103,7 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <iframe class="stretch" src="https://www.youtube.com/embed/Ts7Dt4D96h0?rel=0&amp;ecver=2">
 </iframe>
 <div class="citation">
-<a href="http://dx.doi.org/10.1126/science.aad3439">Tas et al. 2016</a>
+<a href="http://dx.doi.org/10.1126/science.aad3439">Tas et al. 2016</a>
 </div>
 </section>
 <section id="section-1" class="slide level1">
@@ -185,7 +189,7 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <h1>Phylogenetics is not straightforward</h1>
 <img src="figures/bcell/hoehn-mean-field.png" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1534/genetics.116.196303">Hoehn et al. 2017</a>
+<a href="http://dx.doi.org/10.1534/genetics.116.196303">Hoehn et al. 2017</a>
 </div>
 </section>
 <section id="incorporating-context-sensitivity-helps-performance" class="slide level1">
@@ -383,12 +387,29 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
         history: true,
         // Transition style
         transition: 'none', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: 'MathJax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
 
         // Optional reveal.js plugins
         dependencies: [
           { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
           { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+          { src: 'reveal.js/plugin/math/math.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
         ]
       });
     </script>
