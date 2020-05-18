@@ -15,6 +15,7 @@ After this course, I hope you will be able to
 * understand basic features of evolutionary trees
 * be familiar with the various types of tree inference, and when they are useful
 * understand likelihood-based tree inference
+* understand the choices one makes when performing likelihood-based tree inference
 * understand potential pitfalls of tree inference methods
 
 
@@ -52,12 +53,20 @@ After this course, I hope you will be able to
 
 ## Day 3: Sequence alignment, recombination and trees as data structures
 
-* Trees as data structures: pre and post-order traversal
+* Lecture: [Tree exploration]({{ "/slides/phylogenetics-tree-exploration.html" | relative_url }})
+* Lecture: [Overview of sequence substitution models](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf) ([video](https://www.youtube.com/watch?v=UsLeY0wZr4Y))
 * Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
-* Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org)
+<!-- * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org) -->
 * Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
+
+
+## Day 4: Further topics
+
+* Lecture: [Bayesian methods]({{ "/slides/phylogenetics-bayesian.html" | relative_url }})
+* Play with [MCMC Robot](https://phylogeny.uconn.edu/mcmc-robot/)
+
 
 ### Homework 2
 
@@ -66,13 +75,6 @@ Do the following in a script, either submitting both the script and the output, 
 * Simulate sequence evolution down the measles tree using the 0/1 model from homework 1 starting with a uniform draw for the root state, returning one "column" of sequence data at a time (i.e. a single 0/1 value for each tip). (Python hints: I used numpy's [binomial](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.binomial.html) with n=1 and stored values on the tree using [add_feature](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#node-annotation)). Display the tree with an example set of simulated tip states from running your simulator.
 * Implement the [Fitch algorithm](http://www.cs.ubc.ca/labs/beta/Courses/CPSC536A-01/Class10/class10-notes.html) to calculate parsimony scores on your simulated data. I found it useful while debugging my version to annotate the inferences on my tree with `n.add_face(TextFace(str(fitch_cost)), column=0, position = "branch-top")` with another annotation for `fitch_state`.
 * Simulate 1000 times on the Measles tree and run the Fitch algorithm on each of these. Make a plot such that each simulated data set is a single point, with the x axis representing the number of simulated mutations, and the y axis representing the parsimony score. What do you notice?
-
-
-## Day 4: Further topics
-
-* Lecture: [Bayesian methods]({{ "/slides/phylogenetics-bayesian.html" | relative_url }})
-* Play with [MCMC Robot](https://phylogeny.uconn.edu/mcmc-robot/)
-* Work on homework
 
 
 <hr>
