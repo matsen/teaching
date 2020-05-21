@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="97.530411mm"
+   height="36.688801mm"
+   viewBox="0 0 345.57999 129.99965"
+   id="svg5234"
+   version="1.1"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="variational.svg">
+  <defs
+     id="defs5236">
+    <clipPath
+       id="clipPath24">
+      <path
+         d="m 421.34,776.72 386.41,0 0,-157.66 -386.41,0 0,157.66 z"
+         inkscape:connector-curvature="0"
+         id="path26" />
+    </clipPath>
+    <clipPath
+       id="clipPath48">
+      <path
+         d="m 347.34,776.91 280.88,0 0,-157.85 -280.88,0 0,157.85 z"
+         inkscape:connector-curvature="0"
+         id="path50" />
+    </clipPath>
+    <clipPath
+       id="clipPath78">
+      <path
+         d="m 396.29,776.9 157.47,0 0,-157.84 -157.47,0 0,157.84 z"
+         inkscape:connector-curvature="0"
+         id="path80" />
+    </clipPath>
+    <clipPath
+       id="clipPath102">
+      <path
+         d="m 188.75,776.91 210.85,0 0,-157.85 -210.85,0 0,157.85 z"
+         inkscape:connector-curvature="0"
+         id="path104" />
+    </clipPath>
+    <clipPath
+       id="clipPath130">
+      <path
+         d="m 327.17,686.936 136.231,0 0,-95.608 -136.231,0 0,95.608 z"
+         inkscape:connector-curvature="0"
+         id="path132" />
+    </clipPath>
+    <clipPath
+       id="clipPath234">
+      <path
+         d="m 195.17,575.936 136.231,0 0,-95.608 -136.231,0 0,95.608 z"
+         inkscape:connector-curvature="0"
+         id="path236" />
+    </clipPath>
+    <clipPath
+       id="clipPath254">
+      <path
+         d="m 457.17,576.936 136.231,0 0,-95.608 -136.231,0 0,95.608 z"
+         inkscape:connector-curvature="0"
+         id="path256" />
+    </clipPath>
+    <clipPath
+       id="clipPath274">
+      <path
+         d="m 437.17,419.936 136.231,0 0,-95.608 -136.231,0 0,95.608 z"
+         inkscape:connector-curvature="0"
+         id="path276" />
+    </clipPath>
+    <clipPath
+       id="clipPath374">
+      <path
+         d="m 597,905.89 210.71,0 0,-129.53 -210.71,0 0,129.53 z"
+         inkscape:connector-curvature="0"
+         id="path376" />
+    </clipPath>
+    <clipPath
+       id="clipPath410">
+      <path
+         d="m 461.21,905.89 110.31,0 0,-129.58 -110.31,0 0,129.58 z"
+         inkscape:connector-curvature="0"
+         id="path412" />
+    </clipPath>
+    <clipPath
+       id="clipPath462">
+      <path
+         d="m 188.75,905.89 248.34,0 0,-129.17 -248.34,0 0,129.17 z"
+         inkscape:connector-curvature="0"
+         id="path464" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath7077">
+      <rect
+         style="opacity:1;fill:#0000ff;fill-opacity:0.5076142;stroke:#0000ff;stroke-width:1.10000002;stroke-linecap:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:5.52421093;stroke-opacity:1"
+         id="rect7079"
+         width="413.1524"
+         height="214.15234"
+         x="18.182745"
+         y="511.9306" />
+    </clipPath>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5509"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mstart">
+      <path
+         transform="scale(0.6,0.6)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path5511"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker5579"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend">
+      <path
+         transform="matrix(-0.4,0,0,-0.4,-4,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 0,0 Z"
+         id="path5581"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath4892">
+      <rect
+         style="opacity:0.86000001;fill:none;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:4, 4;stroke-dashoffset:0;stroke-opacity:1"
+         id="rect4894"
+         width="472.7179"
+         height="284.28275"
+         x="20.608706"
+         y="536.9903"
+         rx="0.202979"
+         ry="0.39701" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.7144692"
+     inkscape:cx="16.880531"
+     inkscape:cy="64.999844"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1634"
+     inkscape:window-x="640"
+     inkscape:window-y="263"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5239">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(108.38942,-633.72564)">
+    <path
+       id="path3311"
+       d="m -430.38942,751.60867 837.3257,0"
+       style="display:inline;fill:none;fill-opacity:1;stroke:#808080;stroke-width:2;stroke-opacity:1"
+       inkscape:connector-curvature="0" />
+    <path
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssssc"
+       d="m 407.71045,752.49299 c -131.37402,0 -122.67922,-0.60734 -138.60783,-1.21577 -61.76524,-2.35925 -112.15784,-15.62435 -131.24444,-39.93006 -28.83643,-36.72157 -49.375314,-48.85882 -77.35746,-48.61802 -49.248375,0.42381 -41.838509,19.71053 -69.913798,46.92278 -20.786509,20.14753 -60.922847,39.26605 -122.688092,41.6253 -15.92861,0.60843 -7.23381,1.21577 -138.60789,1.21577"
+       style="display:inline;opacity:0.34599998;fill:#cce1ff;fill-opacity:1;fill-rule:evenodd;stroke:#3384ff;stroke-width:4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path4634" />
+    <text
+       id="text5431"
+       y="700.18774"
+       x="24.537857"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Lato;-inkscape-font-specification:'Lato, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.49999809px;line-height:1.25;font-family:MathJax_Math;-inkscape-font-specification:MathJax_Math"
+         y="700.18774"
+         x="24.537857"
+         id="tspan5433"
+         sodipodi:role="line"
+         dy="0 0 0 1.5700001 0 1.5700001">p(<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:MathJax_Main;-inkscape-font-specification:'MathJax_Main Bold'"
+   id="tspan4227"
+   dy="-1.5700001">z</tspan>|<tspan
+   style="-inkscape-font-specification:'MathJax_Main Italic';font-family:MathJax_Main;font-weight:normal;font-style:italic;font-stretch:normal;font-variant:normal"
+   id="tspan49">D</tspan>)</tspan></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:none">
+    <text
+       transform="translate(108.38942,-633.72564)"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:Lato;-inkscape-font-specification:'Lato, Normal';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="-69.738533"
+       y="694.53796"
+       id="text5427"><tspan
+         sodipodi:role="line"
+         id="tspan5429"
+         x="-69.738533"
+         y="694.53796"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:27.49999428px;line-height:3.32999992;font-family:MathJax_Math;-inkscape-font-specification:MathJax_Math"
+         dy="0 0 0 0 1.5700001">q<tspan
+   style="font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:64.99997973%;font-family:MathJax_Math;-inkscape-font-specification:'MathJax_Math Bold Italic';baseline-shift:sub"
+   id="tspan4221">ϕ</tspan>(<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:332.99999237%;font-family:MathJax_Main;-inkscape-font-specification:'MathJax_Main Bold'"
+   id="tspan4225"
+   dy="-1.5700001">z</tspan>)</tspan></text>
+    <path
+       transform="translate(108.38942,-633.72564)"
+       id="path2842"
+       style="display:inline;opacity:0.678;fill:#ffeeaa;fill-rule:evenodd;stroke:#ffcc00;stroke-width:3.91647911;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 389.71045,751.55585 c -128.6309,0 -120.11765,-0.59466 -135.71367,-1.19039 -60.47557,-2.30999 -87.92216,-21.94604 -111.94749,-40.34119 -30.46321,-23.32438 -53.148185,-46.35799 -80.549339,-46.35799 -27.401153,0 -50.086133,23.03361 -80.549348,46.35799 -24.025335,18.39515 -51.471923,38.0312 -111.947483,40.34119 -15.59602,0.59573 -7.08277,1.19039 -135.71368,1.19039"
+       sodipodi:nodetypes="csssssc"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

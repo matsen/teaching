@@ -247,7 +247,7 @@ P(X \mid D) \propto P(D \mid X) P(X)
 $$
 
 
-# What is our height relative the average elevation?
+# What is our height divided by the average elevation?
 ^img figures/inference/everest-view.jpg
 
 # Now, what is model-based statistical inference on *discrete mathematical objects*?
@@ -353,5 +353,47 @@ Try out [MCMC robot](https://phylogeny.uconn.edu/mcmc-robot/)!
 * If you can deal with a prior, it's the statistically right thing to do
 * Sometimes we aren't actually interested in the tree, so we can integrate it out
 * But! Short alignment, 100 taxa = hours
+
+# Why is random-walk Markov chain Monte Carlo so slow?
+
+^imgh figures/phylo/5-taxa-treespace-mcmc-unrooted.svg 400
+
+The efficiency of MCMC depends on the fraction of good neighbors.
+
+# # good neighbors for 41 sequences
+^imgh figures/phylo/spr-neighbors.svg 500
+
+# # good neighbors for 41 sequences (!)
+
+&nbsp;
+
+&nbsp;
+
+^imgw figures/phylo/spr-neighbors-wide.svg
+
+&nbsp;
+
+^div fragment "... we are very unlikely to hit another good tree by randomly trying a neighbor. No wonder random walk MCMC is so slow."
+
+<br>
+
+<div class=fragment>
+Whidden & Matsen IV. (2015). Quantifying MCMC exploration of phylogenetic tree space. _Systematic Biology_.
+</div>
+
+# Variational inference is an alternate strategy
+
+<br>
+
+^imgw figures/phylo/variational-1.svg
+
+^div fragment "MCMC strategy: sample under this curve"
+
+
+# Variational inference: fit a distribution $q_\phi(\mathbf{z})$ to it
+
+<br>
+
+^imgw figures/phylo/variational.svg
 
 

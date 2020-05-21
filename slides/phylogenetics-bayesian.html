@@ -292,8 +292,8 @@ P(\text{tails}) &amp; = 0.49
 P(X \mid D) \propto P(D \mid X) P(X)
 \]</span></p>
 </section>
-<section id="what-is-our-height-relative-the-average-elevation" class="slide level1">
-<h1>What is our height relative the average elevation?</h1>
+<section id="what-is-our-height-divided-by-the-average-elevation" class="slide level1">
+<h1>What is our height divided by the average elevation?</h1>
 <img src="figures/inference/everest-view.jpg" class="stretch">
 </section>
 <section id="now-what-is-model-based-statistical-inference-on-discrete-mathematical-objects" class="slide level1">
@@ -386,6 +386,42 @@ P(X \mid D) \propto P(D \mid X) P(X)
 <li>Sometimes we aren’t actually interested in the tree, so we can integrate it out</li>
 <li>But! Short alignment, 100 taxa = hours</li>
 </ul>
+</section>
+<section id="why-is-random-walk-markov-chain-monte-carlo-so-slow" class="slide level1">
+<h1>Why is random-walk Markov chain Monte Carlo so slow?</h1>
+<img src="figures/phylo/5-taxa-treespace-mcmc-unrooted_nofonts.svg" height="400">
+<p>The efficiency of MCMC depends on the fraction of good neighbors.</p>
+</section>
+<section id="good-neighbors-for-41-sequences" class="slide level1">
+<h1># good neighbors for 41 sequences</h1>
+<img src="figures/phylo/spr-neighbors_nofonts.svg" height="500">
+</section>
+<section id="good-neighbors-for-41-sequences-1" class="slide level1">
+<h1># good neighbors for 41 sequences (!)</h1>
+<p> </p>
+<p> </p>
+<img width="970" src="figures/phylo/spr-neighbors-wide_nofonts.svg">
+<p> </p>
+<div class="fragment">
+… we are very unlikely to hit another good tree by randomly trying a neighbor. No wonder random walk MCMC is so slow.
+</div>
+<p><br></p>
+<div class="fragment">
+<p>Whidden &amp; Matsen IV. (2015). Quantifying MCMC exploration of phylogenetic tree space. <em>Systematic Biology</em>.</p>
+</div>
+</section>
+<section id="variational-inference-is-an-alternate-strategy" class="slide level1">
+<h1>Variational inference is an alternate strategy</h1>
+<p><br></p>
+<img width="970" src="figures/phylo/variational-1_nofonts.svg">
+<div class="fragment">
+MCMC strategy: sample under this curve
+</div>
+</section>
+<section id="variational-inference-fit-a-distribution-q_phimathbfz-to-it" class="slide level1">
+<h1>Variational inference: fit a distribution <span class="math inline">\(q_\phi(\mathbf{z})\)</span> to it</h1>
+<p><br></p>
+<img width="970" src="figures/phylo/variational_nofonts.svg">
 </section>
     </div>
   </div>

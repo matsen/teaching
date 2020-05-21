@@ -65,6 +65,7 @@ After this course, I hope you will be able to
 ## Day 4: Further topics
 
 * Lecture: [Bayesian methods]({{ "/slides/phylogenetics-bayesian.html" | relative_url }})
+* Interleaved with: [Lewis slides on Bayesian inference](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/78lewis/phyloseminar-lewis-part3a.pdf) ([video](https://www.youtube.com/watch?v=4PWlnNsfz90))
 * Play with [MCMC Robot](https://phylogeny.uconn.edu/mcmc-robot/)
 
 

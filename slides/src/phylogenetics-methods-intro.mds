@@ -143,9 +143,24 @@ Is it the most popular phylogenetics method?
 ^div fragment "Given enough data, likelihood methods will converge to the true tree."
 
 # Likelihood setup
-* Come up with a *statistical model* of experiment
-* Parametrize that model
-* Evaluate likelihood under various parameter values
+<ul>
+<li>
+Come up with a statistical model of experiment in terms of some data and some parameters
+</li>
+<li class=fragment>
+Write down a *likelihood function* that expresses the probability of generating the observed data given those parameters
+</li>
+<li class=fragment>
+Now we can evaluate likelihood under various parameter values
+</li>
+<li class=fragment>
+We will write this likelihood $\Pr(D \mid \theta)$.
+<br>
+*Why is this appropriate notation?*
+</li>
+
+</ul>
+
 
 # Example: picking peaches
 
