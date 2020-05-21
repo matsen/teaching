@@ -200,12 +200,14 @@ Recall: ${ {20} \choose 6}$ is the number of ways of choosing 6 items out of 20.
 The *maximum likelihood estimate* of the parameter(s) of interest is the parameter value(s) that maximize the likelihood.
 
 
+<!--
 #
 <s> The *maximum likelihood estimate* of the parameter(s) of interest is the parameter value(s) that maximize the likelihood. </s>
 
 ^img figures/likelihood/prob-models-have-dials.svg
 
 Fiddle with the dials until it looks good.
+-->
 
 
 # Questions

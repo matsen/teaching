@@ -141,7 +141,7 @@ f(x)=y
 <p> </p>
 <p> </p>
 <div class="fragment">
-<p>Alternatively, one might be interested in taking the average of <span class="math inline">\(f(x)\)</span> between two values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+<p>Alternatively, one might be interested in taking the average of a <span class="math inline">\(g(x)\)</span> between two values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
 </div>
 <aside class="notes">
 <ul>
@@ -151,12 +151,12 @@ f(x)=y
 </ul>
 </aside>
 </section>
-<section id="define-int_ab-fx-dx-as-area" class="slide level1">
-<h1>Define <span class="math inline">\(\int_a^b f(x) \ dx\)</span> as area</h1>
+<section id="define-int_ab-gx-dx-as-area" class="slide level1">
+<h1>Define <span class="math inline">\(\int_a^b g(x) \ dx\)</span> as area</h1>
 <img src="figures/inference/integral-auc_nofonts.svg" height="550">
 </section>
-<section id="b-a-cdot-int_ab-fx-dx-is-average" class="slide level1">
-<h1><span class="math inline">\(1/(b-a) \cdot \int_a^b f(x) \ dx\)</span> is average</h1>
+<section id="b-a-cdot-int_ab-gx-dx-is-average" class="slide level1">
+<h1><span class="math inline">\(1/(b-a) \cdot \int_a^b g(x) \ dx\)</span> is average</h1>
 <img src="figures/inference/integral-average_nofonts.svg" height="550">
 </section>
 <section id="variables-allow-us-to-solve" class="slide level1">
@@ -247,7 +247,7 @@ P(\text{tails}) &amp; = 0.49
 <div class="fragment">
 <p>We can also <em>average</em> with respect to <span class="math inline">\(X\)</span>:</p>
 <p><span class="math display">\[
-\int f(X) \, d\mathbb P(X \mid Y)
+\int g(X) \, d\mathbb P(X \mid Y)
 \]</span></p>
 <p>where now we are averaging out with respect to a probability.</p>
 </div>
@@ -279,7 +279,7 @@ P(\text{tails}) &amp; = 0.49
 <p> </p>
 <div class="fragment">
 <p>We can push uncertainty through an analysis using integrals like <span class="math display">\[
-\int_a^b f(X) \, d\mathbb P(X \mid Y).
+\int_a^b g(X) \, d\mathbb P(X \mid Y).
 \]</span> (we don’t care what the angle of the cannon is really, we just want to know with what probability the shot is going to hit the castle!)</p>
 </div>
 </section>
@@ -310,7 +310,7 @@ P(X \mid D) \propto P(D \mid X) P(X)
 <img src="figures/inference/phylogenetic-posterior_nofonts.svg" class="stretch">
 <p> </p>
 <p>To decide superinfection, we would like to calculate <span class="math display">\[
-\int_S f(X) \, d\mathbb P(X \mid Y)
+\int_S g(X) \, d\mathbb P(X \mid Y)
 \]</span> where <span class="math inline">\(X\)</span> is now a <em>phylogenetic-tree-valued random variable</em>.</p>
 </section>
 <section id="time-to-count-your-blessings." class="slide level1">
@@ -334,7 +334,7 @@ P(X \mid D) \propto P(D \mid X) P(X)
 <section id="we-can-thus-define-the-integral" class="slide level1">
 <h1>We can thus define the integral</h1>
 <img src="figures/inference/riemann-integral_nofonts.svg" class="stretch">
-<p>for real-valued <span class="math inline">\(\int_a^b f(x) dx\)</span> and <span class="math inline">\(\int_a^b f(X) \, d\mathbb P(X \mid Y)\)</span>.</p>
+<p>for real-valued <span class="math inline">\(\int_a^b g(x) dx\)</span> and <span class="math inline">\(\int_a^b g(X) \, d\mathbb P(X \mid Y)\)</span>.</p>
 </section>
 <section id="integrating-over-phylogenetic-trees" class="slide level1">
 <h1>Integrating over phylogenetic trees?</h1>

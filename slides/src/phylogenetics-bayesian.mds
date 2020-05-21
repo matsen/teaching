@@ -73,7 +73,7 @@ then we can work towards *solving* for $x$.
 &nbsp;
 
 <div class="fragment">
-Alternatively, one might be interested in taking the average of $f(x)$ between two values $a$ and $b$.
+Alternatively, one might be interested in taking the average of a $g(x)$ between two values $a$ and $b$.
 </div>
 
 <aside class="notes">
@@ -83,11 +83,11 @@ Alternatively, one might be interested in taking the average of $f(x)$ between t
 </aside>
 
 
-# Define $\int_a^b f(x) \ dx$ as area
+# Define $\int_a^b g(x) \ dx$ as area
 ^imgh figures/inference/integral-auc.svg 550
 
 
-# $1/(b-a) \cdot \int_a^b f(x) \ dx$ is average
+# $1/(b-a) \cdot \int_a^b g(x) \ dx$ is average
 ^imgh figures/inference/integral-average.svg 550
 
 
@@ -189,7 +189,7 @@ this is called *inference*.
 We can also *average* with respect to $X$:
 
 $$
-\int f(X) \, d\mathbb P(X \mid Y)
+\int g(X) \, d\mathbb P(X \mid Y)
 $$
 
 where now we are averaging out with respect to a probability.
@@ -228,7 +228,7 @@ We can solve for $X$ in "equations" like $f(X) \sim Y$, <br>
 <div class="fragment">
 We can push uncertainty through an analysis using integrals like
 $$
-\int_a^b f(X) \, d\mathbb P(X \mid Y).
+\int_a^b g(X) \, d\mathbb P(X \mid Y).
 $$
 (we don't care what the angle of the cannon is really, we just want to know with what probability the shot is going to hit the castle!)
 </div>
@@ -269,7 +269,7 @@ $$
 
 To decide superinfection, we would like to calculate
 $$
-\int_S f(X) \, d\mathbb P(X \mid Y)
+\int_S g(X) \, d\mathbb P(X \mid Y)
 $$
 where $X$ is now a *phylogenetic-tree-valued random variable*.
 
@@ -296,7 +296,7 @@ where $X$ is now a *phylogenetic-tree-valued random variable*.
 # We can thus define the integral
 ^img figures/inference/riemann-integral.svg
 
-for real-valued $\int_a^b f(x) dx$ and $\int_a^b f(X) \, d\mathbb P(X \mid Y)$.
+for real-valued $\int_a^b g(x) dx$ and $\int_a^b g(X) \, d\mathbb P(X \mid Y)$.
 
 
 # Integrating over phylogenetic trees?

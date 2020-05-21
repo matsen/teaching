@@ -1,6 +1,7 @@
 % Phylogenetics methods: likelihood
 % Erick Matsen
 
+# NOTE these slides have been superseded by combining the lewis lectures with some of the methods intro.
 
 # Likelihood setup
 * Come up with a *statistical model* of experiment
@@ -35,7 +36,6 @@ The *maximum likelihood estimate* of the parameter(s) of interest is the paramet
 ^img figures/likelihood/prob-models-have-dials.svg
 
 Fiddle with the dials until it looks good.
-
 
 # Questions
 
