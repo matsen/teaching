@@ -14,9 +14,12 @@ After this course, I hope you will be able to
 * recognize situations when evolutionary thinking is important
 * understand basic features of evolutionary trees
 * be familiar with the various types of tree inference, and when they are useful
-* understand likelihood-based tree inference
+* understand likelihood-based phylogenetic inference as a statistical estimation problem, including what a substitution model is, and between-sites rate heterogeneity
 * understand the choices one makes when performing likelihood-based tree inference
 * understand potential pitfalls of tree inference methods
+* understand the tools one has to assess confidence in a phylogenetic tree
+* understand the impact of recombination on phylogenetic inference
+* understand the basics of tree search and sampling in a Bayesian context
 
 
 ## Prerequisites
