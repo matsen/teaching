@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Erick Matsen">
+  <title>Understanding trees</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+  <style type="text/css">
+      .reveal { font-size: 32px; }
+      .reveal h1 { font-size: 1.35em; }
+  
+      .reveal section img {
+          border: none;
+          box-shadow: none;
+          vertical-align: middle;
+      }
+  
+      .reveal h1,
+      .reveal h2,
+      .reveal h3,
+      .reveal h4,
+      .reveal h5,
+      .reveal h6 {
+        font-family: "News Cycle", Lato, sans-serif;
+        text-shadow: none; }
+  
+      div.bigpurple {
+        font-size: 3em;
+        line-height: 1em;
+        color: purple;
+      }
+  
+      div.caption {
+        font-size: 24px;
+        line-height: 1em;
+      }
+  
+      div.citation {
+          position: absolute;
+          bottom:0px;
+          right:0px;
+          z-index:100;
+          font-size: 0.45em !important;
+      }
+  
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Understanding trees</h1>
+  <p class="author">Erick Matsen</p>
+</section>
+
+<section id="section" class="slide level1">
+<h1></h1>
+<img src="https://artic.network/assets/images/tutorials/phylogram_1a.png" height="620">
+<div class="citation">
+<p><a href="https://artic.network/how-to-read-a-tree.html">ARTIC.network</a></p>
+</div>
+<!--
+Talk about leaf nodes, internal nodes, sister
+-->
+</section>
+<section id="branch-support-and-branch-lengths" class="slide level1">
+<h1>Branch support and branch lengths</h1>
+<img src="https://artic.network/assets/images/tutorials/phylogram_1b.png" height="620">
+<div class="citation">
+<p><a href="https://artic.network/how-to-read-a-tree.html">ARTIC.network</a></p>
+</div>
+</section>
+<section id="circular-tree-representation" class="slide level1">
+<h1>Circular tree representation</h1>
+<img src="https://artic.network/assets/images/tutorials/phylogram_2.png" height="620">
+<div class="citation">
+<p><a href="https://artic.network/how-to-read-a-tree.html">ARTIC.network</a></p>
+</div>
+</section>
+<section id="unrooted-tree-representation" class="slide level1">
+<h1>Unrooted tree representation</h1>
+<img src="https://artic.network/assets/images/tutorials/phylogram_3.png" height="620">
+<div class="citation">
+<p><a href="https://artic.network/how-to-read-a-tree.html">ARTIC.network</a></p>
+</div>
+</section>
+<section id="can-rotate-branches" class="slide level1">
+<h1>Can rotate branches</h1>
+<img width="450" src="https://artic.network/assets/images/tutorials/phylogram_4a.png"> <img width="450" src="https://artic.network/assets/images/tutorials/phylogram_4b.png">
+<div class="citation">
+<p><a href="https://artic.network/how-to-read-a-tree.html">ARTIC.network</a></p>
+</div>
+</section>
+<section id="relationship-of-the-sampled-set-of-sequences" class="slide level1">
+<h1>Relationship of the <em>sampled</em> set of sequences</h1>
+<!--
+https://docs.nextstrain.org/en/latest/learn/interpret/how-to-read-a-tree.html
+-->
+<img width="970" src="https://docs.nextstrain.org/en/latest/_images/infection_tree_combined.png">
+<div class="citation">
+Nextstrain.org
+</div>
+</section>
+<section id="a-tree-of-sampled-hiv-sequences" class="slide level1">
+<h1>A tree of sampled HIV sequences</h1>
+<img src="figures/motivation/scaduto-texas-hiv.png" height="620">
+</section>
+<section id="expected-number-of-substitutions-per-site" class="slide level1">
+<h1>Expected number of substitutions per site</h1>
+<img src="https://bedford.io/projects/gs541-phylodynamics/images/clock_flu_tree.png" height="620">
+<div class="citation">
+Trevor Bedford
+</div>
+</section>
+<section id="the-molecular-clock" class="slide level1">
+<h1>The “molecular clock”</h1>
+<img width="970" src="https://bedford.io/projects/gs541-phylodynamics/images/clock_flu_root_to_tip.png">
+<div class="citation">
+Trevor Bedford
+</div>
+</section>
+<section id="time-tree-gives-calendar-dates-for-all-nodes" class="slide level1">
+<h1>“Time tree” gives (calendar) dates for all nodes</h1>
+<img width="970" src="https://bedford.io/projects/sismid/sequences/images/clock_flu_timetree.png">
+<div class="citation">
+Trevor Bedford
+</div>
+</section>
+<section id="an-inference-about-the-age-of-siv" class="slide level1">
+<h1>An inference about the age of SIV</h1>
+<img width="970" src="figures/motivation/wertheim-relaxed-clocks-2009.png">
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891884.205908097!2d8.651983229093515!3d3.842024003701635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10643a6238de77fd%3A0x84a216a73b0fb9f9!2sBioko!5e0!3m2!1sen!2sus!4v1617831271381!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen loading="lazy">
+</iframe>
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<ol type="1">
+<li>Say you can sample SIV from anywhere, and you know that Bioko was connected to the mainland 10,000 years ago. How could that inform your understanding of the divergence of SIV?</li>
+<li><p>What AMAZING fact can you see in the flu phylogenetic time tree? <img src="https://bedford.io/projects/sismid/sequences/images/clock_flu_timetree.png" height="150"></p></li>
+<li><p>WTF is going on here? <img src="figures/motivation/B117-clade.png" height="350"></p></li>
+</ol>
+</section>
+<section id="worobey-et-al-science-2010" class="slide level1">
+<h1>Worobey et al, <em>Science</em> 2010</h1>
+<img src="figures/motivation/worobey-siv-bioko-island.png" height="500">
+<div class="fragment">
+<p>“This pattern suggests that the more rapidly evolving the character, the more biased the dating estimate becomes toward the present.”</p>
+</div>
+</section>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<img src="https://bedford.io/images/talks/ncov_variants_501Y.V1_clock_2021_02_10.png" height="620">
+<div class="citation">
+Trevor Bedford
+</div>
+</section>
+<section id="section-4" class="slide level1">
+<h1></h1>
+<img src="https://bedford.io/images/talks/ncov_variants_501Y.V2_clock_2021_02_10.png" height="620">
+<div class="citation">
+Trevor Bedford
+</div>
+</section>
+<section id="section-5" class="slide level1">
+<h1></h1>
+<img src="https://bedford.io/images/talks/ncov_variants_501Y.V3_clock_2021_02_10.png" height="620">
+<div class="citation">
+Trevor Bedford
+</div>
+</section>
+<section id="section-6" class="slide level1">
+<h1></h1>
+<img src="https://bedford.io/images/talks/ncov_variants_501Y.V1_clock_2021_02_10.png" height="300"> <img src="https://bedford.io/images/talks/ncov_variants_501Y.V2_clock_2021_02_10.png" height="300"> <img src="https://bedford.io/images/talks/ncov_variants_501Y.V3_clock_2021_02_10.png" height="300">
+<!--
+re deletion variants
+https://paperpile.com/shared/6uoJe2
+-->
+</section>
+<section id="section-7" class="slide level1">
+<h1></h1>
+<ul>
+<li>What are the evolutionary processes that shape a tree?</li>
+<li>What are the non-evolutionary processes that shape a tree?</li>
+</ul>
+</section>
+<section id="reconstructing-state-on-a-tree" class="slide level1">
+<h1>Reconstructing state on a tree</h1>
+<img width="400" src="https://artic.network/assets/images/tutorials/phylogram_5a.png"> <img width="400" src="https://artic.network/assets/images/tutorials/phylogram_5b.png"> <img width="400" src="https://artic.network/assets/images/tutorials/phylogram_5c.png">
+<div class="citation">
+<p><a href="https://artic.network/how-to-read-a-tree.html">ARTIC.network</a></p>
+</div>
+</section>
+<section id="section-8" class="slide level1">
+<h1></h1>
+<blockquote class="twitter-tweet">
+<p lang="en" dir="ltr">
+This case, WA2, is on a branch in the evolutionary tree that descends directly from WA1, the first reported case in the USA sampled Jan 19, also from Snohomish County, viewable here: <a href="https://t.co/gxyo0PsJ7x">https://t.co/gxyo0PsJ7x</a> 2/9 <a href="https://t.co/LBH26A0AFC">pic.twitter.com/LBH26A0AFC</a>
+</p>
+— Trevor Bedford (<span class="citation" data-cites="trvrb">@trvrb</span>) <a href="https://twitter.com/trvrb/status/1233970442152472577?ref_src=twsrc%5Etfw">March 1, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</section>
+<section id="section-9" class="slide level1">
+<h1></h1>
+<img src="figures/motivation/worobey-wa1-sars-cov-2.png" height="620">
+<div class="citation">
+<p><a href="https://science.sciencemag.org/content/370/6516/564">Worobey et al, 2020</a></p>
+</div>
+</section>
+<section id="section-10" class="slide level1">
+<h1></h1>
+<img src="figures/motivation/worobey-wa1-sars-cov-2.png" height="500">
+<div class="citation">
+<p><a href="https://science.sciencemag.org/content/370/6516/564">Worobey et al, 2020</a></p>
+</div>
+<p><br clear=all></p>
+<p>WA epidemic ended up being a second introduction from BC…</p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        math: {
+          mathjax: 'MathJax/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/math/math.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

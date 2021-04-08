@@ -1,14 +1,151 @@
-https://artic.network/how-to-read-a-tree.html
+% Understanding trees
+% Erick Matsen
 
-trees are simplifications
-https://www.nature.com/scitable/topicpage/reading-a-phylogenetic-tree-the-meaning-of-41956/
+#
+^imgh https://artic.network/assets/images/tutorials/phylogram_1a.png
+<div class=citation>
+[ARTIC.network](https://artic.network/how-to-read-a-tree.html)
+</div>
+<!--
+Talk about leaf nodes, internal nodes, sister
+-->
 
-what are the evolutionary processes that shape a tree?
-they are the same processes that shape evolution
-... mutation _and_ selection--
-recurrent deletion
+# Branch support and branch lengths
+^imgh https://artic.network/assets/images/tutorials/phylogram_1b.png
+<div class=citation>
+[ARTIC.network](https://artic.network/how-to-read-a-tree.html)
+</div>
+
+# Circular tree representation
+^imgh https://artic.network/assets/images/tutorials/phylogram_2.png
+<div class=citation>
+[ARTIC.network](https://artic.network/how-to-read-a-tree.html)
+</div>
+
+# Unrooted tree representation
+^imgh https://artic.network/assets/images/tutorials/phylogram_3.png
+<div class=citation>
+[ARTIC.network](https://artic.network/how-to-read-a-tree.html)
+</div>
+
+# Can rotate branches
+^imgw https://artic.network/assets/images/tutorials/phylogram_4a.png 450
+^imgw https://artic.network/assets/images/tutorials/phylogram_4b.png 450
+<div class=citation>
+[ARTIC.network](https://artic.network/how-to-read-a-tree.html)
+</div>
+
+
+# Relationship of the _sampled_ set of sequences
+
+<!--
+https://docs.nextstrain.org/en/latest/learn/interpret/how-to-read-a-tree.html
+-->
+^imgw https://docs.nextstrain.org/en/latest/_images/infection_tree_combined.png
+^div citation "Nextstrain.org"
+
+
+# A tree of sampled HIV sequences
+^imgh figures/motivation/scaduto-texas-hiv.png
+
+
+# Expected number of substitutions per site
+^imgh https://bedford.io/projects/gs541-phylodynamics/images/clock_flu_tree.png
+^div citation "Trevor Bedford"
+
+# The "molecular clock"
+^imgw https://bedford.io/projects/gs541-phylodynamics/images/clock_flu_root_to_tip.png
+^div citation "Trevor Bedford"
+
+# "Time tree" gives (calendar) dates for all nodes
+^imgw https://bedford.io/projects/sismid/sequences/images/clock_flu_timetree.png
+^div citation "Trevor Bedford"
+
+# An inference about the age of SIV
+
+^imgw figures/motivation/wertheim-relaxed-clocks-2009.png
+
+#
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2891884.205908097!2d8.651983229093515!3d3.842024003701635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10643a6238de77fd%3A0x84a216a73b0fb9f9!2sBioko!5e0!3m2!1sen!2sus!4v1617831271381!5m2!1sen!2sus" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+#
+
+1. Say you can sample SIV from anywhere, and you know that Bioko was connected to the mainland 10,000 years ago. How could that inform your understanding of the divergence of SIV?
+2. What AMAZING fact can you see in the flu phylogenetic time tree?
+^imgh https://bedford.io/projects/sismid/sequences/images/clock_flu_timetree.png 150
+
+3. WTF is going on here?
+^imgh figures/motivation/B117-clade.png 350
+
+
+# Worobey et al, _Science_ 2010
+
+^imgh figures/motivation/worobey-siv-bioko-island.png 500
+
+<div class=fragment>
+"This pattern suggests that the more rapidly evolving the character, the more biased the dating estimate becomes toward the present."
+</div>
+
+
+#
+^imgh https://bedford.io/images/talks/ncov_variants_501Y.V1_clock_2021_02_10.png
+^div citation "Trevor Bedford"
+
+#
+^imgh https://bedford.io/images/talks/ncov_variants_501Y.V2_clock_2021_02_10.png
+^div citation "Trevor Bedford"
+
+#
+^imgh https://bedford.io/images/talks/ncov_variants_501Y.V3_clock_2021_02_10.png
+^div citation "Trevor Bedford"
+
+#
+^imgh https://bedford.io/images/talks/ncov_variants_501Y.V1_clock_2021_02_10.png 300
+^imgh https://bedford.io/images/talks/ncov_variants_501Y.V2_clock_2021_02_10.png 300
+^imgh https://bedford.io/images/talks/ncov_variants_501Y.V3_clock_2021_02_10.png 300
+
+<!--
+re deletion variants
 https://paperpile.com/shared/6uoJe2
+-->
 
-introduce molecular clock
-https://bedford.io/projects/gs541-phylodynamics/coalescent.html#/3
-https://bedford.io/talks/sars-cov-2-evolutionary-dynamics-comp-bio/#/12
+#
+
+* What are the evolutionary processes that shape a tree?
+* What are the non-evolutionary processes that shape a tree?
+
+
+
+# Reconstructing state on a tree
+^imgw https://artic.network/assets/images/tutorials/phylogram_5a.png 400
+^imgw https://artic.network/assets/images/tutorials/phylogram_5b.png 400
+^imgw https://artic.network/assets/images/tutorials/phylogram_5c.png 400
+<div class=citation>
+[ARTIC.network](https://artic.network/how-to-read-a-tree.html)
+</div>
+
+
+#
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This case, WA2, is on a branch in the evolutionary tree that descends directly from WA1, the first reported case in the USA sampled Jan 19, also from Snohomish County, viewable here: <a href="https://t.co/gxyo0PsJ7x">https://t.co/gxyo0PsJ7x</a> 2/9 <a href="https://t.co/LBH26A0AFC">pic.twitter.com/LBH26A0AFC</a></p>&mdash; Trevor Bedford (@trvrb) <a href="https://twitter.com/trvrb/status/1233970442152472577?ref_src=twsrc%5Etfw">March 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+#
+
+^imgh figures/motivation/worobey-wa1-sars-cov-2.png
+
+<div class=citation>
+[Worobey et al, 2020](https://science.sciencemag.org/content/370/6516/564)
+</div>
+
+#
+
+^imgh figures/motivation/worobey-wa1-sars-cov-2.png 500
+
+<div class=citation>
+[Worobey et al, 2020](https://science.sciencemag.org/content/370/6516/564)
+</div>
+
+<br clear=all>
+
+WA epidemic ended up being a second introduction from BC...
