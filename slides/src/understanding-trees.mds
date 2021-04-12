@@ -1,5 +1,28 @@
-% Understanding trees
+% What trees do and do not tell us
 % Erick Matsen
+
+# Doodle session
+
+<ul>
+<li class="fragment">
+_phylogenetic_ trees depict evolution
+<li class="fragment">
+internal nodes have a specific meaning, which differs between biological contexts
+<li class="fragment">
+trees represent a _sampled_ set of tips, and different sampling schemes can give us different pictures of history and the evolutionary process
+<li class="fragment">
+it can be difficult to learn the root of the tree
+<li class="fragment">
+to build an informative molecular phylogeny, we need mutations
+<li class="fragment">
+mutation rates can vary across the tree and this makes it challenging to assign calendar dates
+<li class="fragment">
+phylogenetic reconstruction isn't "obvious" and methods should use biological understanding of substitution types and per-site effects
+<li class="fragment">
+we need to understand homology to be able to understand phylogeny
+</ul>
+
+
 
 #
 ^imgh https://artic.network/assets/images/tutorials/phylogram_1a.png
@@ -149,3 +172,8 @@ https://paperpile.com/shared/6uoJe2
 <br clear=all>
 
 WA epidemic ended up being a second introduction from BC...
+
+#
+
+<https://evolution-outreach.biomedcentral.com/articles/10.1007/s12052-008-0035-x>
+<https://www.sciencedirect.com/science/article/pii/S0169534704003404?via%3Dihub>

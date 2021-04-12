@@ -1,0 +1,34 @@
+
+let's draw a tree...
+someone throw out some musicians or bands that everyone here might know
+what kind of tree is that?
+what do internal nodes mean?
+
+let's throw out some names of organisms
+what does this internal node mean?
+where is ... <some organism that isn't there> ...
+
+# it can be difficult to learn the root of the tree
+here are a few DNA sequences
+shall we draw a tree on these?
+
+# to build an informative molecular phylogeny, we need mutations
+multifurcation could be resolved one of several ways
+
+
+# mutation rates can vary across the tree and this makes it challenging to assign calendar dates
+
+
+# phylogenetic reconstruction isn't "obvious" and the results should use biological understanding
+homoplasy
+what if this is a protein-coding gene?
+
+# ... con't ...
+what if this is an intron
+TS/TV
+*** rare mutations should be weighed more heavily than common mutations ***
+
+<to the right> substitution rate variation
+
+
+

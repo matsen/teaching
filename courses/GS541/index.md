@@ -11,10 +11,11 @@ _Welcome to the phylogenetics module of Genome Sciences 541._
 
 After this course, I hope you will be able to
 
-* recognize situations when evolutionary thinking is important
 * understand basic features of evolutionary trees
+* recognize situations when evolutionary thinking is important
+* be able to interpret what trees do and do not tell us
 * be familiar with the various types of tree inference, and when they are useful
-* understand likelihood-based phylogenetic inference as a statistical estimation problem, including what a substitution model is, and between-sites rate heterogeneity
+* understand likelihood-based phylogenetic inference as a statistical estimation problem, including what a substitution model is
 * understand the choices one makes when performing likelihood-based tree inference
 * understand potential pitfalls of tree inference methods
 * understand the tools one has to assess confidence in a phylogenetic tree
@@ -34,6 +35,7 @@ After this course, I hope you will be able to
 
 ## Day 1: Phylogenetics motivation and intro
 
+* Lecture/discussion: [Understanding trees]({{ "/slides/understanding-trees.html" | relative_url }})
 * Lecture: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
 * Perform sequence alignment on [sample data]({{ "/data/sample.fasta" | relative_url }}) using seaview
 * Lecture: [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }})
@@ -47,6 +49,18 @@ After this course, I hope you will be able to
 * Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
 
 ### Homework 1
+
+We could simulate for the comparative method and then implement the comparative method
+We could simulate sequences, then observe that long and longer branch lengths both lead to similar things.
+We could implement maximum parsimony and observe Felsenstein zone.
+
+Concepts:
+* phylogenetic signal
+* pulley principle
+* time trees vs not
+* The simulation-based perspective on phylogenetic likelihood
+* No "mainline" of evolution
+
 
 * Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}) using seaview. Write a little Python script to find the longest branch (a.k.a. edge) in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.)
 * Make a scatter plot of this measles tree with one point for each branch of the tree: make the x axis the length of the branch and the y axis the number of descendants of that branch (`len(n)` gives the number of descendants of a node in ETE).
