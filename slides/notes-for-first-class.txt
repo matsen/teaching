@@ -1,12 +1,23 @@
 
 let's draw a tree...
-someone throw out some musicians or bands that everyone here might know
+someone throw out some musical styles that everyone here might know
 what kind of tree is that?
 what do internal nodes mean?
+does it have a strictly tree-like structure?
 
 let's throw out some names of organisms
 what does this internal node mean?
 where is ... <some organism that isn't there> ...
+
+does the horizontal dimension mean anything?
+what do the lengths of branches mean?
+can we assign calendar dates?
+
+now let's say that we are building a tree of virus sequences.
+what do internal nodes mean then?
+
+# reading phylogenetic trees takes practice, and it's easy to be misled
+"mainline" artifact, reading across the tips, reading trends into shape
 
 # it can be difficult to learn the root of the tree
 here are a few DNA sequences
@@ -15,28 +26,25 @@ shall we draw a tree on these?
 # to build an informative molecular phylogeny, we need mutations
 multifurcation could be resolved one of several ways
 
-
-# mutation rates can vary across the tree and this makes it challenging to assign calendar dates
-
-
 # phylogenetic reconstruction isn't "obvious" and the results should use biological understanding
 homoplasy
 what if this is a protein-coding gene?
 
 # ... con't ...
 what if this is an intron
-TS/TV
+
+# substitution rate variation
 *** rare mutations should be weighed more heavily than common mutations ***
 
-<to the right> substitution rate variation
-
+# TS/TV
+how could we bring this type of thing in to phylogenetic inference?
 
 # we need to establish homology relationships between sites to be able to do phylogeny; this is done for molecular data using multiple sequence alignment
 that's a hard problem
 
-
-# what if there is gene duplication and loss?
-
+# phylogeny happens on the level of genes. what if there is gene duplication and loss? incomplete lineage sorting?
+start by drawing a single non-branching tree inside the species tree
+then talk about ILS
 
 # we need to use tools to assess confidence in phylogeny, AND we need to look at the data and be critical of it
 Look at sample.fasta
