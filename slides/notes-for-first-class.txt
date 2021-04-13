@@ -31,4 +31,15 @@ TS/TV
 <to the right> substitution rate variation
 
 
+# we need to establish homology relationships between sites to be able to do phylogeny; this is done for molecular data using multiple sequence alignment
+that's a hard problem
+
+
+# what if there is gene duplication and loss?
+
+
+# we need to use tools to assess confidence in phylogeny, AND we need to look at the data and be critical of it
+Look at sample.fasta
+
+
 
