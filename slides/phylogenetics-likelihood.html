@@ -8,35 +8,27 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
   <style type="text/css">
       .reveal { font-size: 32px; }
       .reveal h1 { font-size: 1.35em; }
-  
+
       .reveal section img {
           border: none;
           box-shadow: none;
           vertical-align: middle;
       }
-  
+
       .reveal h1,
       .reveal h2,
       .reveal h3,
@@ -45,18 +37,18 @@
       .reveal h6 {
         font-family: "News Cycle", Lato, sans-serif;
         text-shadow: none; }
-  
+
       div.bigpurple {
         font-size: 3em;
         line-height: 1em;
         color: purple;
       }
-  
+
       div.caption {
         font-size: 24px;
         line-height: 1em;
       }
-  
+
       div.citation {
           position: absolute;
           bottom:0px;
@@ -64,7 +56,7 @@
           z-index:100;
           font-size: 0.45em !important;
       }
-  
+
   </style>
 </head>
 <body>
@@ -76,6 +68,9 @@
   <p class="author">Erick Matsen</p>
 </section>
 
+<section id="note-these-slides-have-been-superseded-by-combining-the-lewis-lectures-with-some-of-the-methods-intro." class="slide level1">
+<h1>NOTE these slides have been superseded by combining the lewis lectures with some of the methods intro.</h1>
+</section>
 <section id="likelihood-setup" class="slide level1">
 <h1>Likelihood setup</h1>
 <ul>
@@ -97,14 +92,12 @@
 <h1>Peach picking likelihood surface</h1>
 <img src="figures/likelihood/ripe-likelihood_nofonts.svg" height="450">
 <p>The <em>maximum likelihood estimate</em> of the parameter(s) of interest is the parameter value(s) that maximize the likelihood.</p>
-<!--
-#
-<s> The *maximum likelihood estimate* of the parameter(s) of interest is the parameter value(s) that maximize the likelihood. </s>
-
+</section>
+<section id="section" class="slide level1">
+<h1></h1>
+<p><s> The <em>maximum likelihood estimate</em> of the parameter(s) of interest is the parameter value(s) that maximize the likelihood. </s></p>
 <img src="figures/likelihood/prob-models-have-dials_nofonts.svg" class="stretch">
-
-Fiddle with the dials until it looks good.
--->
+<p>Fiddle with the dials until it looks good.</p>
 </section>
 <section id="questions" class="slide level1">
 <h1>Questions</h1>
@@ -155,12 +148,12 @@ Q_{\text{HKY}}={\begin{pmatrix}{*}&amp;{\kappa \pi _{G}}&amp;{\pi _{C}}&amp;{\pi
 </ul></li>
 <li>Protein models are typically pre-made
 <ul>
-<li>e.g. <a href="http://www.scopus.com/record/display.url?eid=2-s2.0-0026691182&amp;origin=inward&amp;txGid=u2307zIZ5me4AtASSSuc_3u%3a2">JTT</a> (Jones, Taylor, and Thornton), and <a href="http://mbe.oxfordjournals.org/content/18/5/691.short">WAG</a> (Whelan and Goldman) matrices</li>
+<li>e.g. <a href="http://www.scopus.com/record/display.url?eid=2-s2.0-0026691182&amp;origin=inward&amp;txGid=u2307zIZ5me4AtASSSuc_3u%3a2">JTT</a> (Jones, Taylor, and Thornton), and <a href="http://mbe.oxfordjournals.org/content/18/5/691.short">WAG</a> (Whelan and Goldman) matrices</li>
 </ul></li>
 <li>Codon models are a great idea
 <ul>
 <li>Position matters!</li>
-<li>e.g. <a href="http://mbe.oxfordjournals.org/content/23/1/7.full">SRD06</a> model</li>
+<li>e.g. <a href="http://mbe.oxfordjournals.org/content/23/1/7.full">SRD06</a> model</li>
 </ul></li>
 </ul>
 </section>
@@ -199,14 +192,20 @@ Q_{\text{HKY}}={\begin{pmatrix}{*}&amp;{\kappa \pi _{G}}&amp;{\pi _{C}}&amp;{\pi
     </div>
   </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
+      
         // Display controls in the bottom right corner
         controls: false,
         // Push each slide change to the browser history
@@ -230,12 +229,12 @@ Q_{\text{HKY}}={\begin{pmatrix}{*}&amp;{\kappa \pi _{G}}&amp;{\pi _{C}}&amp;{\pi
           },
         },
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/math/math.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
         ]
       });
     </script>

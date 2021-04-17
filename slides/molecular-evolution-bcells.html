@@ -8,35 +8,27 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
-  <style type="text/css">
-      code{white-space: pre-wrap;}
-      span.smallcaps{font-variant: small-caps;}
-      span.underline{text-decoration: underline;}
-      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/simple.css" id="theme">
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
-  <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
-  <![endif]-->
+  <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
   <style type="text/css">
       .reveal { font-size: 32px; }
       .reveal h1 { font-size: 1.35em; }
-  
+
       .reveal section img {
           border: none;
           box-shadow: none;
           vertical-align: middle;
       }
-  
+
       .reveal h1,
       .reveal h2,
       .reveal h3,
@@ -45,18 +37,18 @@
       .reveal h6 {
         font-family: "News Cycle", Lato, sans-serif;
         text-shadow: none; }
-  
+
       div.bigpurple {
         font-size: 3em;
         line-height: 1em;
         color: purple;
       }
-  
+
       div.caption {
         font-size: 24px;
         line-height: 1em;
       }
-  
+
       div.citation {
           position: absolute;
           bottom:0px;
@@ -64,7 +56,7 @@
           z-index:100;
           font-size: 0.45em !important;
       }
-  
+
   </style>
 </head>
 <body>
@@ -234,7 +226,7 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <section id="how-do-we-get-neutral-per-site-substitution-rate" class="slide level1">
 <h1>How do we get neutral per-site substitution rate?</h1>
 </section>
-<section id="productive-vs.out-of-frame-receptors" class="slide level1">
+<section id="productive-vs.-out-of-frame-receptors" class="slide level1">
 <h1>Productive vs. out-of-frame receptors</h1>
 <p> </p>
 <p><a href="figures/bcell/vdj_recomb_out_of_frame_nofonts.svg" target="_blank"><img width="970" src="figures/bcell/vdj_recomb_out_of_frame_nofonts_nofonts.svg"></a></p>
@@ -373,14 +365,20 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
     </div>
   </div>
 
-  <script src="reveal.js/lib/js/head.min.js"></script>
-  <script src="reveal.js/js/reveal.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//dist/reveal.js"></script>
+
+  <!-- reveal.js plugins -->
+  <script src="https://unpkg.com/reveal.js@^4//plugin/notes/notes.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/search/search.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/zoom/zoom.js"></script>
+  <script src="https://unpkg.com/reveal.js@^4//plugin/math/math.js"></script>
 
   <script>
 
       // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
+      // https://revealjs.com/config/
       Reveal.initialize({
+      
         // Display controls in the bottom right corner
         controls: false,
         // Push each slide change to the browser history
@@ -404,12 +402,12 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
           },
         },
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/math/math.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        // reveal.js plugins
+        plugins: [
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
         ]
       });
     </script>

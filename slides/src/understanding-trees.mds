@@ -77,8 +77,7 @@ https://docs.nextstrain.org/en/latest/learn/interpret/how-to-read-a-tree.html
 
 
 # A tree of sampled HIV sequences
-^imgh figures/motivation/scaduto-texas-hiv.png
-
+^img figures/motivation/scaduto-texas-hiv.png
 
 # Expected number of substitutions per site (flu)
 ^imgh https://bedford.io/projects/gs541-phylodynamics/images/clock_flu_tree.png

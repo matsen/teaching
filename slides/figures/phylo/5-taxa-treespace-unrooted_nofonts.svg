@@ -328,7 +328,7 @@
                id="g32">
               <path
                  style="fill:#ffffff"
-                 d="m 0,792 612,0 0,-525.55 -612,0 L 0,792 Z"
+                 d="M 0,792 H 612 V 266.45 H 0 Z"
                  id="path34" />
               <g
                  id="g36">
