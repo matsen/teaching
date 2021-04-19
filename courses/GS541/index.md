@@ -30,19 +30,24 @@ After this course, I hope you will be able to
 * [seaview](http://doua.prabi.fr/software/seaview)
 * Anaconda. If you have an existing installation, excellent. Otherwise I recommend [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 * I suggest that you use Python 3.7. With conda this looks like `conda create --name 541 python=3.7; conda activate 541`
+* Install jupyter with `conda install jupyter`
+* Install some data analysis packages; I use `conda install pandas matplotlib`
 * Install ETE and friends with `conda install -c etetoolkit ete3`
 
 
 ## Day 1: Phylogenetics motivation and intro
 
-* Lecture/discussion: [Understanding trees]({{ "/slides/understanding-trees.html" | relative_url }})
-* Lecture: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
+* Discussion: getting an intuitive grasp of how phylogenetic methods work
+* Discussion: [Understanding trees]({{ "/slides/understanding-trees.html" | relative_url }})
+
+
+## Day 2: Phylogenetics methods
+
+* Discussion: [Phylogenetics motivation]({{ "/slides/phylogenetics-motivation.html" | relative_url }})
 * Perform sequence alignment on [sample data]({{ "/data/sample.fasta" | relative_url }}) using seaview
 * Lecture: [Phylogenetics methods intro]({{ "/slides/phylogenetics-methods-intro.html" | relative_url }})
 * Try using various algorithms to build trees with seaview; then try clicking "Full, Swap, Re-root, and Subtree"
 
-
-## Day 2: Phylogenetics methods
 
 * Lecture: [introduction to likelihood-based phylogenetics](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf) ([video](https://www.youtube.com/watch?v=1r4z0YJq580))
 * Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
@@ -50,16 +55,6 @@ After this course, I hope you will be able to
 
 ### Homework 1
 
-We could simulate for the comparative method and then implement the comparative method
-We could simulate sequences, then observe that long and longer branch lengths both lead to similar things.
-We could implement maximum parsimony and observe Felsenstein zone.
-
-Concepts:
-* phylogenetic signal
-* pulley principle
-* time trees vs not
-* The simulation-based perspective on phylogenetic likelihood
-* No "mainline" of evolution
 
 
 * Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}) using seaview. Write a little Python script to find the longest branch (a.k.a. edge) in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.)
@@ -91,8 +86,6 @@ Concepts:
 Do the following in a script, either submitting both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF. PDF is best, but if you encounter problems with the PDF export you may submit (in order of preference) HTML or the `.ipynb` file.
 
 * Simulate sequence evolution down the measles tree using the 0/1 model from homework 1 starting with a uniform draw for the root state, returning one "column" of sequence data at a time (i.e. a single 0/1 value for each tip). (Python hints: I used numpy's [binomial](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.binomial.html) with n=1 and stored values on the tree using [add_feature](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#node-annotation)). Display the tree with an example set of simulated tip states from running your simulator.
-* Implement the [Fitch algorithm](http://www.cs.ubc.ca/labs/beta/Courses/CPSC536A-01/Class10/class10-notes.html) to calculate parsimony scores on your simulated data. I found it useful while debugging my version to annotate the inferences on my tree with `n.add_face(TextFace(str(fitch_cost)), column=0, position = "branch-top")` with another annotation for `fitch_state`.
-* Simulate 1000 times on the Measles tree and run the Fitch algorithm on each of these. Make a plot such that each simulated data set is a single point, with the x axis representing the number of simulated mutations, and the y axis representing the parsimony score. What do you notice?
 
 
 <hr>
