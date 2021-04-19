@@ -29,7 +29,7 @@ Please download and make sure you can run [seaview](http://doua.prabi.fr/softwar
 * Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
 * Lecture: [Codon models and tests for selection]({{ "/slides/kosakovsky-pond-selection.pdf" | relative_url }}) (part)
 * Lecture: [Mutation and selection in B cells]({{ "/slides/molecular-evolution-bcells.html" | relative_url }})
-* [Investigate tree balance](https://github.com/matsen/teaching/blob/master/notebooks/tree-shape.md) (see [Horns et al](http://dx.doi.org/10.1101/145052) for an application of tree shape to B cells)
+* [Investigate tree balance](https://github.com/matsen/teaching/blob/main/notebooks/tree-shape.md) (see [Horns et al](http://dx.doi.org/10.1101/145052) for an application of tree shape to B cells)
 
 
 ## Extra material in case we have time

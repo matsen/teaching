@@ -3,10 +3,6 @@
 
 # Examine the confidence measures for your trees.
 
-<br>
-
-^div fragment "... any thoughts about the data set we've been looking at?"
-
 
 #
 ^img figures/confidence/felsenstein-bootstrap.png
