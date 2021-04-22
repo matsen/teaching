@@ -20,7 +20,7 @@ After this course, I hope you will be able to
 * understand potential pitfalls of tree inference methods
 * understand the tools one has to assess confidence in a phylogenetic tree
 * understand the impact of recombination on phylogenetic inference
-* understand the basics of tree search and sampling in a Bayesian context
+* understand the basics of tree search
 
 
 ## Prerequisites
@@ -31,13 +31,12 @@ After this course, I hope you will be able to
 * Anaconda. If you have an existing installation, excellent. Otherwise I recommend [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 * I suggest that you use Python 3.7. With conda this looks like `conda create --name 541 python=3.7; conda activate 541`
 * Install jupyter with `conda install jupyter`
-* Install some data analysis packages; I use `conda install pandas matplotlib`
-* Install ETE and friends with `conda install -c etetoolkit ete3`
+* Install some data analysis packages: I use `conda install matplotlib pandas scipy`
 
 
 ## Day 1: Phylogenetics motivation and intro
 
-* Discussion: getting an intuitive grasp of how phylogenetic methods work
+* Discussion: getting an intuitive grasp of how phylogenetic methods work via interactive doodling
 * Discussion: [Understanding trees]({{ "/slides/understanding-trees.html" | relative_url }})
 
 
@@ -49,12 +48,7 @@ After this course, I hope you will be able to
 * Try using various algorithms to build trees with seaview; then try clicking "Full, Swap, Re-root, and Subtree"
 
 
-* Lecture: [introduction to likelihood-based phylogenetics](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf) ([video](https://www.youtube.com/watch?v=1r4z0YJq580))
-* Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
-* Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
-
 ### Homework 1
-
 
 
 * Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}) using seaview. Write a little Python script to find the longest branch (a.k.a. edge) in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.)
@@ -65,20 +59,21 @@ After this course, I hope you will be able to
 
 ## Day 3: Sequence alignment, recombination and trees as data structures
 
+* Lecture: [introduction to likelihood-based phylogenetics](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf) ([video](https://www.youtube.com/watch?v=1r4z0YJq580))
+* Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
+* Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
+
 * Lecture: [Tree exploration]({{ "/slides/phylogenetics-tree-exploration.html" | relative_url }})
 * Lecture: [Overview of sequence substitution models](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf) ([video](https://www.youtube.com/watch?v=UsLeY0wZr4Y))
+
+## Day 4: Further topics
+
 * Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
 <!-- * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org) -->
 * Lecture: [Trees and recombination]({{ "/slides/phylogenetics-recombination.html" | relative_url }})
 * Testing for recombination using [GARD](http://datamonkey.org/gard)
 
-
-## Day 4: Further topics
-
-* Lecture: [Bayesian methods]({{ "/slides/phylogenetics-bayesian.html" | relative_url }})
-* Interleaved with: [Lewis slides on Bayesian inference](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/78lewis/phyloseminar-lewis-part3a.pdf) ([video](https://www.youtube.com/watch?v=4PWlnNsfz90))
-* Play with [MCMC Robot](https://phylogeny.uconn.edu/mcmc-robot/)
 
 
 ### Homework 2
@@ -96,7 +91,7 @@ Do the following in a script, either submitting both the script and the output, 
 * [*The Phylogenetic Handbook*](http://www.cambridge.org/gb/knowledge/isbn/item2327447/?site_locale=en_GB) edited by Lemey, Salemi, and Vandamme, chapters by the stars
 
 
-## Introductory lecture series
+## Introductory lecture series (this is really good!)
 * [Introduction to likelihood-based phylogenetics video](https://www.youtube.com/watch?v=1r4z0YJq580) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf))
 * [Introduction to phylogenetic models video](https://www.youtube.com/watch?v=UsLeY0wZr4Y) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf))
 * [Introduction to Bayesian statistics and how it is used in phylogenetics](https://www.youtube.com/watch?v=4PWlnNsfz90) (with [slides](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/78lewis/phyloseminar-lewis-part3a.pdf))
