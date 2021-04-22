@@ -27,11 +27,11 @@ After this course, I hope you will be able to
 
 ### Software prerequisites
 
-* [seaview](http://doua.prabi.fr/software/seaview)
-* Anaconda. If you have an existing installation, excellent. Otherwise I recommend [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-* I suggest that you use Python 3.7. With conda this looks like `conda create --name 541 python=3.7; conda activate 541`
-* Install jupyter with `conda install jupyter`
-* Install some data analysis packages: I use `conda install matplotlib pandas scipy`
+* The [seaview](http://doua.prabi.fr/software/seaview) sequence alignment and phylogenetic analysis tool.
+* Anaconda with some core packages. I'm guessing you already have this set up, but if not here are some steps for you:
+    * Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
+    * `conda create --name 541 python=3.7; conda activate 541`
+    * `conda install jupyter matplotlib pandas scipy`
 
 
 ## Day 1: Phylogenetics motivation and intro
@@ -50,11 +50,8 @@ After this course, I hope you will be able to
 
 ### Homework 1
 
-
-* Infer a phylogenetic tree from [measles data]({{ "/data/measles.fasta" | relative_url }}) using seaview. Write a little Python script to find the longest branch (a.k.a. edge) in the tree, and draw a version of that tree such that the longest branch is colored red. (ETE hints: [Node style](http://etetoolkit.org/docs/latest/tutorial/tutorial_drawing.html#node-style), [tree traversal](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#traversing-browsing-trees), and [inline tree rendering](http://etetoolkit.org/ipython_notebook/) if you are using a Jupyter notebook.)
-* Make a scatter plot of this measles tree with one point for each branch of the tree: make the x axis the length of the branch and the y axis the number of descendants of that branch (`len(n)` gives the number of descendants of a node in ETE).
-* Imagine that instead of 4 DNA bases, we have just two bases, named 0 and 1. Follow through the development of the transition probabilities starting on Lewis' slide 59 to obtain a likelihood function for the corresponding model in terms of branch length nu (written ν in the slides) given two sequences that have 20 identical sites and 4 differing ones. Plot the logarithm of the likelihood function for a range of branch length values containing the maximum likelihood branch length. (Note that this part of the assignment does not involve a proper tree, just two sequences evolving from one to the other.)
-* Submit both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF.
+* Fill in the blanks in the [Homework 1 Jupyter notebook](https://github.com/matsen/teaching/blob/master/notebooks/homework_1.ipynb).
+* Submit the Jupyter notebook run from scratch ("Restart & Run All") and exported to PDF. If you have problems exporting to PDF, that's fine, HTML and `.ipynb` are also fine formats (with my preference in that order).
 
 
 ## Day 3: Sequence alignment, recombination and trees as data structures
@@ -62,12 +59,12 @@ After this course, I hope you will be able to
 * Lecture: [introduction to likelihood-based phylogenetics](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/76lewis/phyloseminar-lewis-part1.pdf) ([video](https://www.youtube.com/watch?v=1r4z0YJq580))
 * Lecture: [Phylogenetic confidence measures]({{ "/slides/phylogenetics-confidence.html" | relative_url }})
 * Investigate a [mysterious data set]({{ "/data/mystery.fasta" | relative_url }}) using aLRT and bootstrapping
-
 * Lecture: [Tree exploration]({{ "/slides/phylogenetics-tree-exploration.html" | relative_url }})
-* Lecture: [Overview of sequence substitution models](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf) ([video](https://www.youtube.com/watch?v=UsLeY0wZr4Y))
+
 
 ## Day 4: Further topics
 
+* Lecture: [Overview of sequence substitution models](https://github.com/phyloseminar/phyloseminar.org/blob/master/material/77lewis/phyloseminar-lewis-part2.pdf) ([video](https://www.youtube.com/watch?v=UsLeY0wZr4Y))
 * Lecture: [Sequence alignment]({{ "/slides/sequence-alignment.html" | relative_url }})
 * Perform sequence alignment of [some HIV gag sequences]({{ "/data/hiv-gag.fasta" | relative_url }})
 <!-- * Sequence alignment using PRANK in [Wasabi](http://wasabiapp.org) -->
@@ -80,10 +77,9 @@ After this course, I hope you will be able to
 
 Do the following in a script, either submitting both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF. PDF is best, but if you encounter problems with the PDF export you may submit (in order of preference) HTML or the `.ipynb` file.
 
-* Simulate sequence evolution down the measles tree using the 0/1 model from homework 1 starting with a uniform draw for the root state, returning one "column" of sequence data at a time (i.e. a single 0/1 value for each tip). (Python hints: I used numpy's [binomial](https://docs.scipy.org/doc/numpy/reference/generated/numpy.random.binomial.html) with n=1 and stored values on the tree using [add_feature](http://etetoolkit.org/docs/latest/tutorial/tutorial_trees.html#node-annotation)). Display the tree with an example set of simulated tip states from running your simulator.
+* Fill in the blanks in the [Homework 2 Jupyter notebook](https://github.com/matsen/teaching/blob/master/notebooks/homework_2.ipynb).
+* Submit the Jupyter notebook run from scratch ("Restart & Run All") and exported to PDF. If you have problems exporting to PDF, that's fine, HTML and `.ipynb` are also fine formats (with my preference in that order).
 
-
-<hr>
 
 
 ## Books
