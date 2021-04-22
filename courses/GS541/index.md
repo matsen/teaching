@@ -75,8 +75,6 @@ After this course, I hope you will be able to
 
 ### Homework 2
 
-Do the following in a script, either submitting both the script and the output, or a Jupyter notebook that has been run from scratch ("Restart & Run All") and exported to PDF. PDF is best, but if you encounter problems with the PDF export you may submit (in order of preference) HTML or the `.ipynb` file.
-
 * Fill in the blanks in the [Homework 2 Jupyter notebook](https://github.com/matsen/teaching/blob/main/notebooks/homework_2.ipynb).
 * Submit the Jupyter notebook run from scratch ("Restart & Run All") and exported to PDF. If you have problems exporting to PDF, that's fine, HTML and `.ipynb` are also fine formats (with my preference in that order).
 
