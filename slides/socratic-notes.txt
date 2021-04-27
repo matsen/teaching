@@ -1,10 +1,12 @@
 
+# we can use trees to represent relationships, but this is not a phylogenetic tree
 let's draw a tree...
 someone throw out some musical styles that everyone here might know
 what kind of tree is that?
 what do internal nodes mean?
 does it have a strictly tree-like structure?
 
+# internal nodes have a specific meaning, which differs between biological contexts
 let's throw out some names of organisms
 what does this internal node mean?
 where is ... <some organism that isn't there> ...
@@ -16,6 +18,10 @@ can we assign calendar dates?
 now let's say that we are building a tree of virus sequences.
 what do internal nodes mean then?
 
+# trees represent a _sampled_ set of tips, and different sampling schemes can give us different pictures of history and the evolutionary process
+<reveal the left part of the SARS-CoV-2 diagram first>
+what happens if a novel variant arises in India, isn't sampled, and then is transmitted to the UK?
+
 # reading phylogenetic trees takes practice, and it's easy to be misled
 "mainline" artifact, reading across the tips, reading trends into shape
 
@@ -25,6 +31,9 @@ shall we draw a tree on these?
 
 # to build an informative molecular phylogeny, we need mutations
 multifurcation could be resolved one of several ways
+
+# some branches can have more mutations than others
+this _may_ indicate that more time has passed
 
 # phylogenetic reconstruction isn't "obvious" and the results should use biological understanding
 homoplasy
@@ -43,11 +52,11 @@ how could we bring this type of thing in to phylogenetic inference?
 that's a hard problem
 
 # phylogeny happens on the level of genes. what if there is gene duplication and loss? incomplete lineage sorting?
-start by drawing a single non-branching tree inside the species tree
+start by drawing a single simply branching tree inside the species tree
 then talk about ILS
+then talk about duplication and loss
 
 # we need to use tools to assess confidence in phylogeny, AND we need to look at the data and be critical of it
 Look at sample.fasta
-
 
 
