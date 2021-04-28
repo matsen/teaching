@@ -3,15 +3,14 @@
 * let's introduce ourselves
 * my name is Erick, my pronouns are he/him but I'm perfectly happy being addressed with gender-neutral pronouns.
 * I'm a professor ...
-* positive/negative about the pandemic period
+* tell me about your research interests
 
 # we can use trees to represent relationships, but this is not a phylogenetic tree
 let's draw a tree...
-nodes: internal nodes, tip nodes or leaves, sisters, edge/branch
-let's draw a tree on these shapes. what does this tree mean? what about the five-pointed star?
-what kind of tree is that?
-what do internal nodes mean?
-does it have a strictly tree-like structure?
+introduce terminology: internal nodes, tip nodes or leaves, sisters, edge/branch
+
+# let's draw a tree on these shapes.
+can map character changes to branches
 
 # internal nodes have a specific meaning, which differs between biological contexts
 let's throw out some names of organisms
