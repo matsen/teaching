@@ -30,7 +30,7 @@ After this course, I hope you will be able to
 * The [seaview](http://doua.prabi.fr/software/seaview) sequence alignment and phylogenetic analysis tool.
 * Anaconda with some core packages. If you don't already have this set up here are some steps for you:
     * Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-    * `conda create --name 541 python=3.7; conda activate 541`
+    * `conda create --name 541 python=3.8; conda activate 541`
     * `conda install jupyter matplotlib pandas scipy`
 
 
