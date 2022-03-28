@@ -5,15 +5,10 @@
 * I'm a professor ...
 * tell me about your research interests
 
-# we can use trees to represent relationships, but this is not a phylogenetic tree
-let's draw a tree...
+# let's draw a tree on humans, mouse, fungus, plant (get them to volunteer some fungi and plants)
 introduce terminology: internal nodes, tip nodes or leaves, sisters, edge/branch
 
-# let's draw a tree on these shapes.
-can map character changes to branches
-
 # internal nodes have a specific meaning, which differs between biological contexts
-let's throw out some names of organisms
 what does this internal node mean?
 where is ... <some organism that isn't there> ...
 
@@ -24,12 +19,19 @@ can we assign calendar dates?
 now let's say that we are building a tree of virus sequences.
 what do internal nodes mean then?
 
+Is this a phylogenetic tree?
+https://www.semanticscholar.org/paper/Unsupervised-analysis-of-similarities-between-and-George-Shamir/726d2f0a0c7d75d225979ddb1640d477266cb9cb/figure/2
+(no)
+
 # trees represent a _sampled_ set of tips, and different sampling schemes can give us different pictures of history and the evolutionary process
 <reveal the left part of the SARS-CoV-2 diagram first>
 what happens if a novel variant arises in India, isn't sampled, and then is transmitted to the UK?
 
 # reading phylogenetic trees takes practice, and it's easy to be misled
 "mainline" artifact, reading across the tips, reading trends into shape
+
+# let's draw a tree on these shapes.
+can map character changes to branches
 
 # it can be difficult to learn the root of the tree
 here are a few DNA sequences
