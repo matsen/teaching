@@ -23,15 +23,18 @@ Is this a phylogenetic tree?
 https://www.semanticscholar.org/paper/Unsupervised-analysis-of-similarities-between-and-George-Shamir/726d2f0a0c7d75d225979ddb1640d477266cb9cb/figure/2
 (no)
 
+# let's draw a tree on these shapes.
+can map character changes to branches
+
 # trees represent a _sampled_ set of tips, and different sampling schemes can give us different pictures of history and the evolutionary process
 <reveal the left part of the SARS-CoV-2 diagram first>
 what happens if a novel variant arises in India, isn't sampled, and then is transmitted to the UK?
 
 # reading phylogenetic trees takes practice, and it's easy to be misled
-"mainline" artifact, reading across the tips, reading trends into shape
 
-# let's draw a tree on these shapes.
-can map character changes to branches
+1. "mainline" artifact and reading across the tips
+2. "fish" including sharks and bony fish, are not a monophyletic clade as suggested by the upper tree
+3. we are not descended from chimpanzees!
 
 # it can be difficult to learn the root of the tree
 here are a few DNA sequences
