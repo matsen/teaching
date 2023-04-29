@@ -32,6 +32,7 @@ After this course, I hope you will be able to
     * Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
     * `conda create --name 541 python=3.8; conda activate 541`
     * `conda install jupyter matplotlib pandas scipy`
+    * `conda install -c bioconda iqtree`
 
 
 ## Day 1: Phylogenetics motivation and intro
