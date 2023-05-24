@@ -4,9 +4,11 @@
 * my name is Erick, my pronouns are he/him but I'm perfectly happy being addressed with gender-neutral pronouns.
 * I'm a professor ...
 * tell me about your research interests
+* website and course goals
 
-# let's draw a tree on humans, mouse, fungus, plant (get them to volunteer some fungi and plants)
-introduce terminology: internal nodes, tip nodes or leaves, sisters, edge/branch
+# let's draw a tree on humans, mouse, fungus, plant (get them to volunteer more than one fungus and plant so we can discuss monophyly)
+introduce terminology: internal nodes, tip nodes or leaves, sisters, edge/branch, monophyly
+talk about how trees are actually on representatives of a species; higher order
 
 # internal nodes have a specific meaning, which differs between biological contexts
 what does this internal node mean?
@@ -24,7 +26,7 @@ https://www.semanticscholar.org/paper/Unsupervised-analysis-of-similarities-betw
 (no)
 
 # let's draw a tree on these shapes.
-can map character changes to branches
+can map character changes to branches, but state can be ambiguous
 
 # trees represent a _sampled_ set of tips, and different sampling schemes can give us different pictures of history and the evolutionary process
 <reveal the left part of the SARS-CoV-2 diagram first>
@@ -32,9 +34,10 @@ what happens if a novel variant arises in India, isn't sampled, and then is tran
 
 # reading phylogenetic trees takes practice, and it's easy to be misled
 
-1. "mainline" artifact and reading across the tips
-2. "fish" including sharks and bony fish, are not a monophyletic clade as suggested by the upper tree
-3. we are not descended from chimpanzees!
+1. reading across the tips
+2. "mainline" artifact and
+3. "fish" including sharks and bony fish, are not a monophyletic clade as suggested by the upper tree (though note that there is an error in the tree as the taxa differ between them)
+4. we are not descended from chimpanzees!
 
 # it can be difficult to learn the root of the tree
 here are a few DNA sequences
