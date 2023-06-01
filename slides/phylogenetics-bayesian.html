@@ -75,158 +75,187 @@
 <li>What does likelihood mean?</li>
 <li>What is its interpretation in terms of simulation?</li>
 </ul>
-</section>
-<section id="section" class="slide level1">
-<h1></h1>
-Modern technology gives us the ability to <em>observe</em> in great detail <img width="970" src="figures/inference/edge-detection-first.jpg">
+<!--
+#
+Modern technology gives us the ability to *observe* in great detail
+<img width="970" src="figures/inference/edge-detection-first.jpg">
 <aside class="notes">
-Modern technology gives us the ability to <em>observe</em> in great detail, which is wonderful, but in order to actually gain understanding we need to simplify and abstract.
+Modern technology gives us the ability to *observe* in great detail, which is wonderful, but in order to actually gain understanding we need to simplify and abstract.
 </aside>
-<p> </p>
-</section>
-<section id="section-1" class="slide level1">
-<h1></h1>
-<p>But very detailed observation is not the same as understanding <img width="970" src="figures/inference/edge-detection.jpg"></p>
-<p>To <em>understand</em> we need to simplify and abstract.</p>
-</section>
-<section id="what-abstractions-do-we-have-at-our-disposal" class="slide level1">
-<h1>What abstractions do we have at our disposal?</h1>
-</section>
-<section id="section-2" class="slide level1">
-<h1> </h1>
-<section data-background="figures/inference/abstraction-3_nofonts.svg">
-</section>
-<p> </p>
+
+&nbsp;
+
+
+#
+But very detailed observation is not the same as understanding
+<img width="970" src="figures/inference/edge-detection.jpg">
+
+To *understand* we need to simplify and abstract.
+
+
+# What abstractions do we have at our disposal?
+
+# &nbsp;
+<section data-background="figures/inference/abstraction-3_nofonts.svg"> </section>
+&nbsp;
+
 <aside class="notes">
-<ul>
-<li>Here is the number 3, which is one abstraction we all know and love.</li>
-<li>This is such a basic abstraction that sometimes we forget that it’s an abstraction at all.</li>
-<li>But it really is– you can’t have “three” in your pocket.</li>
-<li>You can have three coins, three pipette tips or three wombats in your pocket, but you can’t have “three”.</li>
-<li>I think we can all agree that conducting science without the letter 3 and its ilk would be rather difficult.</li>
-</ul>
-So now I’m going to skip over the square root of 2 and the completely bizarre notion of negative numbers to <span class="math inline">\(x\)</span>.
+* Here is the number 3, which is one abstraction we all know and love.
+* This is such a basic abstraction that sometimes we forget that it's an abstraction at all.
+* But it really is-- you can't have "three" in your pocket.
+* You can have three coins, three pipette tips or three wombats in your pocket, but you can't have "three".
+* I think we can all agree that conducting science without the letter 3 and its ilk would be rather difficult.
+
+So now I'm going to skip over the square root of 2 and the completely bizarre notion of negative numbers to $x$.
 </aside>
-</section>
-<section id="section-3" class="slide level1">
-<h1></h1>
-<section data-background="figures/inference/abstraction-x_nofonts.svg">
-</section>
+
+
+#
+<section data-background="figures/inference/abstraction-x_nofonts.svg"> </section>
+
 <aside class="notes">
-<ul>
-<li><span class="math inline">\(x\)</span> is like 3 in that it represents an abstract quantity, but in the case of <span class="math inline">\(x\)</span> it’s an unknown abstract quantity.</li>
-<li><span class="math inline">\(x\)</span> is SO COOL.</li>
-<li><span class="math inline">\(x\)</span> is SO COOL because it allows us to describe knowledge in an implicit way.</li>
-</ul>
+* $x$ is like 3 in that it represents an abstract quantity, but in the case of $x$ it's an unknown abstract quantity.
+* $x$ is SO COOL.
+* $x$ is SO COOL because it allows us to describe knowledge in an implicit way.
 </aside>
-</section>
-<section id="x-is-useful-and-we-love-it-dearly" class="slide level1">
-<h1><span class="math inline">\(x\)</span> is useful and we love it dearly!</h1>
-<p> </p>
-<p><span class="math inline">\(x\)</span> allows us to describe knowledge in an implicit way:</p>
-<p> </p>
-<p><span class="math display">\[
+
+
+# $x$ is useful and we love it dearly!
+
+&nbsp;
+
+$x$ allows us to describe knowledge in an implicit way:
+
+&nbsp;
+
+$$
 f(x)=y
-\]</span></p>
-<p> </p>
-<p>then we can work towards <em>solving</em> for <span class="math inline">\(x\)</span>.</p>
-<p> </p>
-<p> </p>
+$$
+
+&nbsp;
+
+then we can work towards *solving* for $x$.
+
+&nbsp;
+
+&nbsp;
+
 <div class="fragment">
-<p>Alternatively, one might be interested in taking the average of a <span class="math inline">\(g(x)\)</span> between two values <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>.</p>
+Alternatively, one might be interested in taking the average of a $g(x)$ between two values $a$ and $b$.
 </div>
+
 <aside class="notes">
-<ul>
-<li>For example, here we have <span class="math inline">\(x\)</span></li>
-<li><span class="math inline">\(x\)</span> is SO COOL.</li>
-<li>It allows us to describe knowledge in an implicit way.</li>
-</ul>
+* For example, here we have $x$
+* $x$ is SO COOL.
+* It allows us to describe knowledge in an implicit way.
 </aside>
-</section>
-<section id="define-int_ab-gx-dx-as-area" class="slide level1">
-<h1>Define <span class="math inline">\(\int_a^b g(x) \ dx\)</span> as area</h1>
+
+
+# Define $\int_a^b g(x) \ dx$ as area
 <img src="figures/inference/integral-auc_nofonts.svg" height="550">
-</section>
-<section id="b-a-cdot-int_ab-gx-dx-is-average" class="slide level1">
-<h1><span class="math inline">\(1/(b-a) \cdot \int_a^b g(x) \ dx\)</span> is average</h1>
+
+
+# $1/(b-a) \cdot \int_a^b g(x) \ dx$ is average
 <img src="figures/inference/integral-average_nofonts.svg" height="550">
-</section>
-<section id="variables-allow-us-to-solve" class="slide level1">
-<h1>Variables allow us to solve</h1>
+
+
+# Variables allow us to solve
 <img width="970" src="figures/inference/cannon-deterministic_nofonts.svg">
-<ul>
-<li><em>Problem 1</em>: given <span class="math inline">\(y\)</span>, solve for <span class="math inline">\(x\)</span>.</li>
-<li><em>Problem 2</em>: predict if a 10% bigger charge will hit the castle. <br> Say the answer to this is <span class="math inline">\(\text{hit}_{10}(x)\)</span>, such that <span class="math inline">\(\text{hit}_{10}(x)\)</span> is 1 if that <span class="math inline">\(x\)</span> will make the cannonball hit the castle, and 0 otherwise.</li>
-</ul>
+
+* *Problem 1*: given $y$, solve for $x$.
+* *Problem 2*: predict if a 10% bigger charge will hit the castle. <br> Say the answer to this is $\text{hit}_{10}(x)$, such that $\text{hit}_{10}(x)$ is 1 if that $x$ will make the cannonball hit the castle, and 0 otherwise.
+
 <aside class="notes">
-<ul>
-<li>I will leave the actual solution as an exercise.</li>
-<li>But actually I would like to use this toy problem as a way to point out that normal sorts of variables only allow us to solve…</li>
-</ul>
+* I will leave the actual solution as an exercise.
+* But actually I would like to use this toy problem as a way to point out that normal sorts of variables only allow us to solve...
 </aside>
-</section>
-<section id="variables-allow-us-to-solve-1" class="slide level1">
-<h1>Variables allow us to solve</h1>
+
+
+# Variables allow us to solve
 <img width="970" src="figures/inference/cannon-deterministic_nofonts.svg">
-<p> </p>
-<p> </p>
-<p>… in a <em>deterministic</em> framework.</p>
+
+&nbsp;
+
+&nbsp;
+
+... in a *deterministic* framework.
+
 <aside class="notes">
-<ul>
-<li>This implicitly assumes that not only does the process happen in exactly the same way each time, it also means that we have a complete description of the process.</li>
-<li>Given x, the cannonball is going to take exactly the same trajectory each time.</li>
-<li>No variation in wind, no strange turbulence effects with slightly different shaped cannonballs, no anything that might make the path do anything other than strict Newtonian motion.</li>
-<li>So here is a picture of something that inhabits this world:</li>
-</ul>
+* This implicitly assumes that not only does the process happen in exactly the same way each time, it also means that we have a complete description of the process.
+* Given x, the cannonball is going to take exactly the same trajectory each time.
+* No variation in wind, no strange turbulence effects with slightly different shaped cannonballs, no anything that might make the path do anything other than strict Newtonian motion.
+* So here is a picture of something that inhabits this world:
 </aside>
-</section>
-<section id="section-4" class="slide level1">
-<h1></h1>
-<section data-background="figures/inference/coin-flipping-machine.jpg">
-</section>
-</section>
-<section id="section-5" class="slide level1">
-<h1></h1>
-<section data-background="figures/inference/coin-flipping-hand.jpg">
-</section>
-<p> </p>
-</section>
-<section id="section-6" class="slide level1">
-<h1></h1>
-<p>Life is a probabilistic process.</p>
-<p> </p>
-<p> </p>
-<p>How do we abstract probabilistic quantities?</p>
-</section>
-<section id="section-7" class="slide level1">
-<h1></h1>
-<section data-background="figures/inference/abstraction-X_nofonts.svg">
-</section>
-</section>
-<section id="random-variables-x-abstract-variables" class="slide level1">
-<h1>Random variables <span class="math inline">\(X\)</span> abstract variables</h1>
-<p>It doesn’t have a fixed value: <em>we have to “ask” it for a value.</em></p>
+
+
+#
+<section data-background="figures/inference/coin-flipping-machine.jpg"> </section>
+
+#
+<section data-background="figures/inference/coin-flipping-hand.jpg"> </section>
+
+&nbsp;
+
+
+#
+Life is a probabilistic process.
+
+&nbsp;
+
+&nbsp;
+
+How do we abstract probabilistic quantities?
+
+#
+<section data-background="figures/inference/abstraction-X_nofonts.svg"> </section>
+
+# Random variables $X$ abstract variables
+It doesn't have a fixed value: *we have to "ask" it for a value.*
+
 <img height="350" src="figures/inference/coin-flipping-hand.jpg">
-<p>Random variables are capricious, <br> but they are well defined behind their stochastic exterior.</p>
+
+Random variables are capricious, <br> but they are well defined behind their stochastic exterior.
+
 <aside class="notes">
 Random variables are defined according to their distribution.
 </aside>
-</section>
-<section id="random-variable-sampling-determined-by-distributions" class="slide level1">
-<h1>Random variable sampling determined by <em>distributions</em></h1>
-<p> </p>
-<p>Sometimes discrete:</p>
-<p><span class="math display">\[
+
+# Random variable sampling determined by *distributions*
+&nbsp;
+
+Sometimes discrete:
+
+$$
 \begin{align}
-P(\text{heads}) &amp; = 0.51 \\
-P(\text{tails}) &amp; = 0.49
+P(\text{heads}) & = 0.51 \\
+P(\text{tails}) & = 0.49
 \end{align}
-\]</span></p>
-<p> </p>
+$$
+
+&nbsp;
+
 <div class="fragment">
-<p>Sometimes continuous:</p>
+Sometimes continuous:
+
 <img width="500" src="figures/inference/Gaussian_distribution_nofonts.svg">
 </div>
+
+-->
+</section>
+<section id="section" class="slide level1">
+<h1></h1>
+<p>Sometimes we want to make confident statements<br> using trees that are highly uncertain.</p>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<p>Tracking SARS-CoV-2 transmission (colors)</p>
+<img src="figures/phylo/ncov-travel-history_nofonts.svg" class="stretch">
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<p>Tracking SARS-CoV-2 transmission (colors)</p>
+<img src="figures/phylo/ncov-travel-history_nofonts.svg" class="stretch">
+<p>What if we only care about transmission from country to country?</p>
 </section>
 <section id="working-with-random-variables-x" class="slide level1">
 <h1>Working with <em>random variables</em> <span class="math inline">\(X\)</span>:</h1>
@@ -255,7 +284,7 @@ P(\text{tails}) &amp; = 0.49
 </ul>
 <p> </p>
 <ol type="1">
-<li>Solve <span class="math inline">\(f(X) = Y\)</span>   to get   <span class="math inline">\(\mathbb P(X \mid Y)\)</span>.</li>
+<li>Solve <span class="math inline">\(f(X) \sim Y\)</span>   to get   <span class="math inline">\(\mathbb P(X \mid Y)\)</span>.</li>
 <li>Integrate <span class="math inline">\(\int \text{hit}_{10}(X) \, d\mathbb P(X \mid Y)\)</span>.</li>
 </ol>
 </section>
@@ -275,13 +304,16 @@ P(\text{tails}) &amp; = 0.49
 \]</span> (we don’t care what the angle of the cannon is really, we just want to know with what probability the shot is going to hit the castle!)</p>
 </div>
 </section>
-<section id="bayes-is-magic" class="slide level1">
-<h1>Bayes is <a href="http://en.wikipedia.org/wiki/Bayes%27_theorem">magic</a></h1>
-<p> </p>
+<section id="bayes-theorem" class="slide level1">
+<h1><a href="http://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes theorem</a></h1>
 <p> </p>
 <p> </p>
 <p><span class="math display">\[
-P(X \mid D) \propto P(D \mid X) P(X)
+P(X \mid D) = \frac{P(D \mid X) P(X)}{P(D)}
+\]</span></p>
+<p> </p>
+<p><span class="math display">\[
+P(D) = \sum_{X} P(D \mid X) P(X)
 \]</span></p>
 </section>
 <section id="what-is-our-height-divided-by-the-average-elevation" class="slide level1">
@@ -299,34 +331,50 @@ P(X \mid D) \propto P(D \mid X) P(X)
 </section>
 <section id="integrate-out-phylogenetic-uncertainty" class="slide level1">
 <h1>Integrate out phylogenetic uncertainty</h1>
+<!--
 <img src="figures/inference/phylogenetic-posterior_nofonts.svg" class="stretch">
-<p> </p>
+
+&nbsp;
+-->
 <p>To decide superinfection, we would like to calculate <span class="math display">\[
-\int_S g(X) \, d\mathbb P(X \mid Y)
-\]</span> where <span class="math inline">\(X\)</span> is now a <em>phylogenetic-tree-valued random variable</em>.</p>
+\int_S g(T) \, d\mathbb P(T \mid Y)
+\]</span> where <span class="math inline">\(T\)</span> is now a <em>phylogenetic-tree-valued random variable</em>.</p>
+<div class="fragment">
+<p>If we can sample from the posterior distribution <span class="math inline">\(P(T \mid Y)\)</span> of trees given data, then <span class="math display">\[
+\int_S g(T) \, d\mathbb P(T \mid Y) = \sum_{T \sim P(T \mid Y)} g(T)
+\]</span></p>
+</div>
 </section>
-<section id="time-to-count-your-blessings." class="slide level1">
-<h1>Time to count your blessings.</h1>
- 
+<section id="section-3" class="slide level1">
+<h1></h1>
+<p>Tracking SARS-CoV-2 transmission (colors)</p>
+<img src="figures/phylo/ncov-travel-history-jumps_nofonts.svg" class="stretch">
+<!--
+# Time to count your blessings.
+
+&nbsp;
 <ul style="list-style-type: none;">
-  
-<li class="fragment">
-<em>Real numbers are equipped with a total order.</em>         (<span class="math inline">\(3 &lt; 4\)</span>)
-</li>
-  
-<li class="fragment">
-<em>Real numbers are equipped with a simply-computed distance <br> that is compatible with the total order.</em>         (<span class="math inline">\(\,|7-3| = 4\,\)</span>)
-</li>
-  
-<li class="fragment">
-<em>Real numbers form a continuum.</em>             (<span class="math inline">\(2.9 &lt; 2.95 &lt; 3\)</span>)
-</li>
+  <li class="fragment">
+  *Real numbers are equipped with a total order.*
+  &nbsp; &nbsp; &nbsp; &nbsp; ($3 < 4$)
+  </li>
+  <li class="fragment">
+  *Real numbers are equipped with a simply-computed distance <br> that is compatible with the total order.*
+  &nbsp; &nbsp; &nbsp; &nbsp; ($\,|7-3| = 4\,$)
+  </li>
+  <li class="fragment">
+  *Real numbers form a continuum.*
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ($2.9 < 2.95 < 3$)
+  </li>
 </ul>
-</section>
-<section id="we-can-thus-define-the-integral" class="slide level1">
-<h1>We can thus define the integral</h1>
+
+
+# We can thus define the integral
 <img src="figures/inference/riemann-integral_nofonts.svg" class="stretch">
-<p>for real-valued <span class="math inline">\(\int_a^b g(x) dx\)</span> and <span class="math inline">\(\int_a^b g(X) \, d\mathbb P(X \mid Y)\)</span>.</p>
+
+for real-valued $\int_a^b g(x) dx$ and $\int_a^b g(X) \, d\mathbb P(X \mid Y)$.
+
+-->
 </section>
 <section id="integrating-over-phylogenetic-trees" class="slide level1">
 <h1>Integrating over phylogenetic trees?</h1>
@@ -356,7 +404,7 @@ P(X \mid D) \propto P(D \mid X) P(X)
 <li>It’s all arranged so that you sample trees in proportion to their posterior probability</li>
 </ul>
 <p><br></p>
-<p>Try out <a href="https://phylogeny.uconn.edu/mcmc-robot/">MCMC robot</a>!</p>
+<p>Try out <a href="https://plewis.github.io/applets/mcmc-robot/">MCMC robot</a>!</p>
 </section>
 <section id="markov-chain-monte-carlo" class="slide level1">
 <h1>Markov chain Monte Carlo</h1>
@@ -378,6 +426,15 @@ P(X \mid D) \propto P(D \mid X) P(X)
 <li>Sometimes we aren’t actually interested in the tree, so we can integrate it out</li>
 <li>But! Short alignment, 100 taxa = hours</li>
 </ul>
+<p><br></p>
+<div class="fragment">
+<p>Software:</p>
+<ul>
+<li><a href="https://beast.community/">BEAST</a></li>
+<li><a href="http://www.beast2.org/">BEAST2</a></li>
+<li><a href="https://revbayes.github.io/">RevBayes</a></li>
+</ul>
+</div>
 </section>
 <section id="why-is-random-walk-markov-chain-monte-carlo-so-slow" class="slide level1">
 <h1>Why is random-walk Markov chain Monte Carlo so slow?</h1>

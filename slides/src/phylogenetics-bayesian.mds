@@ -8,6 +8,7 @@
 * What does likelihood mean?
 * What is its interpretation in terms of simulation?
 
+<!--
 #
 Modern technology gives us the ability to *observe* in great detail
 ^imgw figures/inference/edge-detection-first.jpg
@@ -172,6 +173,30 @@ Sometimes continuous:
 ^imgw figures/inference/Gaussian_distribution.svg 500
 </div>
 
+-->
+
+#
+
+Sometimes we want to make confident statements<br> using trees that are highly uncertain.
+
+#
+
+Tracking SARS-CoV-2 transmission (colors)
+
+^img figures/phylo/ncov-travel-history.svg
+
+#
+
+Tracking SARS-CoV-2 transmission (colors)
+
+^img figures/phylo/ncov-travel-history.svg
+
+What if we only care about transmission from country to country?
+
+
+
+
+
 # Working with *random variables* $X$:
 &nbsp;
 
@@ -206,7 +231,7 @@ where now we are averaging out with respect to a probability.
 
 &nbsp;
 
-1. Solve $f(X) = Y$ &nbsp; to get &nbsp; $\mathbb P(X \mid Y)$.
+1. Solve $f(X) \sim Y$ &nbsp; to get &nbsp; $\mathbb P(X \mid Y)$.
 2. Integrate $\int \text{hit}_{10}(X) \, d\mathbb P(X \mid Y)$.
 
 
@@ -234,16 +259,20 @@ $$
 </div>
 
 
-# Bayes is [magic](http://en.wikipedia.org/wiki/Bayes%27_theorem)
-
-&nbsp;
+# [Bayes theorem](http://en.wikipedia.org/wiki/Bayes%27_theorem)
 
 &nbsp;
 
 &nbsp;
 
 $$
-P(X \mid D) \propto P(D \mid X) P(X)
+P(X \mid D) = \frac{P(D \mid X) P(X)}{P(D)}
+$$
+
+&nbsp;
+
+$$
+P(D) = \sum_{X} P(D \mid X) P(X)
 $$
 
 
@@ -263,17 +292,34 @@ $$
 
 
 # Integrate out phylogenetic uncertainty
+<!--
 ^img figures/inference/phylogenetic-posterior.svg
 
 &nbsp;
+-->
 
 To decide superinfection, we would like to calculate
 $$
-\int_S g(X) \, d\mathbb P(X \mid Y)
+\int_S g(T) \, d\mathbb P(T \mid Y)
 $$
-where $X$ is now a *phylogenetic-tree-valued random variable*.
+where $T$ is now a *phylogenetic-tree-valued random variable*.
+
+<div class="fragment">
+If we can sample from the posterior distribution $P(T \mid Y)$ of trees given data, then
+$$
+\int_S g(T) \, d\mathbb P(T \mid Y) = \sum_{T \sim P(T \mid Y)} g(T)
+$$
+</div>
 
 
+#
+
+Tracking SARS-CoV-2 transmission (colors)
+
+^img figures/phylo/ncov-travel-history-jumps.svg
+
+
+<!--
 # Time to count your blessings.
 
 &nbsp;
@@ -298,6 +344,7 @@ where $X$ is now a *phylogenetic-tree-valued random variable*.
 
 for real-valued $\int_a^b g(x) dx$ and $\int_a^b g(X) \, d\mathbb P(X \mid Y)$.
 
+-->
 
 # Integrating over phylogenetic trees?
 Phylogenetic trees have discrete topologies, there is no canonical distance between them, nor a natural total order.
@@ -333,7 +380,7 @@ These trees are then distance 1 apart.
 
 <br>
 
-Try out [MCMC robot](https://phylogeny.uconn.edu/mcmc-robot/)!
+Try out [MCMC robot](https://plewis.github.io/applets/mcmc-robot/)!
 
 
 # Markov chain Monte Carlo
@@ -353,6 +400,16 @@ Try out [MCMC robot](https://phylogeny.uconn.edu/mcmc-robot/)!
 * If you can deal with a prior, it's the statistically right thing to do
 * Sometimes we aren't actually interested in the tree, so we can integrate it out
 * But! Short alignment, 100 taxa = hours
+
+<br>
+
+<div class="fragment">
+Software:
+
+* [BEAST](https://beast.community/)
+* [BEAST2](http://www.beast2.org/)
+* [RevBayes](https://revbayes.github.io/)
+</div>
 
 # Why is random-walk Markov chain Monte Carlo so slow?
 

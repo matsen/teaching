@@ -1,6 +1,13 @@
 % Recombination in trees
 % Erick Matsen
 
+# Recombination in viruses
+
+^img https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrmicro2614/MediaObjects/41579_2011_Article_BFnrmicro2614_Fig1_HTML.jpg
+
+^div citation "[Simon-Loriere & Holmes, 2011](https://www.nature.com/articles/nrmicro2614)"
+
+
 # What is the impact of recombination on phylogenies?
 
 
@@ -62,7 +69,7 @@ $$
 
 # GARD pre-bake for `mystery.fasta`
 
-<http://previousresults.datamonkey.org/gard/5ad88315fbe9ab580f8f73cb>
+<http://datamonkey.org/gard/647666d11c35ba63bcef71da>
 
 ^img figures/recombination/breakpoint-support.png
 

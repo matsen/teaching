@@ -40,3 +40,22 @@ _What assumption enables this application of the bootstrap?_
 ^img figures/confidence/alrt.svg
 
 ^div citation "[Anisimova and Gascuel 2006](https://academic.oup.com/sysbio/article/55/4/539/1675125)"
+
+
+# Bayesian approach
+
+$$
+P(T \mid D) \propto P(D \mid T) P(T)
+$$
+
+Quantify the _posterior distribution_ of trees given data and a prior.
+
+<br>
+
+<div class=fragment>
+If we want to quantify the support of a given node $N$ of a tree,
+
+$$
+P(N \mid D) = \sum_{T \ni N} P(T \mid D)
+$$
+</div>

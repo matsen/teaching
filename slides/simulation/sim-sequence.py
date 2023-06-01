@@ -65,7 +65,7 @@ def evolve_sequence_gillespie(seq, t, kappa=2.0, mu=1e-1):
 
 
 seq = "AAAGGGCCCTTT"
-print(f"evolving original sequence {seq} for the middle node")
+print(f"evolving original sequence {seq} for the middle node for 5 seconds")
 middle_seq = evolve_sequence_gillespie(seq, 5)
 print(f"\nevolving middle sequence {middle_seq} for the left leaf for 4 seconds")
 left_seq = evolve_sequence_gillespie(seq, 4)
