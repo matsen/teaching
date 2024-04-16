@@ -41,6 +41,7 @@ conda install -c bioconda iqtree
 * I recently got a M2 mac and so my install process has been:
     * [Install iqtree](http://www.iqtree.org/). Note that you'll have to do [this](https://support.apple.com/guide/mac-help/apple-cant-check-app-for-malicious-software-mchleab3a043/14.0/mac/14.4.1) to avoid the "malicious software" block
     * Install [Mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html) and:
+
 ```
 mamba create --name 541 python=3.11; conda activate 541
 mamba install jupyter matplotlib pandas scipy
