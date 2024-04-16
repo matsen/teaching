@@ -30,9 +30,21 @@ After this course, I hope you will be able to
 * The [seaview](http://doua.prabi.fr/software/seaview) sequence alignment and phylogenetic analysis tool.
 * Anaconda with some core packages. If you don't already have this set up here are some steps for you:
     * Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-    * `conda create --name 541 python=3.8; conda activate 541`
-    * `conda install jupyter matplotlib pandas scipy`
-    * `conda install -c bioconda iqtree`
+    * Historically my recommendation has been (running linux):
+
+```
+conda create --name 541 python=3.11; conda activate 541
+conda install jupyter matplotlib pandas scipy
+conda install -c bioconda iqtree
+```
+
+* I recently got a M2 mac and so my install process has been:
+    * [Install iqtree](http://www.iqtree.org/). Note that you'll have to do [this](https://support.apple.com/guide/mac-help/apple-cant-check-app-for-malicious-software-mchleab3a043/14.0/mac/14.4.1) to avoid the "malicious software" block
+    * Install [Mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html) and:
+```
+mamba create --name 541 python=3.11; conda activate 541
+mamba install jupyter matplotlib pandas scipy
+```
 
 
 ## Day 1: Phylogenetics motivation and intro

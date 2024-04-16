@@ -6,9 +6,12 @@
 * tell me about your research interests
 * website and course goals
 
-# let's draw a tree on humans, mouse, fungus, plant (get them to volunteer more than one fungus and plant so we can discuss monophyly)
+Goals for first part of course: open the black box of phylogenetic programs!
+
+# let's draw a tree on human, mouse, fungus, plant (get them to volunteer more than one fungus and plant so we can discuss monophyly)
 introduce terminology: internal nodes, tip nodes or leaves, sisters, edge/branch, monophyly
 talk about how trees are actually on representatives of a species; higher order
+Note that the answer to this question is given in https://www.pnas.org/doi/abs/10.1073/pnas.90.24.11558
 
 # internal nodes have a specific meaning, which differs between biological contexts
 what does this internal node mean?
@@ -42,6 +45,9 @@ what happens if a novel variant arises in India, isn't sampled, and then is tran
 # it can be difficult to learn the root of the tree
 here are a few DNA sequences
 shall we draw a tree on these?
+It's easiest to draw a tree in which AAA...A is the root state, but could easily have AACA...ATA...A be the root state.
+Then X would have C3A and T23A mutations.
+So for these reasons one often uses an unrooted representation.
 
 # to build an informative molecular phylogeny, we need mutations
 multifurcation could be resolved one of several ways
