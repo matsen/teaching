@@ -11,12 +11,23 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
   <style type="text/css">
@@ -78,7 +89,7 @@
 <!--
 #
 Modern technology gives us the ability to *observe* in great detail
-<img width="970" src="figures/inference/edge-detection-first.jpg">
+<img src="figures/inference/edge-detection-first.jpg" width="970">
 <aside class="notes">
 Modern technology gives us the ability to *observe* in great detail, which is wonderful, but in order to actually gain understanding we need to simplify and abstract.
 </aside>
@@ -88,7 +99,7 @@ Modern technology gives us the ability to *observe* in great detail, which is wo
 
 #
 But very detailed observation is not the same as understanding
-<img width="970" src="figures/inference/edge-detection.jpg">
+<img src="figures/inference/edge-detection.jpg" width="970">
 
 To *understand* we need to simplify and abstract.
 
@@ -160,7 +171,7 @@ Alternatively, one might be interested in taking the average of a $g(x)$ between
 
 
 # Variables allow us to solve
-<img width="970" src="figures/inference/cannon-deterministic_nofonts.svg">
+<img src="figures/inference/cannon-deterministic_nofonts.svg" width="970">
 
 * *Problem 1*: given $y$, solve for $x$.
 * *Problem 2*: predict if a 10% bigger charge will hit the castle. <br> Say the answer to this is $\text{hit}_{10}(x)$, such that $\text{hit}_{10}(x)$ is 1 if that $x$ will make the cannonball hit the castle, and 0 otherwise.
@@ -172,7 +183,7 @@ Alternatively, one might be interested in taking the average of a $g(x)$ between
 
 
 # Variables allow us to solve
-<img width="970" src="figures/inference/cannon-deterministic_nofonts.svg">
+<img src="figures/inference/cannon-deterministic_nofonts.svg" width="970">
 
 &nbsp;
 
@@ -237,14 +248,15 @@ $$
 <div class="fragment">
 Sometimes continuous:
 
-<img width="500" src="figures/inference/Gaussian_distribution_nofonts.svg">
+<img src="figures/inference/Gaussian_distribution_nofonts.svg" width="500">
 </div>
 
 -->
 </section>
 <section id="section" class="slide level1">
 <h1></h1>
-<p>Sometimes we want to make confident statements<br> using trees that are highly uncertain.</p>
+<p>Sometimes we want to make confident statements<br> using trees that
+are highly uncertain.</p>
 </section>
 <section id="section-1" class="slide level1">
 <h1></h1>
@@ -258,15 +270,20 @@ Sometimes continuous:
 <p>What if we only care about transmission from country to country?</p>
 </section>
 <section id="working-with-random-variables-x" class="slide level1">
-<h1>Working with <em>random variables</em> <span class="math inline">\(X\)</span>:</h1>
+<h1>Working with <em>random variables</em> <span
+class="math inline">\(X\)</span>:</h1>
 <p> </p>
 <div class="fragment">
-<p>We can solve for <span class="math inline">\(X\)</span> in “equations” like <span class="math inline">\(f(X) \sim Y\)</span>, obtaining expressions such as <span class="math inline">\(\mathbb P(X \mid Y);\)</span> this is called <em>inference</em>.</p>
+<p>We can solve for <span class="math inline">\(X\)</span> in
+“equations” like <span class="math inline">\(f(X) \sim Y\)</span>,
+obtaining expressions such as <span class="math inline">\(\mathbb P(X
+\mid Y);\)</span> this is called <em>inference</em>.</p>
 </div>
 <p> </p>
 <p> </p>
 <div class="fragment">
-<p>We can also <em>average</em> with respect to <span class="math inline">\(X\)</span>:</p>
+<p>We can also <em>average</em> with respect to <span
+class="math inline">\(X\)</span>:</p>
 <p><span class="math display">\[
 \int g(X) \, d\mathbb P(X \mid Y)
 \]</span></p>
@@ -275,37 +292,54 @@ Sometimes continuous:
 </section>
 <section id="probabilistic-approach-to-prediction" class="slide level1">
 <h1>Probabilistic approach to prediction</h1>
-<img width="970" src="figures/inference/cannon-probabilistic_nofonts.svg">
+<img src="figures/inference/cannon-probabilistic_nofonts.svg" width="970">
 <ul>
-<li><span class="math inline">\(Y\)</span>: horizontal distance traveled by a cannonball (random variable)</li>
-<li><span class="math inline">\(X\)</span>: cannon angle (inferred random variable)</li>
-<li><em>Problem 1</em>: given observed distribution <span class="math inline">\(Y\)</span>, infer distribution of <span class="math inline">\(X\)</span>.</li>
-<li><em>Problem 2</em>: find probability that a 10% bigger charge will hit castle.</li>
+<li><span class="math inline">\(Y\)</span>: horizontal distance traveled
+by a cannonball (random variable)</li>
+<li><span class="math inline">\(X\)</span>: cannon angle (inferred
+random variable)</li>
+<li><em>Problem 1</em>: given observed distribution <span
+class="math inline">\(Y\)</span>, infer distribution of <span
+class="math inline">\(X\)</span>.</li>
+<li><em>Problem 2</em>: find probability that a 10% bigger charge will
+hit castle.</li>
 </ul>
 <p> </p>
 <ol type="1">
-<li>Solve <span class="math inline">\(f(X) \sim Y\)</span>   to get   <span class="math inline">\(\mathbb P(X \mid Y)\)</span>.</li>
-<li>Integrate <span class="math inline">\(\int \text{hit}_{10}(X) \, d\mathbb P(X \mid Y)\)</span>.</li>
+<li>Solve <span class="math inline">\(f(X) \sim Y\)</span>   to get  
+<span class="math inline">\(\mathbb P(X \mid Y)\)</span>.</li>
+<li>Integrate <span class="math inline">\(\int \text{hit}_{10}(X) \,
+d\mathbb P(X \mid Y)\)</span>.</li>
 </ol>
 </section>
-<section id="biological-experiments-are-measurements-with-uncertainty" class="slide level1">
+<section id="biological-experiments-are-measurements-with-uncertainty"
+class="slide level1">
 <h1>Biological experiments are measurements with uncertainty</h1>
-<img width="970" src="figures/inference/sequencing_nofonts.svg">
+<img src="figures/inference/sequencing_nofonts.svg" width="970">
 </section>
 <section id="model-based-statistical-inference" class="slide level1">
-<h1>Model-based statistical inference <span style="color:green"> ✓ </span></h1>
+<h1>Model-based statistical inference <span style="color:green"> ✓
+</span></h1>
 <p> </p>
-<p>We can solve for <span class="math inline">\(X\)</span> in “equations” like <span class="math inline">\(f(X) \sim Y\)</span>, <br> <em>inferring</em> an unknown distribution for <span class="math inline">\(X\)</span> <br> (what can we learn about the angle of the cannon).</p>
+<p>We can solve for <span class="math inline">\(X\)</span> in
+“equations” like <span class="math inline">\(f(X) \sim Y\)</span>, <br>
+<em>inferring</em> an unknown distribution for <span
+class="math inline">\(X\)</span> <br> (what can we learn about the angle
+of the cannon).</p>
 <p> </p>
 <p> </p>
 <div class="fragment">
-<p>We can push uncertainty through an analysis using integrals like <span class="math display">\[
+<p>We can push uncertainty through an analysis using integrals like
+<span class="math display">\[
 \int_a^b g(X) \, d\mathbb P(X \mid Y).
-\]</span> (we don’t care what the angle of the cannon is really, we just want to know with what probability the shot is going to hit the castle!)</p>
+\]</span> (we don’t care what the angle of the cannon is really, we just
+want to know with what probability the shot is going to hit the
+castle!)</p>
 </div>
 </section>
 <section id="bayes-theorem" class="slide level1">
-<h1><a href="http://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes theorem</a></h1>
+<h1><a href="http://en.wikipedia.org/wiki/Bayes%27_theorem">Bayes
+theorem</a></h1>
 <p> </p>
 <p> </p>
 <p><span class="math display">\[
@@ -316,31 +350,44 @@ P(X \mid D) = \frac{P(D \mid X) P(X)}{P(D)}
 P(D) = \sum_{X} P(D \mid X) P(X)
 \]</span></p>
 </section>
-<section id="what-is-our-height-divided-by-the-average-elevation" class="slide level1">
+<section id="what-is-our-height-divided-by-the-average-elevation"
+class="slide level1">
 <h1>What is our height divided by the average elevation?</h1>
 <img src="figures/inference/everest-view.jpg" class="stretch">
 </section>
-<section id="now-what-is-model-based-statistical-inference-on-discrete-mathematical-objects" class="slide level1">
-<h1>Now, what is model-based statistical inference on <em>discrete mathematical objects</em>?</h1>
+<section
+id="now-what-is-model-based-statistical-inference-on-discrete-mathematical-objects"
+class="slide level1">
+<h1>Now, what is model-based statistical inference on <em>discrete
+mathematical objects</em>?</h1>
 <p> </p>
 </section>
-<section id="motivation-we-would-like-to-decide-whether-an-individual-has-been-superinfected-i.e.-infected-with-a-second-viral-variant-in-a-separate-event" class="slide level1">
-<h1>Motivation: we would like to decide whether an individual has been <em>superinfected</em>, i.e. infected with a second viral variant in a separate event</h1>
+<section
+id="motivation-we-would-like-to-decide-whether-an-individual-has-been-superinfected-i.e.-infected-with-a-second-viral-variant-in-a-separate-event"
+class="slide level1">
+<h1>Motivation: we would like to decide whether an individual has been
+<em>superinfected</em>, i.e. infected with a second viral variant in a
+separate event</h1>
 <p> </p>
-<img width="550" src="figures/inference/superinfection-definition_nofonts.svg">
+<img src="figures/inference/superinfection-definition_nofonts.svg" width="550">
 </section>
-<section id="integrate-out-phylogenetic-uncertainty" class="slide level1">
+<section id="integrate-out-phylogenetic-uncertainty"
+class="slide level1">
 <h1>Integrate out phylogenetic uncertainty</h1>
 <!--
 <img src="figures/inference/phylogenetic-posterior_nofonts.svg" class="stretch">
 
 &nbsp;
 -->
-<p>To decide superinfection, we would like to calculate <span class="math display">\[
+<p>To decide superinfection, we would like to calculate <span
+class="math display">\[
 \int_S g(T) \, d\mathbb P(T \mid Y)
-\]</span> where <span class="math inline">\(T\)</span> is now a <em>phylogenetic-tree-valued random variable</em>.</p>
+\]</span> where <span class="math inline">\(T\)</span> is now a
+<em>phylogenetic-tree-valued random variable</em>.</p>
 <div class="fragment">
-<p>If we can sample from the posterior distribution <span class="math inline">\(P(T \mid Y)\)</span> of trees given data, then <span class="math display">\[
+<p>If we can sample from the posterior distribution <span
+class="math inline">\(P(T \mid Y)\)</span> of trees given data, then
+<span class="math display">\[
 \int_S g(T) \, d\mathbb P(T \mid Y) = \sum_{T \sim P(T \mid Y)} g(T)
 \]</span></p>
 </div>
@@ -378,17 +425,20 @@ for real-valued $\int_a^b g(x) dx$ and $\int_a^b g(X) \, d\mathbb P(X \mid Y)$.
 </section>
 <section id="integrating-over-phylogenetic-trees" class="slide level1">
 <h1>Integrating over phylogenetic trees?</h1>
-<p>Phylogenetic trees have discrete topologies, there is no canonical distance between them, nor a natural total order.</p>
+<p>Phylogenetic trees have discrete topologies, there is no canonical
+distance between them, nor a natural total order.</p>
 <p> </p>
 <div class="fragment">
-<p>But we still want to do inference and integration in this setting!</p>
-<img width="600" src="figures/phylo/bayesian_phylo_hearts_nofonts.svg">
+<p>But we still want to do inference and integration in this
+setting!</p>
+<img src="figures/phylo/bayesian_phylo_hearts_nofonts.svg" width="600">
 </div>
 </section>
-<section id="subtree-prune-regraft-rspr-definition" class="slide level1">
+<section id="subtree-prune-regraft-rspr-definition"
+class="slide level1">
 <h1>Subtree-prune-regraft (rSPR) definition</h1>
 <p> </p>
-<img width="970" src="figures/phylo/spr-definition_nofonts.svg">
+<img src="figures/phylo/spr-definition_nofonts.svg" width="970">
 <p> </p>
 <p>These trees are then distance 1 apart.</p>
 </section>
@@ -397,14 +447,19 @@ for real-valued $\int_a^b g(x) dx$ and $\int_a^b g(X) \, d\mathbb P(X \mid Y)$.
 <img src="figures/phylo/5-taxa-treespace-unrooted_nofonts.svg" class="stretch">
 </section>
 <section id="metropolis-hastings-algorithm" class="slide level1">
-<h1><a href="http://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm">Metropolis-Hastings algorithm</a></h1>
+<h1><a
+href="http://en.wikipedia.org/wiki/Metropolis–Hastings_algorithm">Metropolis-Hastings
+algorithm</a></h1>
 <ul>
 <li>If you jump to a better tree, accept that move</li>
-<li>If you jump to a worse tree, accept that move with a non-zero probability</li>
-<li>It’s all arranged so that you sample trees in proportion to their posterior probability</li>
+<li>If you jump to a worse tree, accept that move with a non-zero
+probability</li>
+<li>It’s all arranged so that you sample trees in proportion to their
+posterior probability</li>
 </ul>
 <p><br></p>
-<p>Try out <a href="https://plewis.github.io/applets/mcmc-robot/">MCMC robot</a>!</p>
+<p>Try out <a href="https://plewis.github.io/applets/mcmc-robot/">MCMC
+robot</a>!</p>
 </section>
 <section id="markov-chain-monte-carlo" class="slide level1">
 <h1>Markov chain Monte Carlo</h1>
@@ -418,12 +473,17 @@ for real-valued $\int_a^b g(x) dx$ and $\int_a^b g(X) \, d\mathbb P(X \mid Y)$.
 <h1>The top 4096 trees for a data set</h1>
 <img src="figures/phylo/ds6.png" height="620">
 </section>
-<section id="the-posterior-probability-of-a-tree-is-the-probability-that-the-observed-tree-is-correct-given-the-model-and-priors" class="slide level1">
-<h1>The posterior probability of a tree is the probability that the observed tree is correct (given the model and priors)</h1>
+<section
+id="the-posterior-probability-of-a-tree-is-the-probability-that-the-observed-tree-is-correct-given-the-model-and-priors"
+class="slide level1">
+<h1>The posterior probability of a tree is the probability that the
+observed tree is correct (given the model and priors)</h1>
 <ul>
 <li>Bayesians sample from this posterior</li>
-<li>If you can deal with a prior, it’s the statistically right thing to do</li>
-<li>Sometimes we aren’t actually interested in the tree, so we can integrate it out</li>
+<li>If you can deal with a prior, it’s the statistically right thing to
+do</li>
+<li>Sometimes we aren’t actually interested in the tree, so we can
+integrate it out</li>
 <li>But! Short alignment, 100 taxa = hours</li>
 </ul>
 <p><br></p>
@@ -436,7 +496,8 @@ for real-valued $\int_a^b g(x) dx$ and $\int_a^b g(X) \, d\mathbb P(X \mid Y)$.
 </ul>
 </div>
 </section>
-<section id="why-is-random-walk-markov-chain-monte-carlo-so-slow" class="slide level1">
+<section id="why-is-random-walk-markov-chain-monte-carlo-so-slow"
+class="slide level1">
 <h1>Why is random-walk Markov chain Monte Carlo so slow?</h1>
 <img src="figures/phylo/5-taxa-treespace-mcmc-unrooted_nofonts.svg" height="400">
 <p>The efficiency of MCMC depends on the fraction of good neighbors.</p>
@@ -449,28 +510,34 @@ for real-valued $\int_a^b g(x) dx$ and $\int_a^b g(X) \, d\mathbb P(X \mid Y)$.
 <h1># good neighbors for 41 sequences (!)</h1>
 <p> </p>
 <p> </p>
-<img width="970" src="figures/phylo/spr-neighbors-wide_nofonts.svg">
+<img src="figures/phylo/spr-neighbors-wide_nofonts.svg" width="970">
 <p> </p>
 <div class="fragment">
-… we are very unlikely to hit another good tree by randomly trying a neighbor. No wonder random walk MCMC is so slow.
+… we are very unlikely to hit another good tree by randomly trying a
+neighbor. No wonder random walk MCMC is so slow.
 </div>
 <p><br></p>
 <div class="fragment">
-<p>Whidden &amp; Matsen IV. (2015). Quantifying MCMC exploration of phylogenetic tree space. <em>Systematic Biology</em>.</p>
+<p>Whidden &amp; Matsen IV. (2015). Quantifying MCMC exploration of
+phylogenetic tree space. <em>Systematic Biology</em>.</p>
 </div>
 </section>
-<section id="variational-inference-is-an-alternate-strategy" class="slide level1">
+<section id="variational-inference-is-an-alternate-strategy"
+class="slide level1">
 <h1>Variational inference is an alternate strategy</h1>
 <p><br></p>
-<img width="970" src="figures/phylo/variational-1_nofonts.svg">
+<img src="figures/phylo/variational-1_nofonts.svg" width="970">
 <div class="fragment">
 MCMC strategy: sample under this curve
 </div>
 </section>
-<section id="variational-inference-fit-a-distribution-q_phimathbfz-to-it" class="slide level1">
-<h1>Variational inference: fit a distribution <span class="math inline">\(q_\phi(\mathbf{z})\)</span> to it</h1>
+<section
+id="variational-inference-fit-a-distribution-q_phimathbfz-to-it"
+class="slide level1">
+<h1>Variational inference: fit a distribution <span
+class="math inline">\(q_\phi(\mathbf{z})\)</span> to it</h1>
 <p><br></p>
-<img width="970" src="figures/phylo/variational_nofonts.svg">
+<img src="figures/phylo/variational_nofonts.svg" width="970">
 </section>
     </div>
   </div>
@@ -488,13 +555,146 @@ MCMC strategy: sample under this curve
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-      
         // Display controls in the bottom right corner
         controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
         // Push each slide change to the browser history
         history: true,
-        // Transition style
-        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
         math: {
           mathjax: 'MathJax/MathJax.js',
           config: 'TeX-AMS_HTML-full',

@@ -10,12 +10,23 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
   <style type="text/css">
@@ -66,22 +77,29 @@
   <h1 class="title">Model assumptions in phylogenetics</h1>
 </section>
 
-<section id="lets-take-a-look-at-the-newick-string-for-a-tree-inferred-from-mystery.fasta" class="slide level1">
-<h1>Let’s take a look at the Newick string for a tree inferred from <code>mystery.fasta</code>…</h1>
+<section
+id="lets-take-a-look-at-the-newick-string-for-a-tree-inferred-from-mystery.fasta"
+class="slide level1">
+<h1>Let’s take a look at the Newick string for a tree inferred from
+<code>mystery.fasta</code>…</h1>
 <p><br></p>
 <div class="fragment">
 Why does it look that way?
 </div>
 </section>
-<section id="mathematically-what-are-the-primary-common-model-assumptions-in-phylogenetics" class="slide level1">
-<h1>Mathematically, what are the primary common model assumptions in phylogenetics?</h1>
+<section
+id="mathematically-what-are-the-primary-common-model-assumptions-in-phylogenetics"
+class="slide level1">
+<h1>Mathematically, what are the primary common model assumptions in
+phylogenetics?</h1>
 <p><br></p>
 <ul>
 <li class="fragment">
 Stationarity: overall base composition does not change on the tree
 </li>
 <li class="fragment">
-Time reversibility: substitution process is the same going forward and backward in time
+Time reversibility: substitution process is the same going forward and
+backward in time
 </li>
 <li class="fragment">
 Homogeneity: same across branches of the tree
@@ -92,50 +110,73 @@ Homogeneity: same across branches of the tree
 <h1>Time reversibility is not symmetry</h1>
 <p>Symmetry:</p>
 <p><span class="math display">\[
-\Pr(X_t = \mathtt A | X_0 = \mathtt C) = \Pr(X_t = \mathtt C | X_0 = \mathtt A)
+\Pr(X_t = \mathtt A | X_0 = \mathtt C) = \Pr(X_t = \mathtt C | X_0 =
+\mathtt A)
 \]</span></p>
 <p><br></p>
 <p>Time-reversibility:</p>
 <p><span class="math display">\[
-\Pr(X_0 = \mathtt C, X_t = \mathtt A) = \Pr(X_0 = \mathtt A, X_t = \mathtt C)
+\Pr(X_0 = \mathtt C, X_t = \mathtt A) = \Pr(X_0 = \mathtt A, X_t =
+\mathtt C)
 \]</span></p>
 <div class="fragment">
 <p>or</p>
 <p><span class="math display">\[
-\Pr(X_0 = \mathtt C | X_t = \mathtt A) \Pr(X_t = \mathtt A) = \Pr(X_0 = \mathtt A | X_t = \mathtt C) \Pr(X_t = \mathtt C)
+\Pr(X_0 = \mathtt C | X_t = \mathtt A) \Pr(X_t = \mathtt A) = \Pr(X_0 =
+\mathtt A | X_t = \mathtt C) \Pr(X_t = \mathtt C)
 \]</span></p>
 </div>
 <div class="fragment">
 <p>… which is by what principle …</p>
 <p><span class="math display">\[
-\Pr(X_0 = \mathtt C | X_t = \mathtt A) \pi_{\mathtt A} = \Pr(X_0 = \mathtt A | X_t = \mathtt C) \pi_{\mathtt C}
+\Pr(X_0 = \mathtt C | X_t = \mathtt A) \pi_{\mathtt A} = \Pr(X_0 =
+\mathtt A | X_t = \mathtt C) \pi_{\mathtt C}
 \]</span></p>
 </div>
 </section>
-<section id="time-reversibility-is-why-our-tree-structures-come-out-unrooted." class="slide level1">
-<h1>Time-reversibility is why our tree structures come out unrooted.</h1>
+<section
+id="time-reversibility-is-why-our-tree-structures-come-out-unrooted."
+class="slide level1">
+<h1>Time-reversibility is why our tree structures come out
+unrooted.</h1>
 <p><br></p>
-<p>The “pulley principle” says that one can move the root around anywhere under reversible models. This is handy for saving computation doing tree rearrangements under reversible models.</p>
+<p>The “pulley principle” says that one can move the root around
+anywhere under reversible models. This is handy for saving computation
+doing tree rearrangements under reversible models.</p>
 <p><br></p>
 <div class="fragment">
 Outgroups can give us back a rooted tree.
 </div>
 </section>
 <section id="gc-content-is-not-stationary" class="slide level1">
-<h1><a href="https://www.pnas.org/content/111/39/E4096">GC content is <em>not</em> stationary…</a></h1>
+<h1><a href="https://www.pnas.org/content/111/39/E4096">GC content is
+<em>not</em> stationary…</a></h1>
 <p><a href="https://www.pnas.org/content/pnas/111/39/E4096/F1.large.jpg" target="_blank"><img src="https://www.pnas.org/content/pnas/111/39/E4096/F1.large.jpg" height="620"></a></p>
 </section>
-<section id="there-are-methods-that-enable-use-of-non-reversible-models" class="slide level1">
+<section id="there-are-methods-that-enable-use-of-non-reversible-models"
+class="slide level1">
 <h1>There are methods that enable use of non-reversible models</h1>
 <p><br></p>
-<p>Boussau, B., &amp; Gouy, M. (2006). Efficient likelihood computations with nonreversible models of evolution. Systematic Biology, 55(5), 756–768. <a href="https://doi.org/10.1080/10635150600975218" class="uri">https://doi.org/10.1080/10635150600975218</a></p>
+<p>Boussau, B., &amp; Gouy, M. (2006). Efficient likelihood computations
+with nonreversible models of evolution. Systematic Biology, 55(5),
+756–768. <a href="https://doi.org/10.1080/10635150600975218"
+class="uri">https://doi.org/10.1080/10635150600975218</a></p>
 </section>
-<section id="phylogenetic-invariants-can-infer-under-a-non-homogeneous-general-markov-model-of-evolution" class="slide level1">
-<h1>Phylogenetic invariants can infer under a non-homogeneous General Markov model of evolution!</h1>
+<section
+id="phylogenetic-invariants-can-infer-under-a-non-homogeneous-general-markov-model-of-evolution"
+class="slide level1">
+<h1>Phylogenetic invariants can infer under a non-homogeneous General
+Markov model of evolution!</h1>
 <p><br></p>
-<p>Fernández-Sánchez, J., &amp; Casanellas, M. (2016). Invariant Versus Classical Quartet Inference When Evolution is Heterogeneous Across Sites and Lineages. Systematic Biology, 65(2), 280–291. <a href="https://doi.org/10.1093/sysbio/syv086" class="uri">https://doi.org/10.1093/sysbio/syv086</a></p>
+<p>Fernández-Sánchez, J., &amp; Casanellas, M. (2016). Invariant Versus
+Classical Quartet Inference When Evolution is Heterogeneous Across Sites
+and Lineages. Systematic Biology, 65(2), 280–291. <a
+href="https://doi.org/10.1093/sysbio/syv086"
+class="uri">https://doi.org/10.1093/sysbio/syv086</a></p>
 <p><br></p>
-<p>If you want to learn more, we had a phyloseminar session on invariants <a href="http://phyloseminar.org/recorded.html" class="uri">http://phyloseminar.org/recorded.html</a></p>
+<p>If you want to learn more, we had a phyloseminar session on
+invariants <a href="http://phyloseminar.org/recorded.html"
+class="uri">http://phyloseminar.org/recorded.html</a></p>
 </section>
     </div>
   </div>
@@ -153,13 +194,146 @@ Outgroups can give us back a rooted tree.
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-      
         // Display controls in the bottom right corner
         controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
         // Push each slide change to the browser history
         history: true,
-        // Transition style
-        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
         math: {
           mathjax: 'MathJax/MathJax.js',
           config: 'TeX-AMS_HTML-full',

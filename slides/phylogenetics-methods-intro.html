@@ -11,12 +11,23 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
   <style type="text/css">
@@ -90,16 +101,20 @@
 <img src="figures/alignment/bigProtAln.png" class="stretch">
 <p>… it is a complex inference.</p>
 </section>
-<section id="in-molecular-phylogenetics-homology-means" class="slide level1">
+<section id="in-molecular-phylogenetics-homology-means"
+class="slide level1">
 <h1>In molecular phylogenetics, <em>homology</em> means…</h1>
 <img src="figures/alignment/bigProtAln-column_nofonts.svg" class="stretch">
 </section>
-<section id="in-molecular-phylogenetics-homology-means-1" class="slide level1">
+<section id="in-molecular-phylogenetics-homology-means-1"
+class="slide level1">
 <h1>In molecular phylogenetics, <em>homology</em> means…</h1>
 <img src="figures/alignment/bigProtAln-column_nofonts.svg" class="stretch">
-<p>Thus sequence alignment for phylogenetics is <br> a <em>super challenging inference</em>. More about this later.</p>
+<p>Thus sequence alignment for phylogenetics is <br> a <em>super
+challenging inference</em>. More about this later.</p>
 </section>
-<section id="types-of-phylogenetic-inference-methods" class="slide level1">
+<section id="types-of-phylogenetic-inference-methods"
+class="slide level1">
 <h1>Types of phylogenetic inference methods</h1>
 <ul>
 <li>Distance-based</li>
@@ -123,8 +138,13 @@
 <section id="parsimony-phylogenetics" class="slide level1">
 <h1>Parsimony phylogenetics</h1>
 <p><br></p>
-<p><a href="https://en.wikipedia.org/wiki/Maximum_parsimony_(phylogenetics)">Parsimony</a> is based on <a href="https://en.wikipedia.org/wiki/Occam&#39;s_razor">Occam’s razor</a></p>
-<p>Among competing hypotheses that predict equally well, the one with the fewest assumptions should be selected.</p>
+<p><a
+href="https://en.wikipedia.org/wiki/Maximum_parsimony_(phylogenetics)">Parsimony</a>
+is based on <a
+href="https://en.wikipedia.org/wiki/Occam&#39;s_razor">Occam’s
+razor</a></p>
+<p>Among competing hypotheses that predict equally well, the one with
+the fewest assumptions should be selected.</p>
 <p><br></p>
 <div class="caption">
 The next few slides are from Trevor Bedford.
@@ -132,63 +152,77 @@ The next few slides are from Trevor Bedford.
 </section>
 <section id="section-3" class="slide level1">
 <h1></h1>
-<p>Say we have three viruses <img src="figures/parsimony/parsimony_1.png" height="620"></p>
+<p>Say we have three viruses
+<img src="figures/parsimony/parsimony_1.png" height="620"></p>
 </section>
 <section id="section-4" class="slide level1">
 <h1></h1>
-<p>Say we have three viruses <img src="figures/parsimony/parsimony_2.png" height="620"></p>
+<p>Say we have three viruses
+<img src="figures/parsimony/parsimony_2.png" height="620"></p>
 </section>
 <section id="section-5" class="slide level1">
 <h1></h1>
-<p>We can explain these sequences with 3 mutations <img src="figures/parsimony/parsimony_3.png" height="620"></p>
+<p>We can explain these sequences with 3 mutations
+<img src="figures/parsimony/parsimony_3.png" height="620"></p>
 </section>
 <section id="section-6" class="slide level1">
 <h1></h1>
-<p>This topology requires 3 mutations at minimum <img src="figures/parsimony/parsimony_4.png" height="620"></p>
+<p>This topology requires 3 mutations at minimum
+<img src="figures/parsimony/parsimony_4.png" height="620"></p>
 </section>
 <section id="section-7" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_1.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em>
+<img src="figures/parsimony/parsimony_exercise_1.png" height="620"></p>
 </section>
 <section id="section-8" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_2.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em>
+<img src="figures/parsimony/parsimony_exercise_2.png" height="620"></p>
 </section>
 <section id="section-9" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_3.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em>
+<img src="figures/parsimony/parsimony_exercise_3.png" height="620"></p>
 </section>
 <section id="section-10" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_4.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em>
+<img src="figures/parsimony/parsimony_exercise_4.png" height="620"></p>
 </section>
 <section id="section-11" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_5.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em>
+<img src="figures/parsimony/parsimony_exercise_5.png" height="620"></p>
 </section>
 <section id="section-12" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_6.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em>
+<img src="figures/parsimony/parsimony_exercise_6.png" height="620"></p>
 </section>
 <section id="section-13" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_7.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em>
+<img src="figures/parsimony/parsimony_exercise_7.png" height="620"></p>
 </section>
 <section id="section-14" class="slide level1">
 <h1></h1>
-<p><em>Exercise: which topology is more parsimonious?</em> <img src="figures/parsimony/parsimony_exercise_8.png" height="620"></p>
+<p><em>Exercise: which topology is more parsimonious?</em>
+<img src="figures/parsimony/parsimony_exercise_8.png" height="620"></p>
 </section>
 <section id="section-15" class="slide level1">
 <h1></h1>
 <p>Parsimony seems sensible.</p>
 <p>Is it the most popular phylogenetics method?</p>
 <div class="fragment">
-<p><em>No. There are situations in which the correct tree has more mutations.</em></p>
+<p><em>No. There are situations in which the correct tree has more
+mutations.</em></p>
 </div>
 </section>
 <section id="section-16" class="slide level1">
 <h1></h1>
-<img width="970" src="figures/parsimony/felsenstein-zone-title.png"> <img width="320" src="figures/parsimony/felsenstein-zone-tree.png">
+<p><img src="figures/parsimony/felsenstein-zone-title.png" width="970">
+<img src="figures/parsimony/felsenstein-zone-tree.png" width="320"></p>
 </section>
 <section id="long-branch-attraction" class="slide level1">
 <h1>Long branch attraction</h1>
@@ -215,22 +249,26 @@ Given enough data, likelihood methods will converge to the true tree.
 <h1>Likelihood setup</h1>
 <ul>
 <li>
-Come up with a statistical model of experiment in terms of some data and some parameters
+Come up with a statistical model of experiment in terms of some data and
+some parameters
 </li>
 <li class="fragment">
-Write down a <em>likelihood function</em> that expresses the probability of generating the observed data given those parameters
+Write down a <em>likelihood function</em> that expresses the probability
+of generating the observed data given those parameters
 </li>
 <li class="fragment">
 Now we can evaluate likelihood under various parameter values
 </li>
 <li class="fragment">
-We will write this likelihood <span class="math inline">\(\Pr(D \mid \theta)\)</span>. <br> <em>Why is this appropriate notation?</em>
+We will write this likelihood <span class="math inline">\(\Pr(D \mid
+\theta)\)</span>. <br> <em>Why is this appropriate notation?</em>
 </li>
 </ul>
 </section>
 <section id="example-picking-peaches" class="slide level1">
 <h1>Example: picking peaches</h1>
-<p>Say <span class="math inline">\(p\)</span> is the probability of getting a ripe peach, and each draw is independent.</p>
+<p>Say <span class="math inline">\(p\)</span> is the probability of
+getting a ripe peach, and each draw is independent.</p>
 <ul>
 <li class="fragment">
 What is the probability of getting two ripe peaches in a row?
@@ -246,16 +284,22 @@ What about if after harvesting 20 peaches, we have 6 ripe ones?
 <section id="example-picking-peaches-1" class="slide level1">
 <h1>Example: picking peaches</h1>
 <p>Say that, after harvesting 20 peaches, we have 6 ripe ones.</p>
-<p>Say <span class="math inline">\(p\)</span> is the probability of getting a ripe peach, and each draw is independent. Model using the <a href="http://en.wikipedia.org/wiki/Binomial_distribution">binomial distribution</a>.</p>
+<p>Say <span class="math inline">\(p\)</span> is the probability of
+getting a ripe peach, and each draw is independent. Model using the <a
+href="http://en.wikipedia.org/wiki/Binomial_distribution">binomial
+distribution</a>.</p>
 <p> </p>
-<p>The <em>likelihood</em> of getting the observed result is <span class="math display">\[
+<p>The <em>likelihood</em> of getting the observed result is <span
+class="math display">\[
 { {20} \choose 6} \, p^6 \, (1-p)^{20-6}.
-\]</span> Recall: <span class="math inline">\({ {20} \choose 6}\)</span> is the number of ways of choosing 6 items out of 20.</p>
+\]</span> Recall: <span class="math inline">\({ {20} \choose 6}\)</span>
+is the number of ways of choosing 6 items out of 20.</p>
 </section>
 <section id="peach-picking-likelihood-surface" class="slide level1">
 <h1>Peach picking likelihood surface</h1>
 <img src="figures/likelihood/ripe-likelihood_nofonts.svg" height="450">
-<p>The <em>maximum likelihood estimate</em> of the parameter(s) of interest is the parameter value(s) that maximize the likelihood.</p>
+<p>The <em>maximum likelihood estimate</em> of the parameter(s) of
+interest is the parameter value(s) that maximize the likelihood.</p>
 <!--
 #
 <s> The *maximum likelihood estimate* of the parameter(s) of interest is the parameter value(s) that maximize the likelihood. </s>
@@ -270,13 +314,16 @@ Fiddle with the dials until it looks good.
 <img src="figures/likelihood/ripe-likelihood_nofonts.svg" height="250">
 <ol>
 <li class="fragment">
-What is the maximum likelihood (ML) estimate of <span class="math inline">\(p\)</span> given our experiment?
+What is the maximum likelihood (ML) estimate of <span
+class="math inline">\(p\)</span> given our experiment?
 </li>
 <li class="fragment">
-Would the result of this ML estimate be different if we got 60 ripe peaches out of 200?
+Would the result of this ML estimate be different if we got 60 ripe
+peaches out of 200?
 </li>
 <li class="fragment">
-Intuitively, would the shape of the likelihood curve be different with this larger dataset?
+Intuitively, would the shape of the likelihood curve be different with
+this larger dataset?
 </li>
 </ol>
 </section>
@@ -284,8 +331,13 @@ Intuitively, would the shape of the likelihood curve be different with this larg
 <h1>Likelihood recap</h1>
 <ul>
 <li>Maximum likelihood is a way of inferring unknown parameters</li>
-<li>To apply likelihood, we need a <em>model</em> of the system under investigation</li>
-<li>In general, the “likelihood” is the likelihood of generating the data under the given parameters, written <span class="math inline">\(P(D | \theta),\)</span> where <span class="math inline">\(D\)</span> is the data and <span class="math inline">\(\theta\)</span> are the parameters.</li>
+<li>To apply likelihood, we need a <em>model</em> of the system under
+investigation</li>
+<li>In general, the “likelihood” is the likelihood of generating the
+data under the given parameters, written <span class="math inline">\(P(D
+| \theta),\)</span> where <span class="math inline">\(D\)</span> is the
+data and <span class="math inline">\(\theta\)</span> are the
+parameters.</li>
 </ul>
 <!--
 # Setup for likelihood based phylogenetics
@@ -327,8 +379,10 @@ Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.ed
 <ul>
 <li>differences between sequences only appear by point mutation</li>
 <li>evolution happens on each column independently</li>
-<li>sequences are evolving according to <em>reversible</em> models (this excludes selection and directional evolution of base composition)</li>
-<li>the evolutionary process is identical on all branches of the tree</li>
+<li>sequences are evolving according to <em>reversible</em> models (this
+excludes selection and directional evolution of base composition)</li>
+<li>the evolutionary process is identical on all branches of the
+tree</li>
 </ul>
 </section>
     </div>
@@ -347,13 +401,146 @@ Note that the UW's own [Joe Felsenstein](http://evolution.genetics.washington.ed
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-      
         // Display controls in the bottom right corner
         controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
         // Push each slide change to the browser history
         history: true,
-        // Transition style
-        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
         math: {
           mathjax: 'MathJax/MathJax.js',
           config: 'TeX-AMS_HTML-full',

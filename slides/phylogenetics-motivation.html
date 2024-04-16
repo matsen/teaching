@@ -11,12 +11,23 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
   <style type="text/css">
@@ -93,36 +104,53 @@ Independent contrasts
 <h1></h1>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
-Genome of the whale shark, Earth's largest fish—contributed by <a href="https://twitter.com/geochurch?ref_src=twsrc%5Etfw"><span class="citation" data-cites="geochurch">@geochurch</span></a> and colleagues. Ostensibly extremely significant correlations are reported between physiological and genomic features across taxa, interpreted as evincing scaling laws. <a href="https://t.co/9EvT18ClPR">https://t.co/9EvT18ClPR</a> (1/n)
+Genome of the whale shark, Earth's largest fish—contributed by
+<a href="https://twitter.com/geochurch?ref_src=twsrc%5Etfw"><span
+class="citation" data-cites="geochurch">@geochurch</span></a> and
+colleagues. Ostensibly extremely significant correlations are reported
+between physiological and genomic features across taxa, interpreted as
+evincing scaling laws.
+<a href="https://t.co/9EvT18ClPR">https://t.co/9EvT18ClPR</a> (1/n)
 </p>
-— William DeWitt (<span class="citation" data-cites="wsdewitt">@wsdewitt</span>) <a href="https://twitter.com/wsdewitt/status/1291147602507862016?ref_src=twsrc%5Etfw">August 5, 2020</a>
+— William DeWitt (<span class="citation"
+data-cites="wsdewitt">@wsdewitt</span>)
+<a href="https://twitter.com/wsdewitt/status/1291147602507862016?ref_src=twsrc%5Etfw">August
+5, 2020</a>
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </section>
 <section id="section-2" class="slide level1">
 <h1></h1>
 <img src="figures/motivation/whale-shark-correlations.jpg" height="620">
-<p><a href="https://www.pnas.org/content/117/34/20662">Paper link</a>. gray: Hyperoartia, Ascidiacea, Chromadorea, Insecta, and Saccharomycetes; turquoise: Chondrichthyes [cyan indicates whale shark]; light blue: Actinopterygii; aquamarine: Sarcopterygii; dark green: Amphibia; light green: Reptilia; dark yellow: Aves; orange: Mammalia</p>
+<p><a href="https://www.pnas.org/content/117/34/20662">Paper link</a>.
+gray: Hyperoartia, Ascidiacea, Chromadorea, Insecta, and
+Saccharomycetes; turquoise: Chondrichthyes [cyan indicates whale shark];
+light blue: Actinopterygii; aquamarine: Sarcopterygii; dark green:
+Amphibia; light green: Reptilia; dark yellow: Aves; orange: Mammalia</p>
 </section>
 <section id="section-3" class="slide level1">
 <h1></h1>
-<img width="970" src="figures/comparative-method/whale-shark-panel-d-split_nofonts.svg">
+<img src="figures/comparative-method/whale-shark-panel-d-split_nofonts.svg" width="970">
 </section>
 <section id="say-we-measure-two-traits" class="slide level1">
 <h1>Say we measure two traits</h1>
 <img src="figures/comparative-method/traits.png" class="stretch">
 </section>
 <section id="do-traits-x-and-y-look-correlated" class="slide level1">
-<h1>Do traits <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> look correlated?</h1>
+<h1>Do traits <span class="math inline">\(X\)</span> and <span
+class="math inline">\(Y\)</span> look correlated?</h1>
 <img src="figures/comparative-method/false-correlation-one-symbol.png" height="500">
 </section>
 <section id="do-traits-x-and-y-look-correlated-1" class="slide level1">
-<h1>Do traits <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span> look correlated?</h1>
+<h1>Do traits <span class="math inline">\(X\)</span> and <span
+class="math inline">\(Y\)</span> look correlated?</h1>
 <img src="figures/comparative-method/false-correlation-two-symbols.png" height="500">
 </section>
-<section id="stars-from-left-branch-squares-from-the-right" class="slide level1">
+<section id="stars-from-left-branch-squares-from-the-right"
+class="slide level1">
 <h1>Stars from left branch, squares from the right</h1>
-<img src="figures/comparative-method/worst-case-tree.png" style="float:left" height="510"> <img src="figures/comparative-method/false-correlation-two-symbols.png" style="float:right" height="510">
+<p><img src="figures/comparative-method/worst-case-tree.png" height="510" style="float:left">
+<img src="figures/comparative-method/false-correlation-two-symbols.png" height="510" style="float:right"></p>
 <p><br></p>
 <div class="fragment">
 Need to correct for evolutionary history to test evolution hypothesis.
@@ -130,25 +158,42 @@ Need to correct for evolutionary history to test evolution hypothesis.
 </section>
 <section id="felsenstein-1985" class="slide level1">
 <h1>Felsenstein 1985</h1>
-<p>Felsenstein, J. (1985). Phylogenies and the Comparative Method. The American Naturalist, 125(1), 1–15. <a href="https://paperpile.com/shared/Vp8yHJ">[PDF]</a></p>
+<p>Felsenstein, J. (1985). Phylogenies and the Comparative Method. The
+American Naturalist, 125(1), 1–15. <a
+href="https://paperpile.com/shared/Vp8yHJ">[PDF]</a></p>
 <div class="fragment">
-<p>Huey, R. B., Garland, T., Jr, &amp; Turelli, M. (2019). Revisiting a Key Innovation in Evolutionary Biology: Felsenstein’s “Phylogenies and the Comparative Method.” The American Naturalist, 193(6), 755–772. <a href="https://doi.org/10.1086/703055">[DOI]</a></p>
+<p>Huey, R. B., Garland, T., Jr, &amp; Turelli, M. (2019). Revisiting a
+Key Innovation in Evolutionary Biology: Felsenstein’s “Phylogenies and
+the Comparative Method.” The American Naturalist, 193(6), 755–772. <a
+href="https://doi.org/10.1086/703055">[DOI]</a></p>
 </div>
 </section>
 <section id="section-4" class="slide level1">
 <h1></h1>
-<img width="970" src="figures/comparative-method/dunn-pairwise-felsenstein-simple_nofonts.svg">
+<img src="figures/comparative-method/dunn-pairwise-felsenstein-simple_nofonts.svg" width="970">
 <p>This paper blows big holes in these papers:</p>
 <ul>
-<li>Kryuchkova-Mostacci, N., &amp; Robinson-Rechavi, M. (2016). Tissue-Specificity of Gene Expression Diverges Slowly between Orthologs, and Rapidly between Paralogs. PLoS Computational Biology, 12(12), e1005274. <a href="https://doi.org/10.1371/journal.pcbi.1005274">[DOI]</a></li>
-<li>Levin, M., Anavy, L., Cole, A. G., Winter, E., Mostov, N., Khair, S., … Yanai, I. (2016). The mid-developmental transition and the evolution of animal body plans. Nature, 531, 637. <a href="https://doi.org/10.1038/nature16994">[DOI]</a></li>
+<li>Kryuchkova-Mostacci, N., &amp; Robinson-Rechavi, M. (2016).
+Tissue-Specificity of Gene Expression Diverges Slowly between Orthologs,
+and Rapidly between Paralogs. PLoS Computational Biology, 12(12),
+e1005274. <a
+href="https://doi.org/10.1371/journal.pcbi.1005274">[DOI]</a></li>
+<li>Levin, M., Anavy, L., Cole, A. G., Winter, E., Mostov, N., Khair,
+S., … Yanai, I. (2016). The mid-developmental transition and the
+evolution of animal body plans. Nature, 531, 637. <a
+href="https://doi.org/10.1038/nature16994">[DOI]</a></li>
 </ul>
 <p>… don’t make this mistake, please!</p>
 </section>
 <section id="for-a-paper-that-does-it-right" class="slide level1">
 <h1>For a paper that does it right…</h1>
-<p>Schraiber, J. G., Mostovoy, Y., Hsu, T. Y., &amp; Brem, R. B. (2013). Inferring evolutionary histories of pathway regulation from transcriptional profiling data. PLoS Computational Biology, 9(10), e1003255. <a href="https://doi.org/10.1371/journal.pcbi.1003255">[DOI]</a></p>
-<p><a href="https://www.youtube.com/watch?v=3lxqv_iJeLY" class="uri">https://www.youtube.com/watch?v=3lxqv_iJeLY</a></p>
+<p>Schraiber, J. G., Mostovoy, Y., Hsu, T. Y., &amp; Brem, R. B. (2013).
+Inferring evolutionary histories of pathway regulation from
+transcriptional profiling data. PLoS Computational Biology, 9(10),
+e1003255. <a
+href="https://doi.org/10.1371/journal.pcbi.1003255">[DOI]</a></p>
+<p><a href="https://www.youtube.com/watch?v=3lxqv_iJeLY"
+class="uri">https://www.youtube.com/watch?v=3lxqv_iJeLY</a></p>
 </section>
 <section id="section-5" class="slide level1">
 <h1></h1>
@@ -160,7 +205,10 @@ Flu transmission patterns
 <h1>Where does the flu come from?</h1>
 <img src="figures/phylogeography/bedford-2010-migration-map.png" class="stretch">
 <div class="fragment">
-<p>Bedford, T., Cobey, S., Beerli, P., &amp; Pascual, M. (2010). Global Migration Dynamics Underlie Evolution and Persistence of Human Influenza A (H3N2). PLoS Pathogens, 6(5), e1000918. <a href="https://doi.org/10.1371/journal.ppat.1000918">[DOI]</a></p>
+<p>Bedford, T., Cobey, S., Beerli, P., &amp; Pascual, M. (2010). Global
+Migration Dynamics Underlie Evolution and Persistence of Human Influenza
+A (H3N2). PLoS Pathogens, 6(5), e1000918. <a
+href="https://doi.org/10.1371/journal.ppat.1000918">[DOI]</a></p>
 </div>
 </section>
 <section id="infer-trunk-location" class="slide level1">
@@ -187,10 +235,18 @@ Flu transmission patterns
 <section id="try-it-out" class="slide level1">
 <h1>Try it out</h1>
 <p><a href="http://nextflu.org/" class="uri">http://nextflu.org/</a></p>
-<p>Neher, R. A., &amp; Bedford, T. (2015). nextflu: Real-time tracking of seasonal influenza virus evolution in humans. Bioinformatics . <a href="https://doi.org/10.1093/bioinformatics/btv381">[DOI]</a></p>
-<p>Neher, R. A., Russell, C. A., &amp; Shraiman, B. I. (2014). Predicting evolution from the shape of genealogical trees. eLife, 3. <a href="https://doi.org/10.7554/eLife.03568">[DOI]</a></p>
-<p><a href="http://nextstrain.org/" class="uri">http://nextstrain.org/</a></p>
-<p>Hadfield, Megill, Bell, Huddleston, Potter, Callender, …, Bedford, Neher, (2018). Nextstrain: real-time tracking of pathogen evolution. Bioinformatics. <a href="https://doi.org/10.1093/bioinformatics/bty407">[DOI]</a></p>
+<p>Neher, R. A., &amp; Bedford, T. (2015). nextflu: Real-time tracking
+of seasonal influenza virus evolution in humans. Bioinformatics . <a
+href="https://doi.org/10.1093/bioinformatics/btv381">[DOI]</a></p>
+<p>Neher, R. A., Russell, C. A., &amp; Shraiman, B. I. (2014).
+Predicting evolution from the shape of genealogical trees. eLife, 3. <a
+href="https://doi.org/10.7554/eLife.03568">[DOI]</a></p>
+<p><a href="http://nextstrain.org/"
+class="uri">http://nextstrain.org/</a></p>
+<p>Hadfield, Megill, Bell, Huddleston, Potter, Callender, …, Bedford,
+Neher, (2018). Nextstrain: real-time tracking of pathogen evolution.
+Bioinformatics. <a
+href="https://doi.org/10.1093/bioinformatics/bty407">[DOI]</a></p>
 </section>
     </div>
   </div>
@@ -208,13 +264,146 @@ Flu transmission patterns
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-      
         // Display controls in the bottom right corner
         controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
         // Push each slide change to the browser history
         history: true,
-        // Transition style
-        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
         math: {
           mathjax: 'MathJax/MathJax.js',
           config: 'TeX-AMS_HTML-full',

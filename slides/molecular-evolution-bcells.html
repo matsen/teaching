@@ -11,12 +11,23 @@
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reset.css">
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/reveal.css">
   <style>
+    .reveal .sourceCode {  /* see #7635 */
+      overflow: visible;
+    }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    ul.task-list{list-style: none;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <link rel="stylesheet" href="https://unpkg.com/reveal.js@^4//dist/theme/simple.css" id="theme">
   <style type="text/css">
@@ -66,28 +77,34 @@
 <section id="title-slide">
   <h1 class="title">Mutation and selection in B cells</h1>
   <p class="author">Erick Matsen</p>
-  <p class="date">Thanks to <a href="http://cobeylab.uchicago.edu/">Sarah Cobey</a> for some of the slides</p>
+  <p class="date">Thanks to <a
+href="http://cobeylab.uchicago.edu/">Sarah Cobey</a> for some of the
+slides</p>
 </section>
 
 <section id="structure-of-a-b-cell-receptor" class="slide level1">
 <h1>Structure of a B cell receptor</h1>
 <img src="figures/bcell/bcr.png" class="stretch">
 <div class="citation">
-<a href="http://www.nature.com/nbt/journal/v32/n2/abs/nbt.2782.html">Georgiou et al. 2014</a>
+<a
+href="http://www.nature.com/nbt/journal/v32/n2/abs/nbt.2782.html">Georgiou
+et al. 2014</a>
 </div>
 </section>
 <section id="vdj-recombination" class="slide level1">
 <h1>VDJ recombination</h1>
 <img src="figures/bcell/overview-top_nofonts.svg" class="stretch">
 <div class="citation">
-modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al. 2012</a>
+modified from <a
+href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al. 2012</a>
 </div>
 </section>
 <section id="vdj-loci" class="slide level1">
 <h1>VDJ loci</h1>
 <img src="figures/bcell/watson-eichler-breden.png" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.ajhg.2013.03.004">Watson et al. 2013</a>
+<a href="http://dx.doi.org/10.1016/j.ajhg.2013.03.004">Watson et
+al. 2013</a>
 </div>
 </section>
 <section id="section" class="slide level1">
@@ -102,56 +119,64 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <h1></h1>
 <img src="figures/bcell/gc-victora-mesin-1_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin 2016</a>
+<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin
+2016</a>
 </div>
 </section>
 <section id="section-2" class="slide level1">
 <h1></h1>
 <img src="figures/bcell/gc-victora-mesin-2_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin 2016</a>
+<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin
+2016</a>
 </div>
 </section>
 <section id="section-3" class="slide level1">
 <h1></h1>
 <img src="figures/bcell/gc-victora-mesin-3_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin 2016</a>
+<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin
+2016</a>
 </div>
 </section>
 <section id="section-4" class="slide level1">
 <h1></h1>
 <img src="figures/bcell/gc-victora-mesin-4_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin 2016</a>
+<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin
+2016</a>
 </div>
 </section>
 <section id="section-5" class="slide level1">
 <h1></h1>
 <img src="figures/bcell/gc-victora-mesin-5_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin 2016</a>
+<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin
+2016</a>
 </div>
 </section>
 <section id="section-6" class="slide level1">
 <h1></h1>
 <img src="figures/bcell/gc-victora-mesin-6_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin 2016</a>
+<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin
+2016</a>
 </div>
 </section>
 <section id="section-7" class="slide level1">
 <h1></h1>
 <img src="figures/bcell/gc-victora-mesin-7_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin 2016</a>
+<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin
+2016</a>
 </div>
 </section>
 <section id="section-8" class="slide level1">
 <h1></h1>
 <img src="figures/bcell/gc-victora-mesin_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin 2016</a>
+<a href="http://dx.doi.org/10.1016/j.coi.2014.02.010">Victora and Mesin
+2016</a>
 </div>
 </section>
 <section id="section-9" class="slide level1">
@@ -166,7 +191,9 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <h1>Somatic hypermutation is AID + repair</h1>
 <img src="figures/bcell/methot-shm_nofonts.svg" class="stretch">
 <div class="citation">
-<a href="http://www.sciencedirect.com/science/article/pii/S0065277616300530">Methot and Di Noia 2017</a>
+<a
+href="http://www.sciencedirect.com/science/article/pii/S0065277616300530">Methot
+and Di Noia 2017</a>
 </div>
 </section>
 <section id="the-mutations-have-peculiar-biases" class="slide level1">
@@ -181,55 +208,75 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <h1>Phylogenetics is not straightforward</h1>
 <img src="figures/bcell/hoehn-mean-field.png" class="stretch">
 <div class="citation">
-<a href="http://dx.doi.org/10.1534/genetics.116.196303">Hoehn et al. 2017</a>
+<a href="http://dx.doi.org/10.1534/genetics.116.196303">Hoehn et
+al. 2017</a>
 </div>
 </section>
-<section id="incorporating-context-sensitivity-helps-performance" class="slide level1">
+<section id="incorporating-context-sensitivity-helps-performance"
+class="slide level1">
 <h1>Incorporating context sensitivity helps performance</h1>
 <img src="figures/bcell/bcr-phylo-benchmark-COAR_nofonts.svg" class="stretch">
 </section>
 <section id="what-about-natural-selection" class="slide level1">
 <h1>What about natural selection?</h1>
-<p><strong>Remember goal:</strong> get per-site selection inferences,</p>
+<p><strong>Remember goal:</strong> get per-site selection
+inferences,</p>
 <ul>
-<li><span class="math inline">\(\omega &gt; 1\)</span> indicates positive selection (“invites change”)</li>
-<li><span class="math inline">\(\omega &lt; 1\)</span> indicates negative selection (“does not tolerate change”)</li>
+<li><span class="math inline">\(\omega &gt; 1\)</span> indicates
+positive selection (“invites change”)</li>
+<li><span class="math inline">\(\omega &lt; 1\)</span> indicates
+negative selection (“does not tolerate change”)</li>
 </ul>
 </section>
-<section id="natural-selection-inferences-are-also-not-straightforward" class="slide level1">
+<section id="natural-selection-inferences-are-also-not-straightforward"
+class="slide level1">
 <h1>Natural selection inferences are also not straightforward</h1>
 <img src="figures/bcell/selection-vs-mut-bias-1_nofonts.svg" class="stretch">
 </section>
-<section id="natural-selection-inferences-are-also-not-straightforward-1" class="slide level1">
+<section
+id="natural-selection-inferences-are-also-not-straightforward-1"
+class="slide level1">
 <h1>Natural selection inferences are also not straightforward</h1>
 <img src="figures/bcell/selection-vs-mut-bias_nofonts.svg" class="stretch">
 </section>
-<section id="natural-selection-inferences-are-also-not-straightforward-2" class="slide level1">
+<section
+id="natural-selection-inferences-are-also-not-straightforward-2"
+class="slide level1">
 <h1>Natural selection inferences are also not straightforward</h1>
 <img src="figures/bcell/selection-vs-mut-bias_nofonts.svg" class="stretch">
-<p>Context-sensitive mutation can confound <br> natural selection inference for B cells.</p>
+<p>Context-sensitive mutation can confound <br> natural selection
+inference for B cells.</p>
 </section>
 <section id="correct-for-mutation-rate-variation" class="slide level1">
 <h1>Correct for mutation rate variation</h1>
 <p><br></p>
 <ul>
-<li><span class="math inline">\(\lambda_l^{(N-I)}\)</span>: nonsynonymous in-frame rate for site <span class="math inline">\(l\)</span></li>
-<li><span class="math inline">\(\lambda_l^{(N-N)}\)</span>: nonsynonymous neutral rate for site <span class="math inline">\(l\)</span></li>
-<li><span class="math inline">\(\lambda_l^{(S-I)}\)</span>: synonymous in-frame rate for site <span class="math inline">\(l\)</span></li>
-<li><span class="math inline">\(\lambda_l^{(S-N)}\)</span>: synonymous neutral rate for site <span class="math inline">\(l\)</span></li>
+<li><span class="math inline">\(\lambda_l^{(N-I)}\)</span>:
+nonsynonymous in-frame rate for site <span
+class="math inline">\(l\)</span></li>
+<li><span class="math inline">\(\lambda_l^{(N-N)}\)</span>:
+nonsynonymous neutral rate for site <span
+class="math inline">\(l\)</span></li>
+<li><span class="math inline">\(\lambda_l^{(S-I)}\)</span>: synonymous
+in-frame rate for site <span class="math inline">\(l\)</span></li>
+<li><span class="math inline">\(\lambda_l^{(S-N)}\)</span>: synonymous
+neutral rate for site <span class="math inline">\(l\)</span></li>
 </ul>
 <p><br></p>
 <p><span class="math display">\[
-\omega_l = \frac{\lambda_l^{(N-I)} / \lambda_l^{(N-N)}}{\lambda_l^{(S-I)} / \lambda_l^{(S-N)}}
+\omega_l = \frac{\lambda_l^{(N-I)} /
+\lambda_l^{(N-N)}}{\lambda_l^{(S-I)} / \lambda_l^{(S-N)}}
 \]</span></p>
 </section>
-<section id="how-do-we-get-neutral-per-site-substitution-rate" class="slide level1">
+<section id="how-do-we-get-neutral-per-site-substitution-rate"
+class="slide level1">
 <h1>How do we get neutral per-site substitution rate?</h1>
 </section>
-<section id="productive-vs.-out-of-frame-receptors" class="slide level1">
+<section id="productive-vs.-out-of-frame-receptors"
+class="slide level1">
 <h1>Productive vs. out-of-frame receptors</h1>
 <p> </p>
-<p><a href="figures/bcell/vdj_recomb_out_of_frame_nofonts.svg" target="_blank"><img width="970" src="figures/bcell/vdj_recomb_out_of_frame_nofonts_nofonts.svg"></a></p>
+<p><a href="figures/bcell/vdj_recomb_out_of_frame_nofonts.svg" target="_blank"><img src="figures/bcell/vdj_recomb_out_of_frame_nofonts.svg" width="970"></a></p>
 <p> </p>
 <p>Out-of-frame reads can be used to infer neutral mutation rate.</p>
 </section>
@@ -237,29 +284,35 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <h1>One can also use passenger alleles</h1>
 <ul>
 <li>Yeap, Hwang, Du, Meyers, …, Alt, F. W. <em>Cell</em>, 2015</li>
-<li>Cui, Di Niro, Vander Heiden, Briggs, … , Kleinstein <em>J Immunol</em>, 2016.</li>
+<li>Cui, Di Niro, Vander Heiden, Briggs, … , Kleinstein <em>J
+Immunol</em>, 2016.</li>
 </ul>
 <p>and fit a mutation model.</p>
 </section>
-<section id="one-would-like-to-quantify-these-biases" class="slide level1">
+<section id="one-would-like-to-quantify-these-biases"
+class="slide level1">
 <h1>One would like to quantify these biases</h1>
 <img src="figures/bcell/samm-explanation_nofonts.svg" class="stretch">
 </section>
 <section id="classic-work-by-kleinstein-group" class="slide level1">
 <h1>Classic work by Kleinstein group</h1>
 <p><br></p>
-<img width="970" src="figures/bcell/yaari2015-hedgehog-overall.png">
+<img src="figures/bcell/yaari2015-hedgehog-overall.png" width="970">
 <ul>
-<li>Yaari, Vander Heiden, Uduman, Gadala-Maria, Gupta, Stern, Kleinstein, <em>Front Immunol</em>, 2013.</li>
-<li>Cui, Di Niro, Vander Heiden, Briggs, … , Kleinstein <em>J Immunol</em>, 2016.</li>
+<li>Yaari, Vander Heiden, Uduman, Gadala-Maria, Gupta, Stern,
+Kleinstein, <em>Front Immunol</em>, 2013.</li>
+<li>Cui, Di Niro, Vander Heiden, Briggs, … , Kleinstein <em>J
+Immunol</em>, 2016.</li>
 </ul>
 </section>
 <section id="have-extended-this-framework" class="slide level1">
 <h1>Have extended this framework</h1>
-<img width="970" src="figures/bcell/3-5_nofonts.svg">
+<img src="figures/bcell/3-5_nofonts.svg" width="970">
 <p>We can add overlapping motifs.</p>
 <div class="fragment">
-<p>Now the <span class="math inline">\(\theta\)</span> entry for a 5-mer answers the question: <br> what is this 5-mer telling me that the inner 3-mer did not? <br></p>
+<p>Now the <span class="math inline">\(\theta\)</span> entry for a 5-mer
+answers the question: <br> what is this 5-mer telling me that the inner
+3-mer did not? <br></p>
 </div>
 <div class="fragment">
 <p>These get automatically zeroed out if not informative.</p>
@@ -267,15 +320,22 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 </section>
 <section id="section-11" class="slide level1">
 <h1></h1>
-<img width="970" src="figures/bcell/samm_shazam_comparison_nofonts.svg">
-<p>Feng, Shaw, Minin, Simon, &amp; M, <em>arXiv</em>, <em>in revision for Ann. Applied Stat.</em></p>
+<img src="figures/bcell/samm_shazam_comparison_nofonts.svg" width="970">
+<p>Feng, Shaw, Minin, Simon, &amp; M, <em>arXiv</em>, <em>in revision
+for Ann. Applied Stat.</em></p>
 </section>
 <section id="inferring-natural-selection" class="slide level1">
 <h1>Inferring natural selection</h1>
 <ul>
-<li>BASELINe infers overall selection: Yaari, Uduman, Kleinstein <em>Nucleic Acids Research</em>, 2012 [<a href="https://doi.org/10.1093/nar/gks457">DOI</a>]</li>
-<li>Infer whole-repertoire per-base selection: McCoy, Bedford, M <em>Phil. Trans. Royal Soc. London</em>, 2015 [<a href="https://doi.org/10.1098/rstb.2014.0244">DOI</a>]</li>
-<li>IgPhyML infers selection in a phylogenetic context: Hoehn, Lunter, &amp; Pybus <em>Genetics</em>, 2017. [<a href="https://doi.org/10.1534/genetics.116.196303">DOI</a>]</li>
+<li>BASELINe infers overall selection: Yaari, Uduman, Kleinstein
+<em>Nucleic Acids Research</em>, 2012 [<a
+href="https://doi.org/10.1093/nar/gks457">DOI</a>]</li>
+<li>Infer whole-repertoire per-base selection: McCoy, Bedford, M
+<em>Phil. Trans. Royal Soc. London</em>, 2015 [<a
+href="https://doi.org/10.1098/rstb.2014.0244">DOI</a>]</li>
+<li>IgPhyML infers selection in a phylogenetic context: Hoehn, Lunter,
+&amp; Pybus <em>Genetics</em>, 2017. [<a
+href="https://doi.org/10.1534/genetics.116.196303">DOI</a>]</li>
 </ul>
 </section>
 <section id="its-not-all-bad-news" class="slide level1">
@@ -283,12 +343,13 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 </section>
 <section id="motivation" class="slide level1">
 <h1>Motivation</h1>
-<img width="970" src="figures/bcell/tas-victora-tree.png">
+<img src="figures/bcell/tas-victora-tree.png" width="970">
 </section>
 <section id="goal" class="slide level1">
 <h1>Goal:</h1>
 <p><br></p>
-<p>Accurate tree inference using not-very-diverged sequences <br> which are sampled with meaningful counts</p>
+<p>Accurate tree inference using not-very-diverged sequences <br> which
+are sampled with meaningful counts</p>
 </section>
 <section id="section-12" class="slide level1">
 <h1></h1>
@@ -302,14 +363,15 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <h1></h1>
 <img src="figures/bcell/collapsed-trees-reconstruction_nofonts.svg" height="620">
 </section>
-<section id="a-simple-infinite-type-branching-process-model" class="slide level1">
+<section id="a-simple-infinite-type-branching-process-model"
+class="slide level1">
 <h1>A simple infinite-type branching process model</h1>
 <ul>
 <li><span class="math inline">\(p\)</span>: probability of division</li>
 <li><span class="math inline">\(q\)</span>: probability of mutation</li>
 </ul>
 <p><br></p>
-<img width="970" src="figures/bcell/offspring_nofonts.svg">
+<img src="figures/bcell/offspring_nofonts.svg" width="970">
 </section>
 <section id="gctree-likelihood" class="slide level1">
 <h1>“GCTree” likelihood</h1>
@@ -322,14 +384,16 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 <section id="incorporating-model-likelihood" class="slide level1">
 <h1>Incorporating model likelihood</h1>
 <ul>
-<li>Given sequence data, construct maximum parsimony trees <br> (there are lots, typically)</li>
+<li>Given sequence data, construct maximum parsimony trees <br> (there
+are lots, typically)</li>
 <li>Pick the tree with the highest model likelihood</li>
 </ul>
 <p><br></p>
 <div class="fragment">
 <p>Validation:</p>
 <ul>
-<li>Simulate tree using a more complex model (arbitrary offspring distribution, finite sampling time, incomplete sampling)</li>
+<li>Simulate tree using a more complex model (arbitrary offspring
+distribution, finite sampling time, incomplete sampling)</li>
 <li>Simulate sequences down tree (context-sensitive mutation)</li>
 <li>Run inference; compare to simulation</li>
 </ul>
@@ -337,17 +401,18 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
 </section>
 <section id="section-16" class="slide level1">
 <h1></h1>
-<img width="970" src="figures/bcell/gctree-validation-warmup_nofonts.svg">
+<img src="figures/bcell/gctree-validation-warmup_nofonts.svg" width="970">
 </section>
 <section id="gctree-works-in-simulation" class="slide level1">
 <h1>GCtree works in simulation</h1>
 <p><br></p>
-<img width="970" src="figures/bcell/gctree-validation_nofonts.svg">
+<img src="figures/bcell/gctree-validation_nofonts.svg" width="970">
 </section>
-<section id="gctree-finds-more-common-igh-and-igl-trees" class="slide level1">
+<section id="gctree-finds-more-common-igh-and-igl-trees"
+class="slide level1">
 <h1>GCtree finds more common IgH and IgL trees</h1>
 <p><br></p>
-<img width="970" src="figures/bcell/gctree-empval_nofonts.svg">
+<img src="figures/bcell/gctree-empval_nofonts.svg" width="970">
 <!--
 # Weak selection?
 <img src="figures/bcell/kuraoka-avidities_nofonts.svg" class="stretch">
@@ -378,13 +443,146 @@ modified from <a href="http://dx.doi.org/10.1073/pnas.1212755109">Murugan et al.
       // Full list of configuration options available at:
       // https://revealjs.com/config/
       Reveal.initialize({
-      
         // Display controls in the bottom right corner
         controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: true,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'bottom-right',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
         // Push each slide change to the browser history
         history: true,
-        // Transition style
-        transition: 'none', // none/fade/slide/convex/concave/zoom
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'default',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: true,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'fade',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
         math: {
           mathjax: 'MathJax/MathJax.js',
           config: 'TeX-AMS_HTML-full',
