@@ -68,9 +68,10 @@ seq = "AAAGGGCCCTTT"
 print(f"evolving original sequence {seq} for the middle node for 5 seconds")
 middle_seq = evolve_sequence_gillespie(seq, 5)
 print(f"\nevolving middle sequence {middle_seq} for the left leaf for 4 seconds")
-left_seq = evolve_sequence_gillespie(seq, 4)
+left_seq = evolve_sequence_gillespie(middle_seq, 4)
 print(f"\nevolving middle sequence {middle_seq} for the right leaf for 3 seconds")
-right_seq = evolve_sequence_gillespie(seq, 3)
+right_seq = evolve_sequence_gillespie(middle_seq, 3)
 
-print(f"\n>left_leaf\n{left_seq}")
+print(f"\n>parent_seq\n{seq}")
+print(f">left_leaf\n{left_seq}")
 print(f">right_leaf\n{right_seq}")
