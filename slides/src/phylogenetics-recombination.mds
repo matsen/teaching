@@ -1,6 +1,7 @@
 % Recombination in trees
 % Erick Matsen
 
+
 # Recombination in viruses
 
 ^img https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnrmicro2614/MediaObjects/41579_2011_Article_BFnrmicro2614_Fig1_HTML.jpg
@@ -8,14 +9,18 @@
 ^div citation "[Simon-Loriere & Holmes, 2011](https://www.nature.com/articles/nrmicro2614)"
 
 
-# What is the impact of recombination on phylogenies?
+#
+^img figures/recombination/recombination-setup-czepi.png
+^div citation "from czepi.org"
 
 
 # What is the impact of recombination on phylogenies?
 
-^img figures/recombination/effect.png
 
-^div citation "[Martin et al. 2011](http://dx.doi.org/10.1111/j.1755-0998.2011.03026.x)"
+# What is the impact of recombination on phylogenies?
+
+^img figures/recombination/recombination-effect-czepi.png
+^div citation "from czepi.org"
 
 
 # Testing for recombination
