@@ -12,7 +12,7 @@ set.seed(123)
 
 # MODIFY THESE PARAMETERS
 n_machines <- 20        # Number of marble-making machines
-n_draws <- 50          # Marbles sampled from each machine
+n_draws <- 10          # Marbles sampled from each machine
 
 # Generate a more consistent hierarchical model
 # We'll use a Beta distribution for both simulation and inference
@@ -130,9 +130,15 @@ cat("Inferred: a =", inferred_a, ", b =", inferred_b, "\n")
 # Visualize the results
 par(mfrow = c(1, 2), mar = c(4, 4, 2, 1))
 
+# For the comparison plot (True vs Inferred vs Observed)
+# New colorblind-friendly palette: blue, orange, purple
+cb_blue <- "#3182bd"    # Muted blue
+cb_orange <- "#fd8d3c"  # Orange
+cb_purple <- "#756bb1"  # Purple
+
 # Plot inferred vs true thetas
 plot(true_thetas, inferred_thetas, 
-     pch = 16, col = "blue",
+     pch = 16, col = cb_blue,  # Circle, blue
      xlim = c(0, 1), ylim = c(0, 1),
      xlab = "True Proportion (θ)", 
      ylab = "Inferred Proportion (θ)",
@@ -145,27 +151,27 @@ plot(1:n_machines, true_thetas,
      xlab = "Machine", 
      ylab = "Proportion of Blue Marbles",
      main = "Hierarchical Structure",
-     pch = 16, col = "blue")
+     pch = 16, col = cb_blue)  # Circle, blue
 # Add observed proportions
-points(1:n_machines, blue_draws/n_draws, pch = 17, col = "red")
+points(1:n_machines, blue_draws/n_draws, pch = 15, col = cb_orange)  # Square, orange
 # Add inferred proportions
-points(1:n_machines, inferred_thetas, pch = 15, col = "green")
+points(1:n_machines, inferred_thetas, pch = 18, col = cb_purple)  # Diamond, purple
 
 # Connect the points with lines to show the pattern
-lines(1:n_machines, true_thetas, col = "blue")
-lines(1:n_machines, blue_draws/n_draws, col = "red", lty = 2)
-lines(1:n_machines, inferred_thetas, col = "green", lty = 3)
+lines(1:n_machines, true_thetas, col = cb_blue)
+lines(1:n_machines, blue_draws/n_draws, col = cb_orange, lty = 2)
+lines(1:n_machines, inferred_thetas, col = cb_purple, lty = 3)
 
 # Add reference lines for the means
-abline(h = alpha/(alpha+beta), lty = 2, col = "blue")
-abline(h = inferred_a/(inferred_a+inferred_b), lty = 2, col = "green")
+abline(h = alpha/(alpha+beta), lty = 2, col = cb_blue)
+abline(h = inferred_a/(inferred_a+inferred_b), lty = 2, col = cb_purple)
 
 # Add legend
 legend("bottomright", 
        legend = c("True θ", "Observed Prop", "Inferred θ", 
                   "True Mean", "Inferred Mean"), 
-       col = c("blue", "red", "green", "blue", "green"),
-       pch = c(16, 17, 15, NA, NA),
+       col = c(cb_blue, cb_orange, cb_purple, cb_blue, cb_purple),
+       pch = c(16, 15, 18, NA, NA),
        lty = c(1, 2, 3, 2, 2))
 
 # Plot true and inferred distributions
@@ -174,12 +180,12 @@ curve(dbeta(x, alpha, beta), from = 0, to = 1,
       main = "Population Distributions", 
       xlab = "Proportion of Blue (θ)", 
       ylab = "Density",
-      col = "blue", lwd = 2)
+      col = cb_blue, lwd = 2)
 curve(dbeta(x, inferred_a, inferred_b), from = 0, to = 1, 
-      col = "green", lwd = 2, add = TRUE)
+      col = cb_purple, lwd = 2, add = TRUE)
 legend("topright", 
        legend = c("True Distribution", "Inferred Distribution"), 
-       col = c("blue", "green"), 
+       col = c(cb_blue, cb_purple), 
        lwd = 2)
 
 # The key insight: The hierarchical model connects simulation and inference

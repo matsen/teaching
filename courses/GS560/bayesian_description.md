@@ -44,30 +44,21 @@ Start playing with [this notebook](https://bit.ly/marbles-posterior).
 Start with reasonable values.
 As we increase the number of draws, what happens to our uncertainty?
 
-So let's talk it over.
-If we have one observation, how certain are we in our estimate.
-Now if we have a lot, how certain are we?
-
 Now, what if we have _no data_. 
 What is our estimate then?
+A uniform prior seems obvious, but...
+
+If we have one observation, do we really want our estimate to be 1?
 
 In this setup we have to have a prior, which is what happens when we have no data.
 
 Play with the prior.
+Does it have an effect when there is little signal in the data?
+What about when there is a lot of signal in the data?
 
 
-So let's say 
-We know about the normal distribution, right?
-Someone draw me the shape of the normal distribution in the air.
+Now onto R.
+Check out how simulation and inference are closely tied.
 
-First let's focus on just gene A.
-Let's imagine that we are going to model the actual gene expression value as a normal distribution.
-
-Say we have just a 
-
-
-
-Aleatory uncertainty (or aleatory variability): This is the inherent randomness in a system or process. It's the uncertainty that comes from the natural variability in the phenomenon being measured. Even with perfect measurement tools and infinite samples, this uncertainty would remain because it's an intrinsic property of the system. 
-Epistemic uncertainty: This is uncertainty due to our limited knowledge or information. It arises from limitations in our sampling, measurement precision, or model completeness. Unlike aleatory uncertainty, epistemic uncertainty can theoretically be reduced with more data, better measurements, or improved models. 
-
-
+This corresponds to Bayes' formula. 
+Simulate and throw out the simulations that don't match the data.

@@ -8,3 +8,4 @@ package.json
 .Rhistory
 .RData
 _ignore
+.venv
