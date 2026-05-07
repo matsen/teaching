@@ -46,11 +46,11 @@ legend("topright", legend = c("Expected blue", "Expected red"),
 # Using the simulated data, infer the original parameter
 ###############################################################################
 
-# Define the model using map
+# Define the model using quap
 # This model uses a flat Beta(1,1) prior on theta
 # The likelihood is Binomial with probability theta
 
-# Prepare the data list for map
+# Prepare the data list for quap
 data_list <- list(
   blue = blue_draws,
   total = n_draws
@@ -62,8 +62,8 @@ formula <- alist(
   theta ~ dbeta(1, 1)           # Prior: uniform prior on theta
 )
 
-# Fit the model using map (quadratic approximation)
-model <- map(formula, data = data_list)
+# Fit the model using quap (quadratic approximation)
+model <- quap(formula, data = data_list)
 
 # Extract the posterior distribution
 post <- extract.samples(model, n = 10000)
@@ -81,7 +81,7 @@ cat("True theta was:", true_theta, "\n")
 
 # Compare the analytical and approximate posteriors
 # The analytical posterior is Beta(blue_draws + 1, red_draws + 1)
-# The approximate posterior comes from map
+# The approximate posterior comes from quap
 
 # Create a sequence of theta values for plotting
 theta_seq <- seq(0, 1, length.out = 1000)
@@ -110,7 +110,7 @@ legend("topright",
        lty = c(1, 2, 3), 
        col = c("blue", "green", "red"))
 
-# Add density from the approximation (samples from map)
+# Add density from the approximation (samples from quap)
 lines(density(post$theta), col = "orange", lty = 2)
 legend("topleft", 
        legend = c("Quadratic Approximation"),

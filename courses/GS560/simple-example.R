@@ -39,7 +39,7 @@ axis(1, at = c(0, 1), labels = c("A", "B"))
 title("Gene Expression by Cell Type")
 
 # Fit the model using the parameterization that works
-m1 <- map(
+m1 <- quap(
   alist(
     expression ~ dnorm(mu, sigma),
     mu <- a + b * (cell_type_idx - 1),  # A = 0, B = 1

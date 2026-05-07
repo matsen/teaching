@@ -1,4 +1,4 @@
-# Hierarchical Marbles: Simulation and Inference with map
+# Hierarchical Marbles: Simulation and Inference with quap
 # Simple demonstration of hierarchical modeling with consistency between simulation and inference
 library(rethinking)
 
@@ -69,7 +69,7 @@ legend("topright", legend = c("Blue", "Red"),
 
 ###############################################################################
 # PART B: HIERARCHICAL INFERENCE
-# Use a simple approach with map to mimic our simulation
+# Use a simple approach with quap to mimic our simulation
 ###############################################################################
 
 # Prepare data list for inference
@@ -79,7 +79,7 @@ data_list <- list(
   machine = 1:n_machines
 )
 
-# For map, we'll directly estimate individual machine parameters
+# For quap, we'll directly estimate individual machine parameters
 # and fixed hyperparameters
 model_formula <- alist(
   # Likelihood for each machine
@@ -101,7 +101,7 @@ start_list <- list(
 )
 
 # Fit the model
-model <- map(model_formula, data = data_list, start = start_list)
+model <- quap(model_formula, data = data_list, start = start_list)
 
 # Display results
 cat("\nInference Results:\n")
