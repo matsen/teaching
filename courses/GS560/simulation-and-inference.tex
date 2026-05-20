@@ -1,0 +1,96 @@
+\documentclass[aspectratio=169]{beamer}
+\usetheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}{}
+\setbeamercolor{background canvas}{bg=white}
+\setbeamerfont{frametitle}{size=\large}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Size for the central display equations. Tune this one knob.
+\newcommand{\eqsize}{\fontsize{18}{22}\selectfont}
+
+\begin{document}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Bayes' theorem}
+  \vfill
+  {\eqsize
+  \[
+    \underbrace{p(\theta \mid b)}_{\text{posterior}}
+    \;=\;
+    \frac{\overbrace{p(b \mid \theta)}^{\text{likelihood}}\;
+          \overbrace{p(\theta)}^{\text{prior}}}
+         {\underbrace{p(b)}_{\text{normalizer}}}
+  \]}
+  \vfill
+  \begin{center}
+    \small
+    $\theta$ = fraction blue \qquad
+    $b$ = blue marbles drawn \qquad
+    $n$ = total drawn
+  \end{center}
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Drop the normalizer}
+  \vfill
+  {\eqsize
+  \[
+    p(\theta \mid b)\;\propto\;p(b \mid \theta)\,p(\theta)
+  \]}
+  \vfill
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Put in the marble pieces}
+  \vfill
+  {\eqsize
+  \[
+    p(\theta \mid b)\;\propto\;
+    \underbrace{\binom{n}{b}\,\theta^{\,b}(1-\theta)^{\,n-b}}
+              _{\text{Binomial}(n,\theta)\ \text{likelihood}}
+    \;\times\;
+    \underbrace{\theta^{\,\alpha-1}(1-\theta)^{\,\beta-1}}
+              _{\text{Beta}(\alpha,\beta)\ \text{prior}}
+  \]}
+  \vfill
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Simulate, then keep what matches}
+  \vfill
+  {\eqsize
+  \[
+    \begin{aligned}
+      &\textbf{1.}\ \ \theta \sim p(\theta)
+        && \text{\footnotesize draw from prior}\\[6pt]
+      &\textbf{2.}\ \ b' \sim \text{Binomial}(n,\theta)
+        && \text{\footnotesize simulate a draw}\\[6pt]
+      &\textbf{3.}\ \ \text{keep } \theta \text{ if } b' = b
+        && \text{\footnotesize match the data}
+    \end{aligned}
+  \]}
+  \vfill
+\end{frame}
+
+% ---------------------------------------------------------------------------
+\begin{frame}{Why it works}
+  \vfill
+  {\eqsize
+  \[
+    \underbrace{p(\theta)}_{\substack{\text{step 1}\\[2pt]\text{prior draw}}}
+    \;\times\;
+    \underbrace{p(b \mid \theta)}_{\substack{\text{steps 2--3}\\[2pt]\text{Pr[\,sim matches\,]}}}
+    \;\propto\;
+    \underbrace{p(\theta \mid b)}_{\substack{\text{kept }\theta\text{'s}\\[2pt]\text{= posterior}}}
+  \]}
+  \vfill
+  \begin{center}
+    \small
+    $p(b \mid \theta) = \Pr[\,b' = b \mid \theta\,]$:
+    the chance one simulation reproduces the data
+  \end{center}
+\end{frame}
+
+\end{document}
