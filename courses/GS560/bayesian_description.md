@@ -57,8 +57,18 @@ Does it have an effect when there is little signal in the data?
 What about when there is a lot of signal in the data?
 
 
-Now onto R.
-Check out how simulation and inference are closely tied.
-
-This corresponds to Bayes' formula. 
+Now to the heart of it: simulation and inference are closely tied.
+This corresponds to Bayes' formula.
 Simulate and throw out the simulations that don't match the data.
+
+On the whiteboard first.
+Suppose we drew 8 blue out of 10.
+Do rejection sampling by hand, filling in a table:
+sample a θ from the prior, simulate 10 draws conditioned on that θ, and check whether we got 8 blue.
+Keep θ if it matches; otherwise throw it out.
+Repeat — the θ's we keep pile up into the posterior.
+(If there's time, run it as a game: each student samples a θ and simulates a draw.)
+
+Then the equation deck (`simulation-and-inference.tex`) and the marimo notebook (`rejection_sampler.py`) do exactly this, at scale.
+
+Now onto R.

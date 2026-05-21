@@ -1,6 +1,7 @@
 # GS560 — Bayesian guest lecture
 
-A one-session introduction to Bayesian analysis, taught May 2025. The format is
+A one-session introduction to Bayesian analysis, first taught May 2025 and again
+May 2026. The format is
 guided hands-on: short verbal framings, then students drive interactive
 notebooks and R scripts while the instructor poses questions. The only slides
 are a short equation deck (`simulation-and-inference.tex`) that bridges Bayes'
@@ -56,3 +57,17 @@ The two Colab notebooks students used in steps 2 and 4 are checked in at:
 
 Both have a Colab link in their first cell. The posterior notebook is also
 reachable via `bit.ly/marbles-posterior`.
+
+## Notes for next time (from May 2026)
+
+- **Timing.** We only got through the rejection-sampling marimo notebook
+  (`rejection_sampler.py`); the R scripts (step 6) weren't reached. Budget for
+  that, or treat the R portion as optional follow-up.
+- **Whiteboard warmup works.** Before the notebook, do rejection sampling by
+  hand on the board: 8 blue out of 10, sample a θ, simulate, keep it if it
+  matches (now written into `bayesian_description.md`). With more time, run it as
+  an interactive class game — each student samples and simulates.
+- **Convert the Colab notebooks to marimo.** Port `marbles-frequentist.ipynb`
+  and `marbles-posterior.ipynb` to marimo, with bigger fonts for projection.
+- **marimo slider labels.** The sliders didn't show the selected value — pass
+  `show_value=True` to each `mo.ui.slider` in `rejection_sampler.py`.
