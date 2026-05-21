@@ -61,19 +61,31 @@ def _(b, mo, n, n_prop, prior, rejection_figure):
 
 @app.cell
 def _(mo):
-    n = mo.ui.slider(1, 50, value=20, label=r"total drawn $n$")
+    n = mo.ui.slider(1, 50, value=20, label=r"total drawn $n$", show_value=True)
     prior = mo.ui.slider(
-        0.5, 5.0, step=0.5, value=1.0, label=r"prior strength $\alpha=\beta$"
+        0.5,
+        5.0,
+        step=0.5,
+        value=1.0,
+        label=r"prior strength $\alpha=\beta$",
+        show_value=True,
     )
     n_prop = mo.ui.slider(
-        2000, 100000, step=2000, value=40000, label="proposals from prior"
+        2000,
+        100000,
+        step=2000,
+        value=40000,
+        label="proposals from prior",
+        show_value=True,
     )
     return n, n_prop, prior
 
 
 @app.cell
 def _(mo, n):
-    b = mo.ui.slider(0, n.value, value=min(12, n.value), label=r"observed blue $b$")
+    b = mo.ui.slider(
+        0, n.value, value=min(12, n.value), label=r"observed blue $b$", show_value=True
+    )
     return (b,)
 
 
